@@ -1,27 +1,37 @@
-import { Mail, Phone } from "lucide-react";
-import { Link } from "react-router-dom";
+import  { useEffect } from 'react';
 
 const TopBar = () => {
+  useEffect(() => {
+    // Add the custom marquee animation to the document's stylesheet
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes marquee-rtl {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
+      }
+      .animate-marquee-rtl {
+        animation: marquee-rtl 60s linear infinite;
+      }
+    `;
+    document.head.appendChild(style);
+
+    // Cleanup on unmount
+    return () => {
+      document.head.removeChild(style);
+    };
+  }, []);
+
   return (
-    <div className="bg-[var(--primary-main)] text-white py-2 px-4 sm:px-6 shadow-md">
-      <div className="max-w-7xl mx-auto flex justify-between items-center">
-        {/* Left side - contact info */}
-        <div className="flex flex-col sm:flex-row sm:space-x-8">
-          <div className="flex items-center space-x-2 hover:text-blue-200 transition-colors duration-200">
-            <Mail size={16} />
-            <span className="text-xs sm:text-sm font-medium">support@braiinybear.org</span>
+    <div className="bg-[var(--primary-main)] text-white py-2 px-4 sm:px-6 shadow-md overflow-hidden">
+      <div className="max-w-9xl mx-auto">
+        {/* Marquee-like effect with right-to-left animation */}
+        <div className="whitespace-nowrap overflow-hidden relative">
+          <div className="animate-marquee-rtl inline-block">
+            🌟 BraiinyBear Joins Hands with Innovation Artificial Insemination Training Institute 🌟 |
+            📜 Accredited by: Department of Animal Husbandry, Dairying & Fisheries, Ministry of Agriculture & Farmers Welfare, Government of India, New Delhi |
+            🏆 India’s First and Only Institute that Provides Insemination Training |
+            🤝 A Landmark Collaboration for Advancing Animal Husbandry & Reproductive Science Training
           </div>
-          
-          <div className="flex items-center space-x-2 hover:text-blue-200 transition-colors duration-200 mt-1 sm:mt-0">
-            <Phone size={16} />
-            <span className="text-xs sm:text-sm font-medium">+91-9520770813</span>
-          </div>
-        </div>
-        
-        {/* Right side - navigation links */}
-        <div className="flex flex-col items-end sm:flex-row sm:space-x-4">
-          <Link to="/faq" className="text-xs sm:text-sm hover:text-blue-200 transition-colors duration-200">FAQ</Link>
-          <Link to="/contact" className="text-xs sm:text-sm hover:text-blue-200 transition-colors duration-200 mt-1 sm:mt-0">Contact</Link>
         </div>
       </div>
     </div>
