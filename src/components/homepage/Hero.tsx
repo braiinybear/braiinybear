@@ -13,6 +13,7 @@ interface Slide {
 }
 
 const Hero: React.FC = () => {
+  
   const mainSlides: Slide[] = [
     {
       image: backgroundImage1,
@@ -58,16 +59,6 @@ const Hero: React.FC = () => {
     setCurrentSlideIndex(newIndex);
     setTimeout(() => setIsTransitioning(false), 700);
   };
-
-  // const goToNextSlide = (): void => {
-  //   handleSlideChange((currentSlideIndex + 1) % mainSlides.length);
-  // };
-
-  // const goToPrevSlide = (): void => {
-  //   handleSlideChange(
-  //     (currentSlideIndex - 1 + mainSlides.length) % mainSlides.length
-  //   );
-  // };
 
   return (
     <section className="relative h-[70vh] md:h-[75vh] lg:h-[80vh] w-full overflow-hidden">

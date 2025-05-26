@@ -14,6 +14,8 @@ import SeniorCitizen from './pages/work-areas/SeniorCitizen'
 import InnovationTechnology from './pages/work-areas/InnovationTechnology'
 import WomenEmpowerment from './pages/work-areas/WomenEmpowerment'
 import ScrollToTop from './components/ScrollToTop'
+import Events from './pages/events/Events'
+import EventDetails from './pages/events/EventDetails'
 
 function App() {
 
@@ -37,6 +39,8 @@ function App() {
           <Route path="/senior-citizens" element={<SeniorCitizen />} />
           <Route path="/innovation-and-technology" element={<InnovationTechnology />} />
           <Route path="/women-empowerment" element={<WomenEmpowerment />} />
+           <Route path="/events" element={<Events />} />
+          <Route path="/events/:id" element={<EventDetails />} />
         </Routes>
       </Layout>
     </Router>
