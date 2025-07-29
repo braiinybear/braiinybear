@@ -70,6 +70,7 @@ const Header: React.FC = () => {
         { name: "Achievements", path: "/about/achievements" },
       ],
     },
+    { name: "Courses", path: "/courses" },
     { name: "What We Do", path: "/our-work" },
     { name: "Gallery", path: "/gallery" },
     { name: "Inquiry", path: "/contact" },

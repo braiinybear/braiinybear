@@ -1,4 +1,5 @@
 import Hero from "../components/homepage/Hero";
+
 import {
   ArrowRight,
   BookOpen,
@@ -16,7 +17,7 @@ import personImg from "../assets/impact-story/person.jpg";
 import youthImg from "../assets/impact-story/youth.jpg";
 import ruralImg from "../assets/impact-story/rural.jpg";
 import img2 from "../assets/images/IMG_3998.JPG";
-import Events from "./events/Events";
+// import Events from "./courses/Courses";
 
 const Home: React.FC = () => {
   // Work areas with icons and descriptions
@@ -197,6 +198,7 @@ const Home: React.FC = () => {
             {impactData.map((item, index) => (
               <div key={index}>
                 <img
+                  loading="lazy"
                   src={item.image}
                   alt={item.title}
                   className="w-full h-56 object-cover rounded-2xl mb-4"
@@ -393,8 +395,8 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Upcoming Events */}
-<Events />
+      {/* Courses */}
+{/* <Events /> */}
 
 
       {/* Partners & Supporters */}
