@@ -765,7 +765,7 @@ Graduates can work as operation theatre technicians in hospitals, clinics, and s
     image : ntt,
     "approvedBy": "LAKSHAY GROUP OF EDUCATION",
     "status": "Ongoing",
-    "shortDescription": "",
+    "shortDescription": `Gain expertise in operation theatre procedures, assist surgeons and medical staff, and receive hands-on practical training. This 2-year program, approved by the Paramedical Council, New Delhi, is designed to prepare you for a rewarding career in surgical support and healthcare.`,
     "fullDescription": `### What is BEMS – Bachelor in Electro Homoeopathy?  
 BEMS (Bachelor in Electro Homoeopathy Medicine and Surgery) is a 4-year undergraduate program focused on electro homoeopathy – a natural, herbal-based medical system. The course provides deep knowledge of plant-based remedies and non-toxic treatments, aiming to restore balance in the body’s systems without side effects.
 
