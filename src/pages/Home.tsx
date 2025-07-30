@@ -1,261 +1,37 @@
 import Hero from "../components/homepage/Hero";
 
-import {
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+  import {
   ArrowRight,
-  BookOpen,
-  Users,
-  Lightbulb,
-  Leaf,
-  PawPrint,
-  Sun,
-  Heart,
-  Activity,
 } from "lucide-react";
-import { Link } from "react-router-dom";
-import childImg from "../assets/impact-story/child.jpg";
-import personImg from "../assets/impact-story/person.jpg";
-import youthImg from "../assets/impact-story/youth.jpg";
-import ruralImg from "../assets/impact-story/rural.jpg";
+
 import img2 from "../assets/images/IMG_3998.JPG";
+import ImpactSection from "../sections/home/ImpactSection";
+import MissionSection from "../sections/home/MissionSection";
+import WorkAreaSection from "../sections/home/WorkAreaSection";
+import { Link } from "react-router-dom";
+import NewsletterSubscriptionSection from "../sections/home/NewsletterSubscriptionSection";
 // import Events from "./courses/Courses";
 
 const Home: React.FC = () => {
-  // Work areas with icons and descriptions
-  const workAreas = [
-    {
-      id: 1,
-      title: "Education",
-      icon: <BookOpen className="h-12 w-12 mb-4 text-blue-600" />,
-      description:
-        "Providing quality education and learning resources to underprivileged children and communities.",
-      color: "bg-blue-50 border-blue-200",
-      iconBg: "bg-blue-100",
-      hoverColor: "hover:bg-blue-100",
-    },
-    {
-      id: 2,
-      title: "Senior Citizens",
-      icon: <Users className="h-12 w-12 mb-4 text-purple-600" />,
-      description:
-        "Supporting elderly care through healthcare assistance, companionship programs, and retirement planning.",
-      color: "bg-purple-50 border-purple-200",
-      iconBg: "bg-purple-100",
-      hoverColor: "hover:bg-purple-100",
-    },
-    {
-      id: 3,
-      title: "Innovation and Technology",
-      icon: <Lightbulb className="h-12 w-12 mb-4 text-[var(--primary-main)]" />,
-      description:
-        "Leveraging technology to solve social challenges and foster innovation in rural communities.",
-      color: "bg-blue-50 border-blue-200",
-      iconBg: "bg-blue-100",
-      hoverColor: "hover:bg-blue-100",
-    },
-    {
-      id: 4,
-      title: "Agriculture",
-      icon: <Leaf className="h-12 w-12 mb-4 text-green-600" />,
-      description:
-        "Promoting sustainable farming practices and supporting small-scale farmers with resources and training.",
-      color: "bg-green-50 border-green-200",
-      iconBg: "bg-green-100",
-      hoverColor: "hover:bg-green-100",
-    },
-    {
-      id: 5,
-      title: "Animal Husbandry",
-      icon: <PawPrint className="h-12 w-12 mb-4 text-amber-600" />,
-      description:
-        "Providing veterinary services, training in animal care, and support for livestock-based livelihoods.",
-      color: "bg-amber-50 border-amber-200",
-      iconBg: "bg-amber-100",
-      hoverColor: "hover:bg-amber-100",
-    },
-    {
-      id: 6,
-      title: "Environment",
-      icon: <Sun className="h-12 w-12 mb-4 text-emerald-600" />,
-      description:
-        "Implementing conservation projects, awareness programs, and sustainable practices to protect our planet.",
-      color: "bg-emerald-50 border-emerald-200",
-      iconBg: "bg-emerald-100",
-      hoverColor: "hover:bg-emerald-100",
-    },
-    {
-      id: 7,
-      title: "Women Empowerment",
-      icon: <Heart className="h-12 w-12 mb-4 text-pink-600" />,
-      description:
-        "Creating opportunities for women through skill development, microfinance, and entrepreneurship support.",
-      color: "bg-pink-50 border-pink-200",
-      iconBg: "bg-pink-100",
-      hoverColor: "hover:bg-pink-100",
-    },
-    {
-      id: 8,
-      title: "Drug Rehabilitation",
-      icon: <Activity className="h-12 w-12 mb-4 text-red-600" />,
-      description:
-        "Offering recovery programs, counseling services, and reintegration support for those affected by addiction.",
-      color: "bg-red-50 border-red-200",
-      iconBg: "bg-red-100",
-      hoverColor: "hover:bg-red-100",
-    },
-  ];
-
-  const highlights = [
-    {
-      icon: "🎓",
-      title: "Early Education",
-      description:
-        "Building strong foundations through engaging and interactive learning.",
-    },
-    {
-      icon: "🧠",
-      title: "Skill Development",
-      description:
-        "Empowering children with essential life and academic skills.",
-    },
-    {
-      icon: "🤝",
-      title: "Community Engagement",
-      description: "Fostering a spirit of togetherness and collaboration.",
-    },
-    {
-      icon: "🌱",
-      title: "Holistic Growth",
-      description: "Nurturing mind, body, and soul for balanced development.",
-    },
-  ];
-
-  const impactData = [
-    {
-      title: "Children",
-      image: childImg,
-      count: "450047+",
-      underlineColor: "bg-[#2D3E91]",
-    },
-    {
-      title: "Youth",
-      image: youthImg,
-      count: "480203+",
-      underlineColor: "bg-[#4CC5F1]",
-    },
-    {
-      title: "Rural Households",
-      image: ruralImg,
-      count: "778665+",
-      underlineColor: "bg-[#2D3E91]",
-    },
-    {
-      title: "Persons with Disability",
-      image: personImg,
-      count: "44307+",
-      underlineColor: "bg-[#4CC5F1]",
-    },
-  ];
 
   return (
     <div className="bg-gray-50">
       <Hero />
 
       {/* Our Mission */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-3">Our Mission</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-[var(--primary-main)] to-blue-500 mx-auto mb-6 rounded-full"></div>
+      <MissionSection />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {highlights.map((item, index) => (
-              <div
-                key={index}
-                className="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition-all"
-              >
-                <div className="text-5xl mb-4">{item.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600 text-sm">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Our Impact Section */}
 
-      {/* Our Impact */}
-      <section className="py-16 bg-white text-center">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Impact</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-[var(--primary-main)] to-blue-500 mx-auto mb-6 rounded-full"></div>
-          <p className="text-gray-600 mb-12">
-            As on <strong>Feb 28, 2025</strong>, we have directly impacted{" "}
-            <strong>17,53,222</strong> people. We currently have operations in{" "}
-            <strong>22 Indian states/union territories</strong>.
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-            {impactData.map((item, index) => (
-              <div key={index}>
-                <img
-                  loading="lazy"
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-56 object-cover rounded-2xl mb-4"
-                />
-                <div className="text-lg font-semibold text-gray-800">
-                  {item.title}
-                </div>
-                <div
-                  className={`w-14 h-1 mx-auto mt-1 mb-3 rounded-full ${item.underlineColor}`}
-                ></div>
-                <div className="text-3xl font-bold text-gray-900">
-                  {item.count}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ImpactSection />
 
       {/* Our Work Areas */}
-      <section className="py-10 px-6 bg-gray-100">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-3">
-              Our Work Areas
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-[var(--primary-main)] to-blue-500 mx-auto mb-6 rounded-full"></div>
-            <p className="max-w-2xl mx-auto text-gray-600">
-              We take a holistic approach to community development through these
-              key focus areas
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {workAreas.map((area) => (
-              <div
-                key={area.id}
-                className={`${area.color} border p-6 rounded-lg ${area.hoverColor} transition-all duration-300 hover:shadow-lg text-center`}
-              >
-                <div
-                  className={`${area.iconBg} w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4`}
-                >
-                  {area.icon}
-                </div>
-                <h3 className="text-xl font-semibold mb-3">{area.title}</h3>
-                <p className="text-gray-600 mb-4">{area.description}</p>
-                <Link
-                  to={`/${area.title.toLowerCase().replace(/\s+/g, "-")}`}
-                  className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
-                >
-                  Learn more <ArrowRight className="ml-1 h-4 w-4" />
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <WorkAreaSection />
 
       {/* Success Stories */}
       <section className="py-16 px-6">
@@ -421,72 +197,7 @@ const Home: React.FC = () => {
       </section> */}
 
       {/* Newsletter Subscription */}
-      <section className="py-12 px-6 bg-gradient-to-r from-gray-800 to-gray-900 text-white">
-        <div className="container mx-auto">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-3">Stay Updated</h2>
-
-            {/* Stylish underline */}
-            <div className="w-24 h-1 bg-gradient-to-r from-[var(--primary-main)] to-blue-400 mx-auto mb-6 rounded-full"></div>
-
-            <p className="mb-6 text-gray-400">
-              Subscribe to our newsletter for updates on projects and events
-            </p>
-
-            <div className="bg-gray-800 p-6 rounded-lg shadow-lg mb-4 border border-gray-700">
-              <form className="flex flex-col sm:flex-row gap-3">
-                <input
-                  type="email"
-                  placeholder="Your email address"
-                  className="px-4 py-2 rounded-md flex-grow text-white bg-gray-900 border border-gray-700 focus:outline-none focus:border-[var(--primary-main)] focus:ring-1 focus:ring-[var(--primary-main)]"
-                  required
-                />
-                <button
-                  type="submit"
-                  className="bg-[var(--primary-main)] hover:bg-blue-600 text-white font-medium py-2 px-6 rounded-md transition-all duration-200"
-                >
-                  Subscribe
-                </button>
-              </form>
-            </div>
-
-            <div className="flex justify-center gap-6 mt-4">
-              <span className="flex items-center text-gray-400 text-sm">
-                <svg
-                  className="w-4 h-4 mr-1 text-[var(--primary-main)]"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                Weekly Updates
-              </span>
-              <span className="flex items-center text-gray-400 text-sm">
-                <svg
-                  className="w-4 h-4 mr-1 text-[var(--primary-main)]"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                Exclusive Content
-              </span>
-            </div>
-
-            <p className="mt-3 text-xs text-gray-500">
-              We respect your privacy. Unsubscribe at any time.
-            </p>
-          </div>
-        </div>
-      </section>
+      <NewsletterSubscriptionSection />
     </div>
   );
 };
