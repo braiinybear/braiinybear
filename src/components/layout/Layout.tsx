@@ -3,6 +3,7 @@ import Header from '../Header'
 import Footer from '../Footer'
 import TopBar from '../TopBar';
 import WhatsAppButton from '../WhatsAppButton';
+import InstagramButton from '../InstagramButton';
 
 interface LayoutProps {
   children: React.ReactNode
@@ -18,6 +19,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </main>
       <Footer />
       <WhatsAppButton />
+      <InstagramButton />
     </div>
   );
 };

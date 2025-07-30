@@ -44,9 +44,9 @@ const Course = () => {
 
                 {/* Course Info */}
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-gray-800 group-hover:text-sky-600 transition">
+                  <h2 className="text-xl font-semibold mb-2 text-gray-800 group-hover:text-sky-600 transition">
                     {course.title}
-                  </h3>
+                  </h2>
                   <p className="text-gray-600 mb-4 line-clamp-3">
                     {course.shortDescription}
                   </p>

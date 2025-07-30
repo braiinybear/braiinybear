@@ -187,6 +187,8 @@ In the end, valid certificates are provided to support applications for loans an
   id: "refresher-ai-training",
   title: "Refresher Artificial Insemination (AI) Training",
   status: "Ongoing",
+  totalFee: "2000",
+  duration: "7 Days",
   image : img4,
   shortDescription:
     "Five-day refresher training program for existing AI technicians to enhance knowledge and skills in artificial insemination techniques.",
@@ -225,7 +227,9 @@ At the end of the training, valid certificates are awarded to all successful tec
   id: "maitri-worker-training",
   title: "Maitri Worker / Animal Health Worker (AHW) Training",
   status: "Ongoing",
-    image : img5,
+  image : img5,
+  "totalFee": "2000",
+  "duration": "3 Months",
   shortDescription:
     "Certified 3-month training program under the Government of India to create rural animal health professionals for artificial insemination and primary veterinary services.",
   fullDescription: `
@@ -332,7 +336,7 @@ After completing the course, students can work as animal care assistants in vete
     "title": "DRONE PILOT",
     "totalFee": "36,500",
     image : drone,
-    "duration": "3 DAYS",
+    "duration": "5 DAYS",
     "approvedBy": "OVCT VENTURE, DGCA CERTIFIED",
     "status": "Ongoing",
   shortDescription: "Learn the essential rules ➤ Fly a drone ➤ Get certified ➤ Complete process ➤ Fly with license.",
@@ -1200,7 +1204,7 @@ Graduates can work in hospitals, dialysis centers, kidney care clinics, and heal
   "id": "dnys-neuropathy-yogic-sci",
   "title": "DNYS DIPLOMA IN NEUROPATHY & YOGIC SCI",
   "totalFee": "45,000",
-  "duration": "4 YEARS",
+  "duration": "2 YEARS",
   "image": dnys,
   "approvedBy": "PARAMEDICAL COUNCIL, NEW DELHI",
   "status": "Ongoing",
@@ -1409,8 +1413,8 @@ Graduates can work as ANMs in hospitals, primary health centers, NGOs, and gover
   {
   "id": "gnm",
   "title": "GNM",
-  "totalFee": "2,30,000",
-  "duration": "3 YEARS",
+  "totalFee": "2,70,000",
+  "duration": "4 YEARS",
   "image": gnm,
   "approvedBy": "KARNATAKA UNIVERSITY, INC APPROVED",
   "status": "Ongoing",
