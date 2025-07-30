@@ -1,8 +1,34 @@
 import img1 from "../../assets/courses/artificial insamination.webp";
 import img2 from "../../assets/courses/dairy enterpreneurship.webp";
-const img3 = "https://www.goatfarming.in/wp-content/uploads/2023/05/Goat-Farming-Advantages2.jpg";
+import img3 from "../../assets/courses/Goat-Farming-Advantages2.jpg"
 import img4 from "../../assets/courses/refreshre training on ai.webp";
 import img5 from "../../assets/courses/animal health worker.webp";
+import physiotherepist from "../../assets/courses/physiotherepist.webp";
+import anm from "../../assets/courses/anm.webp";
+import veterinary from "../../assets/courses/veterinary-assistant.jpg";
+import drone from "../../assets/courses/drone-pilot.jpeg";
+import cmsEd from "../../assets/courses/cms-ed.webp";
+import mlt from "../../assets/courses/mlt.avif";
+import dmlt from "../../assets/courses/dmlt.jpg";
+import md from "../../assets/courses/md.png";
+import bems from "../../assets/courses/bems.jpeg";
+import ott from "../../assets/courses/ott.jpg";
+import ntt from "../../assets/courses/ntt.webp";
+import dh from "../../assets/courses/dental-hygeine-1.jpg"
+import ccch from "../../assets/courses/ccch.jpg"
+import xray from "../../assets/courses/xray.jpg"
+import ocoe from "../../assets/courses/ocoe.webp"
+import optometrist from "../../assets/courses/optometrist.jpg"
+import dt from "../../assets/courses/dt.avif"
+import dnys from "../../assets/courses/dnys.jpg"
+import dpharma from "../../assets/courses/dpharma.jpg"
+import bpharma from "../../assets/courses/bpharma.jpg"
+import gnm from "../../assets/courses/gnm.jpg"
+import drt from "../../assets/courses/drt.jpg"
+import hsi from "../../assets/courses/hsi.jpg"
+
+
+
 
 export type ICourse = {
   id: string;
@@ -244,7 +270,7 @@ Under government schemes like **Rashtriya Gokul Mission**, one Maitri Worker is 
     "title": "VETERINARY FIELD ASSISTANT",
     "totalFee": "80,000",
     "duration": "2 YEARS",
-    image : "https://careertraining.mcneese.edu/common/images/1/16540/veterinary-assistant.jpg",
+    image : veterinary,
     "approvedBy": "SKILL INDIA , NSDC",
     "status": "Ongoing",
     "shortDescription": "Care for animals ➤ Assist veterinary doctors ➤ Learn treatment, vaccination & livestock care ➤ NSDC-certified ➤ Build a career in animal healthcare.",
@@ -305,7 +331,7 @@ After completing the course, students can work as animal care assistants in vete
     "id": "drone-pilot",
     "title": "DRONE PILOT",
     "totalFee": "36,500",
-    image : "https://images.unsplash.com/photo-1506947411487-a56738267384?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZHJvbmUlMjBwaWxvdHxlbnwwfHwwfHx8MA%3D%3D",
+    image : drone,
     "duration": "3 DAYS",
     "approvedBy": "OVCT VENTURE, DGCA CERTIFIED",
     "status": "Ongoing",
@@ -384,7 +410,7 @@ With the growing use of drone technology, India’s drone industry is estimated 
     "title": "CMS-ED + EMT",
     "totalFee": "15,000",
     "duration": "2 YEARS",
-    image: "https://www.govtresult.in.net/wp-content/uploads/2022/08/cms-ed.webp",
+    image: cmsEd,
     "approvedBy": "PARAMEDICAL COUNCIL, NEW DELHI",
     "status": "Ongoing",
     "shortDescription": "Become a certified healthcare professional ➤ Learn emergency medical skills ➤ Work in clinics, hospitals & ambulances ➤ Government-recognized ➤ Start your medical career.",
@@ -446,7 +472,7 @@ Students can work in clinics, rural hospitals, ambulance services, nursing homes
     "title": "MEDICAL LABORATORY TECHNICIAN",
     "totalFee": "30,000",
     "duration": "2 YEARS",
-    image : " https://plus.unsplash.com/premium_photo-1661668908629-93e712f0d551?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image : mlt,
     "approvedBy": "PARAMEDICAL COUNCIL, NEW DELHI",
     "status": "Ongoing",
     "shortDescription": "Work in diagnostic labs ➤ Learn blood, urine & sample testing ➤ Gain hospital lab skills ➤ 2-year certified course ➤ Govt-recognized qualification.",
@@ -508,7 +534,7 @@ After completing the course, students can work as lab technicians in diagnostic 
     "title": "DIPLOMA IN MEDICAL LABORATORY TECHNICIAN",
     "totalFee": "50,000",
     "duration": "2 YEARS",
-    image : "https://scopecollege.co.in/wp-content/uploads/2017/10/Diploma-course-in-Medical-Laboratory-Technology.jpg",
+    image : dmlt,
     "approvedBy": "PARAMEDICAL COUNCIL, NEW DELHI",
     "status": "Ongoing",
     "shortDescription": "Master lab testing skills ➤ Learn pathology, microbiology & biochemistry ➤ Work in hospitals & diagnostic labs ➤ Govt-recognized diploma ➤ Launch a career in diagnostics.",
@@ -570,7 +596,7 @@ Diploma holders can work in hospitals, diagnostic labs, blood banks, pathology c
     "title": "MEDICAL DRESSER",
     "totalFee": "30,000",
     "duration": "2 YEARS",
-    image : "https://lh3.googleusercontent.com/rGRcZeZI6Mix-iwoKfYfgoIq2JHvMpy7NatYFf1kqkFLP_evGwxH6dgCBuAqNwFiUAJwtNl8fEfhThfos2-9TZ7mSdDB6HPjKznW0cHfUltyZ6wYCIR0rrWUqk6TC3HlM1CtU0hhnVfFCqdqER0k7Qfd0Q2TWVACjEDDNz6sSrqU-6ja-i4",
+    image : md,
     "approvedBy": "PARAMEDICAL COUNCIL, NEW DELHI",
     "status": "Ongoing",
     "shortDescription": "Assist doctors in wound care ➤ Learn bandaging, first aid & minor procedures ➤ Work in clinics & hospitals ➤ Govt-recognized ➤ Start a career in patient care.",
@@ -632,7 +658,7 @@ After completing the course, students can work in hospitals, clinics, trauma cen
   "title": "BEMS Bachelor in electro homopathy",
   "totalFee": "50,000",
   "duration": "4 YEARS",
-  "image": "https://dimtcollege.org/wp-content/uploads/2023/10/WhatsApp-Image-2023-10-16-at-5.55.10-PM-1.jpeg",
+  "image": bems,
   "approvedBy": "PARAMEDICAL COUNCIL, NEW DELHI",
   "status": "Ongoing",
   "shortDescription": "Study electro homoeopathy ➤ Learn herbal & natural treatment methods ➤ Govt-recognized degree ➤ 4-year program ➤ Build a career in alternative medicine.",
@@ -684,7 +710,7 @@ Graduates can work as Electro Homopathy practitioners, consultants in alternativ
   "title": "OTT OPERATION THEATRE TECHNICIAN",
   "totalFee": "30,000",
   "duration": "2 YEARS",
-  "image": "https://ospmi.in/wp-content/uploads/2017/05/Diploma-of-Operation-Theatre-Technician.jpg",
+  "image": ott,
   "approvedBy": "PARAMEDICAL COUNCIL, NEW DELHI",
   "status": "Ongoing",
   "shortDescription": "Learn operation theatre procedures ➤ Assist surgeons & staff ➤ Get certified ➤ Hands-on practical training ➤ Build career in surgical support.",
@@ -736,7 +762,7 @@ Graduates can work as operation theatre technicians in hospitals, clinics, and s
     "title": "NTT NURSERY TEACHER TRAINING",
     "totalFee": "12,000",
     "duration": "2 YEARS",
-    image : "https://teachertrainingmumbai.com/blog/wp-content/uploads/2022/02/613.webp",
+    image : ntt,
     "approvedBy": "LAKSHAY GROUP OF EDUCATION",
     "status": "Ongoing",
     "shortDescription": "",
@@ -798,7 +824,7 @@ Graduates can work as electro homoeopathy practitioners, health consultants, or 
   "title": "DENTAL HYGIENE",
   "totalFee": "35,000",
   "duration": "2 YEARS",
-  "image": "https://middlesexcollege.edu/academics/wp-content/uploads/sites/8/2022/06/dental-hygeine-1.jpg",
+  "image": dh,
   "approvedBy": "PARAMEDICAL COUNCIL, NEW DELHI",
   "status": "Ongoing",
   "shortDescription": "Learn oral care basics ➤ Develop clinical skills ➤ Get certified ➤ Practical training ➤ Start your dental hygiene career.",
@@ -851,7 +877,7 @@ Graduates can work in dental clinics, hospitals, community health centers, and d
   "title": "DIPLOMA IN PHYSIOTHERAPIST",
   "totalFee": "50,000",
   "duration": "2 YEARS",
-  "image": "https://www.maagangeinstitute.com/assets/img/Diploma%20In%20Physiotherapy%20(DPT)/Physiotherapy.jpg",
+  "image": physiotherepist,
   "approvedBy": "PARAMEDICAL COUNCIL, NEW DELHI",
   "status": "Ongoing",
   "shortDescription": "Learn rehabilitation techniques ➤ Develop therapeutic skills ➤ Get certified ➤ Practical training ➤ Build physiotherapy career.",
@@ -905,7 +931,7 @@ Graduates can work in hospitals, rehabilitation centers, sports clinics, and wel
   "title": "CCCH CERTIFICATE IN CHILD CARE HEALTH",
   "totalFee": "30,000",
   "duration": "2 YEARS",
-  "image": "https://emediskill-prod-v2.s3.ap-south-1.amazonaws.com/courseRectangleThumbnails/64e2045a961ec06e241703d4.jpg",
+  "image": ccch,
   "approvedBy": "PARAMEDICAL COUNCIL, NEW DELHI",
   "status": "Ongoing",
   "shortDescription": "Learn child care basics ➤ Health and nutrition ➤ Get certified ➤ Practical training ➤ Build a career in child health.",
@@ -959,7 +985,7 @@ Graduates can work in hospitals, daycare centers, schools, and NGOs focusing on 
   "title": "X- RAY TECHNICIAN",
   "totalFee": "40,000",
   "duration": "2 YEARS",
-  "image": "https://nctaindia.in/images/course/image_73ba4d29-c064-4751-8fc3-16fd7c0a0c2d.jpg",
+  "image": xray,
   "approvedBy": "PARAMEDICAL COUNCIL, NEW DELHI",
   "status": "Ongoing",
   "shortDescription": "Learn radiology basics ➤ Operate X-ray machines ➤ Get certified ➤ Practical training ➤ Build a career in diagnostic imaging.",
@@ -1013,7 +1039,7 @@ Graduates can work in hospitals, clinics, diagnostic labs, and imaging centers. 
   "title": "ONLY CMSED OR ONLY EMT",
   "totalFee": "10000 EACH",
   "duration": "2YRS, 1 YR",
-  "image": "https://thewarhorse.org/wp-content/uploads/2024/03/Back-of-Amublance-main-feature.jpg",
+  "image": ocoe,
   "approvedBy": "PARAMEDICAL COUNCIL, NEW DELHI",
   "status": "Ongoing",
   "shortDescription": "Learn emergency care ➤ Develop life-saving skills ➤ Get certified ➤ Practical training ➤ Build career in emergency medical services.",
@@ -1067,7 +1093,7 @@ Graduates can work with ambulance services, hospitals, disaster management teams
   "title": "OPTOMETRIST",
   "totalFee": "35,000",
   "duration": "2 YEARS",
-  "image": "https://collegeoptom.on.ca/wp-content/uploads/iStock-2176631642-OD-Using-Phoropter.jpg",
+  "image": optometrist,
   "approvedBy": "PARAMEDICAL COUNCIL, NEW DELHI",
   "status": "Ongoing",
   "shortDescription": "Learn eye care basics ➤ Perform vision tests ➤ Get certified ➤ Practical training ➤ Build career in optometry.",
@@ -1121,7 +1147,7 @@ Graduates can work in eye hospitals, optical stores, clinics, and community heal
   "title": "DIALYSIS TECHNICIAN",
   "totalFee": "35,000",
   "duration": "2 YEARS",
-  "image": "https://college.mayo.edu/media/mccms/content-assets/academics/explore-health-care-careers/clinical-hemodialysis-technician-career-3540546-0012-hero-tablet.jpg",
+  "image": dt,
   "approvedBy": "PARAMEDICAL COUNCIL, NEW DELHI",
   "status": "Ongoing",
   "shortDescription": "Learn dialysis procedures ➤ Operate hemodialysis machines ➤ Get certified ➤ Practical training ➤ Build career in kidney care.",
@@ -1175,7 +1201,7 @@ Graduates can work in hospitals, dialysis centers, kidney care clinics, and heal
   "title": "DNYS DIPLOMA IN NEUROPATHY & YOGIC SCI",
   "totalFee": "45,000",
   "duration": "4 YEARS",
-  "image": "https://www.sampoornayoga.com/wp-content/uploads/2024/02/200-hour-hatha-yin-yoga-teacher-training-course-details-1.jpg",
+  "image": dnys,
   "approvedBy": "PARAMEDICAL COUNCIL, NEW DELHI",
   "status": "Ongoing",
   "shortDescription": "Study neuropathy and yoga science ➤ Learn healing therapies ➤ Get certified ➤ Hands-on training ➤ Build holistic health career.",
@@ -1229,7 +1255,7 @@ Graduates can work in wellness centers, yoga institutes, rehabilitation clinics,
   "title": "D.PHARMA",
   "totalFee": "1,80,000",
   "duration": "2 YEARS",
-  "image": "https://www.doonbusinessschool.com/images/23/bandphar1.jpg",
+  "image": dpharma,
   "approvedBy": "KESHAV COLLEGE OF PHARMACY, BHIWANI",
   "status": "Ongoing",
   "shortDescription": "Learn pharmaceutical sciences ➤ Understand drug formulation ➤ Get certified ➤ Practical lab training ➤ Build career in pharmacy.",
@@ -1281,7 +1307,7 @@ Graduates can work as pharmacists, pharmacy technicians, medical representatives
   "title": "B.PHARMA",
   "totalFee": "3,20,000",
   "duration": "4 YEARS",
-  "image": "https://hcp.ac.in/img/pham%20(1).jpg",
+  "image": bpharma,
   "approvedBy": "KESHAV COLLEGE OF PHARMACY, BHIWANI",
   "status": "Ongoing",
   "shortDescription": "Study pharmaceutical sciences deeply ➤ Learn drug development ➤ Get certified ➤ Extensive lab & clinical training ➤ Launch pharmacy career.",
@@ -1333,7 +1359,7 @@ Graduates can work as pharmacists, researchers, quality controllers, medical rep
   "title": "ANM",
   "totalFee": "1,20,000",
   "duration": "2 YEARS",
-  "image": "https://srirajnursing.com/wp-content/uploads/2024/04/ANM-NUrsing.jpg",
+  "image": anm,
   "approvedBy": "KARNATAKA UNIVERSITY, INC APPROVED",
   "status": "Ongoing",
   "shortDescription": "Learn nursing & midwifery skills ➤ Community health focus ➤ Get certified ➤ Practical clinical training ➤ Build healthcare career.",
@@ -1385,7 +1411,7 @@ Graduates can work as ANMs in hospitals, primary health centers, NGOs, and gover
   "title": "GNM",
   "totalFee": "2,30,000",
   "duration": "3 YEARS",
-  "image": "https://paruluniversity.ac.in/app/202404/images/course/366579General%20Nursing%20Midwifery%20(GNM).jpg",
+  "image": gnm,
   "approvedBy": "KARNATAKA UNIVERSITY, INC APPROVED",
   "status": "Ongoing",
   "shortDescription": "Comprehensive nursing training ➤ Patient care skills ➤ Certified diploma ➤ Clinical & community practice ➤ Advance your nursing career.",
@@ -1437,7 +1463,7 @@ Graduates can work as staff nurses, community health nurses, or pursue higher st
   "title": "DRT (RADIOGRAPHER)",
   "totalFee": "1,08,000",
   "duration": "2 YEARS",
-  "image": "https://64.media.tumblr.com/bf4241057c9ca0fb4140aa46a952647a/8a39e37ec7e04112-bf/s1280x1920/97ade4bb7db6adc8a0e086456d46e435d835c7e4.jpg",
+  "image": drt,
   "approvedBy": "NCVT APPROVED ITI",
   "status": "Ongoing",
   "shortDescription": "Learn to operate X-ray & imaging equipment ➤ Understand radiographic techniques ➤ Get certified ➤ Gain clinical experience ➤ Start radiography career.",
@@ -1489,7 +1515,7 @@ Graduates can work as radiographers in hospitals, diagnostic labs, clinics, and 
   "title": "HEALTH SANITARY INSPECTOR",
   "totalFee": "25,000",
   "duration": "1 YEAR",
-  "image": "https://www.aptkhordacollege.org/wp-content/uploads/2023/08/diploma-in-health-sanitary-inspector.jpg",
+  "image": hsi,
   "approvedBy": "NCVT APPROVED ITI",
   "status": "Ongoing",
   "shortDescription": "Learn hygiene & sanitation protocols ➤ Monitor public health standards ➤ Get certified ➤ Practical field training ➤ Build career in health inspection.",
