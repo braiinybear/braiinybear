@@ -1,8 +1,7 @@
-
-
 import { Linkedin, Mail, Twitter } from 'lucide-react';
-import raksh from '../../assets/images/Headshot-1.jpg'
-import indu from '../../assets/images/indu.jpeg'
+import { Helmet } from 'react-helmet';
+import raksh from '../../assets/images/Headshot-1.jpg';
+import indu from '../../assets/images/indu.jpeg';
 
 const teamMembers = [
   {
@@ -29,76 +28,82 @@ const teamMembers = [
       email: "morgan@example.com"
     }
   },
-
 ];
 
 const OurPeople = () => {
   return (
-    <div className="pt-28 pb-24 md:px-8 bg-gradient-to-b from-blue-50 to-white min-h-screen mt-10 mx-auto">
-      <div className="max-w-7xl mx-auto">
-        {/* Header Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-extrabold text-gray-800 mb-4">
-            Our <span className="text-[var(--primary-main)]">People</span>
-          </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Meet the dedicated team members who are the heart of our organization,
-            bringing passion and expertise to everything we do.
-          </p>
-        </div>
-        {teamMembers.map((member) => (
-          <div
-            key={member.id}
-            className="flex flex-col md:flex-row bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 mt-10 mx-auto max-w-7xl"
-          >
-            {/* Left Image */}
-            <div className="md:w-1/3 w-full h-64 md:h-auto relative">
-              <img
-                src={member.image}
-                alt={member.name}
-                className="w-full h-full object-cover object-top"
-              />
+    <>
+      <Helmet>
+        <title>Our Team - BrainyBear Educational Training and Society</title>
+        <meta
+          name="description"
+          content="Meet the dedicated team members of BrainyBear Educational Training and Society, committed to education, empowerment, and environmental sustainability."
+        />
+      </Helmet>
 
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-50"></div>
-            </div>
+      <div className="pt-28 pb-24 md:px-8 bg-gradient-to-b from-blue-50 to-white min-h-screen mt-10 mx-auto">
+        <div className="max-w-7xl mx-auto">
+          {/* Header Section */}
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-extrabold text-gray-800 mb-4">
+              Our <span className="text-[var(--primary-main)]">People</span>
+            </h1>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Meet the dedicated team members who are the heart of our organization,
+              bringing passion and expertise to everything we do.
+            </p>
+          </div>
+          {teamMembers.map((member) => (
+            <div
+              key={member.id}
+              className="flex flex-col md:flex-row bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 mt-10 mx-auto max-w-7xl"
+            >
+              {/* Left Image */}
+              <div className="md:w-1/3 w-full h-64 md:h-auto relative">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-full object-cover object-top"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-50"></div>
+              </div>
 
-            {/* Right Content */}
-            <div className="md:w-2/3 p-6 flex flex-col justify-center">
-              <h3 className="text-2xl font-bold text-gray-800 mb-1">{member.name}</h3>
-              <p className="text-md font-medium text-blue-600 mb-3">{member.role}</p>
-              <p className="text-gray-600 mb-5">{member.bio}</p>
+              {/* Right Content */}
+              <div className="md:w-2/3 p-6 flex flex-col justify-center">
+                <h3 className="text-2xl font-bold text-gray-800 mb-1">{member.name}</h3>
+                <p className="text-md font-medium text-blue-600 mb-3">{member.role}</p>
+                <p className="text-gray-600 mb-5">{member.bio}</p>
 
-              {/* Social Links */}
-              <div className="flex space-x-4 pt-3 border-t border-gray-100">
-                <a href={member.socialLinks.linkedin} className="text-gray-500 hover:text-blue-600 transition-colors">
-                  <Linkedin size={20} />
-                </a>
-                <a href={member.socialLinks.twitter} className="text-gray-500 hover:text-blue-400 transition-colors">
-                  <Twitter size={20} />
-                </a>
-                <a href={`mailto:${member.socialLinks.email}`} className="text-gray-500 hover:text-red-500 transition-colors">
-                  <Mail size={20} />
-                </a>
+                {/* Social Links */}
+                <div className="flex space-x-4 pt-3 border-t border-gray-100">
+                  <a href={member.socialLinks.linkedin} className="text-gray-500 hover:text-blue-600 transition-colors">
+                    <Linkedin size={20} />
+                  </a>
+                  <a href={member.socialLinks.twitter} className="text-gray-500 hover:text-blue-400 transition-colors">
+                    <Twitter size={20} />
+                  </a>
+                  <a href={`mailto:${member.socialLinks.email}`} className="text-gray-500 hover:text-red-500 transition-colors">
+                    <Mail size={20} />
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
 
-        {/* Join Our Team CTA */}
-        <div className="mt-20 text-center bg-blue-50 p-10 rounded-2xl shadow-sm">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Join Our Team</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
-            We're always looking for talented individuals to join our growing team.
-            Check out our open positions and become part of our story.
-          </p>
-          <button className="bg-blue-600 hover:bg-[var(--primary-main)] text-white font-medium py-3 px-8 rounded-lg transition-colors duration-300">
-            View Open Positions
-          </button>
+          {/* Join Our Team CTA */}
+          <div className="mt-20 text-center bg-blue-50 p-10 rounded-2xl shadow-sm">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">Join Our Team</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
+              We're always looking for talented individuals to join our growing team.
+              Check out our open positions and become part of our story.
+            </p>
+            <button className="bg-blue-600 hover:bg-[var(--primary-main)] text-white font-medium py-3 px-8 rounded-lg transition-colors duration-300">
+              View Open Positions
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-
-
+    </>
   );
 };
 

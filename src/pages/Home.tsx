@@ -1,11 +1,12 @@
 import Hero from "../components/homepage/Hero";
+import { Helmet } from "react-helmet";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-  import {
+import {
   ArrowRight,
 } from "lucide-react";
 
@@ -15,12 +16,24 @@ import MissionSection from "../sections/home/MissionSection";
 import WorkAreaSection from "../sections/home/WorkAreaSection";
 import { Link } from "react-router-dom";
 import NewsletterSubscriptionSection from "../sections/home/NewsletterSubscriptionSection";
+import InstagramVideoCarousel from "../sections/home/InstagramVideoSection";
 // import Events from "./courses/Courses";
+
 
 const Home: React.FC = () => {
 
   return (
     <div className="bg-gray-50">
+      <Helmet>
+        <title>BraiinyBear | Empowering Livestock & Farmers through AI Insemination</title>
+        <meta name="description" content="BraiinyBear partners with AI Training Institute for artificial insemination training accredited by the Department of Animal Husbandry & Fisheries. Empowering farmers for sustainable livestock growth." />
+        <meta name="keywords" content="BraiinyBear, Artificial Insemination, AI Training Institute, Livestock, Farmer Empowerment, Department of Animal Husbandry, Fisheries, Agriculture, National Gokul Mission" />
+        <meta property="og:title" content="BraiinyBear | Empowering Livestock & Farmers through AI Insemination" />
+        <meta property="og:description" content="Partnering with AI Training Institute accredited by the Department of Animal Husbandry & Fisheries to empower farmers." />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://yourwebsite.com/" />
+      </Helmet>
+
       <Hero />
 
       {/* Our Mission */}
@@ -32,6 +45,9 @@ const Home: React.FC = () => {
 
       {/* Our Work Areas */}
       <WorkAreaSection />
+
+      {/* <InstagramVideoSection /> */}
+      <InstagramVideoCarousel />
 
       {/* Success Stories */}
       <section className="py-16 px-6">
@@ -172,8 +188,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Courses */}
-{/* <Events /> */}
-
+      {/* <Events /> */}
 
       {/* Partners & Supporters */}
       {/* <section className="py-16 px-6 bg-gray-50">

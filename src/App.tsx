@@ -1,51 +1,166 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Layout from './components/layout/Layout'
-import Home from './pages/Home'
-import Overview from './pages/about/Overview'
-import OurPeople from './pages/about/OurPeople'
-import Contact from './pages/ContactUs'
-import Gallery from './pages/Gallery'
-import Education from './pages/work-areas/Education'
-import Environment from './pages/work-areas/Environment'
-import Agriculture from './pages/work-areas/Agriculture'
-import DrugRehabilitation from './pages/work-areas/DrugRehabilitation'
-import AnimalHusbandry from './pages/work-areas/AnimalHusbandry'
-import SeniorCitizen from './pages/work-areas/SeniorCitizen'
-import InnovationTechnology from './pages/work-areas/InnovationTechnology'
-import WomenEmpowerment from './pages/work-areas/WomenEmpowerment'
-import ScrollToTop from './components/ScrollToTop'
-import Course from './pages/courses/Courses'
-import CourseDetails from './pages/courses/CourseDetails'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Suspense, lazy } from 'react';
+
+
+import Layout from './components/layout/Layout';
+import ScrollToTop from './components/ScrollToTop';
+import Loader from './components/Loader';
+
+// Lazy-loaded pages
+const Home = lazy(() => import('./pages/Home'));
+const Overview = lazy(() => import('./pages/about/Overview'));
+const OurPeople = lazy(() => import('./pages/about/OurPeople'));
+const Contact = lazy(() => import('./pages/ContactUs'));
+const Gallery = lazy(() => import('./pages/Gallery'));
+const Education = lazy(() => import('./pages/work-areas/Education'));
+const Environment = lazy(() => import('./pages/work-areas/Environment'));
+const Agriculture = lazy(() => import('./pages/work-areas/Agriculture'));
+const DrugRehabilitation = lazy(() => import('./pages/work-areas/DrugRehabilitation'));
+const AnimalHusbandry = lazy(() => import('./pages/work-areas/AnimalHusbandry'));
+const SeniorCitizen = lazy(() => import('./pages/work-areas/SeniorCitizen'));
+const InnovationTechnology = lazy(() => import('./pages/work-areas/InnovationTechnology'));
+const WomenEmpowerment = lazy(() => import('./pages/work-areas/WomenEmpowerment'));
+const Course = lazy(() => import('./pages/courses/Courses'));
+const CourseDetails = lazy(() => import('./pages/courses/CourseDetails'));
 
 function App() {
-
   return (
-    <>
-        <Router>
-        <ScrollToTop />
+    <Router>
+      <ScrollToTop />
       <Layout>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/overview" element={<Overview />} />
-          <Route path="/about/our-people" element={<OurPeople />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/our-people" element={<OurPeople />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/education" element={<Education />} />
-          <Route path="/environment" element={<Environment />} />
-          <Route path="/agriculture" element={<Agriculture />} />
-          <Route path="/drug-rehabilitation" element={<DrugRehabilitation />} />
-          <Route path="/animal-husbandry" element={<AnimalHusbandry />} />
-          <Route path="/senior-citizens" element={<SeniorCitizen />} />
-          <Route path="/innovation-and-technology" element={<InnovationTechnology />} />
-          <Route path="/women-empowerment" element={<WomenEmpowerment />} />
-           <Route path="/courses" element={<Course />} />
-          <Route path="/courses/:id" element={<CourseDetails />} />
+          <Route
+            path="/"
+            element={
+              <Suspense fallback={<Loader />}>
+                <Home />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/overview"
+            element={
+              <Suspense fallback={<Loader />}>
+                <Overview />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/about/our-people"
+            element={
+              <Suspense fallback={<Loader />}>
+                <OurPeople />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/our-people"
+            element={
+              <Suspense fallback={<Loader />}>
+                <OurPeople />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/gallery"
+            element={
+              <Suspense fallback={<Loader />}>
+                <Gallery />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <Suspense fallback={<Loader />}>
+                <Contact />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/education"
+            element={
+              <Suspense fallback={<Loader />}>
+                <Education />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/environment"
+            element={
+              <Suspense fallback={<Loader />}>
+                <Environment />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/agriculture"
+            element={
+              <Suspense fallback={<Loader />}>
+                <Agriculture />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/drug-rehabilitation"
+            element={
+              <Suspense fallback={<Loader />}>
+                <DrugRehabilitation />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/animal-husbandry"
+            element={
+              <Suspense fallback={<Loader />}>
+                <AnimalHusbandry />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/senior-citizens"
+            element={
+              <Suspense fallback={<Loader />}>
+                <SeniorCitizen />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/innovation-and-technology"
+            element={
+              <Suspense fallback={<Loader />}>
+                <InnovationTechnology />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/women-empowerment"
+            element={
+              <Suspense fallback={<Loader />}>
+                <WomenEmpowerment />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/courses"
+            element={
+              <Suspense fallback={<Loader />}>
+                <Course />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/courses/:id"
+            element={
+              <Suspense fallback={<Loader />}>
+                <CourseDetails />
+              </Suspense>
+            }
+          />
         </Routes>
       </Layout>
     </Router>
-    </>
-  )
+  );
 }
 
-export default App
+export default App;

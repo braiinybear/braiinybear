@@ -87,7 +87,7 @@ Only certified MAITRI technicians should perform AI as per the **National Animal
 
 {
   id: "dairy-entrepreneurship",
-  title: "Dairy Entrepreneurship Training",
+  title: "Dairy Farming",
   status: "Ongoing",
   "totalFee": "6000 + HOSTEL",
   "duration": "21 DAYS",
@@ -123,7 +123,7 @@ This training is designed to equip participants with practical knowledge to star
 },
 {
   id: "goat-farming-training",
-  title: "Goat Farming Training",
+  title: "Goat Farming",
   status: "Ongoing",
   image : img3,
   "totalFee": "8,000",

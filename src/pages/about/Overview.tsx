@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet';
 import bgImage from '../../assets/images/IMG-20250319-WA0012.jpg'
 import { Target, Award, Heart, Lightbulb } from 'lucide-react';
 
@@ -41,7 +42,14 @@ const About: React.FC = () => {
   ];
 
   return (
-    <div className="">
+    <>
+     <Helmet>
+        <title>About Braiiny Bear Society | Empowering Education & Community</title>
+        <meta name="description" content="Learn about Braiiny Bear Society’s mission, vision, core values, and journey to empower communities through education and innovation." />
+        <meta name="keywords" content="Braiiny Bear, education, community empowerment, innovation, sustainability, women empowerment" />
+        <meta name="author" content="Braiiny Bear Society" />
+      </Helmet>
+    <div className="overview-container">
       {/* Hero Banner */}
       <section
         className="relative bg-cover bg-center bg-no-repeat py-24 px-6"
@@ -267,6 +275,7 @@ const About: React.FC = () => {
         </div>
       </section>
     </div>
+    </>
   )
 }
 

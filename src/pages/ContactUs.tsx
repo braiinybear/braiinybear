@@ -1,7 +1,8 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { MapPin, Phone, Mail, Clock, Send, Check } from "lucide-react";
 import emailjs from 'emailjs-com';
+import { Helmet } from "react-helmet";  // <-- import Helmet here
 
 const Contact: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -22,6 +23,7 @@ const Contact: React.FC = () => {
       );
   
       console.log('Email successfully sent:', result.text);
+      setIsSubmitted(true);
       setTimeout(() => {
         setIsSubmitted(false);
         reset();
@@ -33,6 +35,13 @@ const Contact: React.FC = () => {
 
   return (
     <div className="pb-16 bg-gray-100">
+      <Helmet>
+        <title>Contact Us | BraiinyBear</title>
+        <meta name="description" content="Get in touch with BraiinyBear for inquiries, collaborations, and support. We're here to help you." />
+        <meta name="keywords" content="Contact, BraiinyBear, Support, Inquiry, Collaboration" />
+        <meta name="author" content="BraiinyBear" />
+      </Helmet>
+
       {/* Page Header */}
       <div className="relative bg-black-600 text-white h-96 flex items-center justify-center mb-12">
         <div className="absolute inset-0 bg-[var(--primary-main)] opacity-10"></div>
@@ -43,7 +52,6 @@ const Contact: React.FC = () => {
           </p>
         </div>
       </div>
-
 
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">

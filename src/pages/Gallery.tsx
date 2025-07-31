@@ -1,8 +1,9 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 import img1 from "../assets/images/IMG_3992.JPG";
 import img2 from "../assets/images/IMG_3993.JPG";
-import img3 from "../assets/images/IMG_3994.JPG"
+import img3 from "../assets/images/IMG_3994.JPG";
 import img4 from "../assets/images/IMG_3995.JPG";
 import img5 from "../assets/images/IMG_3997.JPG";
 import img6 from "../assets/images/IMG_3998.JPG";
@@ -18,9 +19,9 @@ import img15 from "../assets/images/IMG_4007.JPG";
 import img16 from "../assets/images/IMG_4008.JPG";
 import img17 from "../assets/images/IMG_4009.JPG";
 import img18 from "../assets/images/img.JPG";
-import img19 from "../assets/images/IMG.jpeg"
-import img20 from "../assets/images/IMG02.jpeg"
-import img21 from "../assets/images/IMG01.jpeg"
+import img19 from "../assets/images/IMG.jpeg";
+import img20 from "../assets/images/IMG02.jpeg";
+import img21 from "../assets/images/IMG01.jpeg";
 
 const images = [
   img1, img2, img3, img4, img5, img6, img7, img8, img9, img10,
@@ -30,6 +31,19 @@ const images = [
 const Gallery: React.FC = () => {
   return (
     <section className="pt-28 pb-16 px-4 sm:px-10 bg-gradient-to-br from-gray-50 to-white min-h-screen">
+      <Helmet>
+        <title>Gallery | BraiinyBear - Capturing Moments of Empowerment</title>
+        <meta
+          name="description"
+          content="Explore BraiinyBear's gallery showcasing photos from our events, activities, and training sessions empowering farmers and communities."
+        />
+        <meta name="keywords" content="BraiinyBear gallery, events photos, training sessions, farmer empowerment, livestock, agriculture" />
+        <meta property="og:title" content="Gallery | BraiinyBear" />
+        <meta property="og:description" content="Browse photos capturing the spirit of empowerment in our community programs." />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://yourwebsite.com/gallery" />
+      </Helmet>
+
       <h1 className="text-5xl font-extrabold text-center text-gray-800 mb-4">
         Our <span className="text-[var(--primary-main)]">Gallery</span>
       </h1>

@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="ml-3 flex flex-col leading-tight">
                 <span className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-brainy-blue">
-                  Brainy Bear Educational and Training Society
+                  BraiinyBear Educational and Training Society
                 </span>
                 <span className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-brainy-blue">
                   ब्रैनीबियर शिक्षा प्रशिक्षण एवं सामाजिक संस्था
