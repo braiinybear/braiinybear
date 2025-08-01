@@ -9,13 +9,14 @@ const Footer: React.FC = () => {
     { name: "Home", path: "/" },
     { name: "Overview", path: "/overview" },
     { name: "Our People", path: "/about/our-people" },
-    { name: "What We Do", path: "/our-work" },
+    // { name: "What We Do", path: "/our-work" },
+    { name: "Faq", path: "/faq" },
     { name: "Gallery", path: "/gallery" },
     { name: "Inquiry", path: "/contact" },
   ];
 
   return (
-    <footer className="bg-gray-100 text-black py-8 md:py-12">
+    <footer className="bg-[#dbdddf] text-black py-8 md:py-12">
       <div className="container mx-auto px-4 md:px-8 flex flex-col items-center justify-center">
         {/* Main Footer Content */}
         <div className="flex flex-col md:flex-row gap-4 md:gap-8">
