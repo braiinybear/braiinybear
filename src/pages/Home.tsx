@@ -16,7 +16,7 @@ import MissionSection from "../sections/home/MissionSection";
 import WorkAreaSection from "../sections/home/WorkAreaSection";
 import { Link } from "react-router-dom";
 import NewsletterSubscriptionSection from "../sections/home/NewsletterSubscriptionSection";
-// import InstagramVideoCarousel from "../sections/home/InstagramVideoSection";
+import InstagramVideoCarousel from "../sections/home/InstagramVideoSection";
 // import Events from "./courses/Courses";
 
 
@@ -47,7 +47,7 @@ const Home: React.FC = () => {
       <WorkAreaSection />
 
       {/* InstagramVideoSection  */}
-      {/* <InstagramVideoCarousel /> */}
+      <InstagramVideoCarousel />
 
       {/* Success Stories */}
       <section className="py-16 px-6">

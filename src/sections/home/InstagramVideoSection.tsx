@@ -1,40 +1,42 @@
 import React, { useState, useRef, useEffect } from "react";
 
-const videos = [
+type VideoItem = {
+  id: number;
+  thumbnail: string;
+  url: string;
+  title?: string;
+};
+
+const videos: VideoItem[] = [
   {
     id: 1,
-    title: "Nature Documentary",
-    thumbnail:
-      "https://images.unsplash.com/photo-1744231413143-67086a79977b?w=500&auto=format&fit=crop&q=60",
-    url: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm",
+    thumbnail: "https://images.unsplash.com/photo-1744231413143-67086a79977b?w=500&auto=format&fit=crop&q=60",
+    url: "/videos/drug .mp4",
   },
   {
     id: 2,
-    title: "City Timelapse",
-    thumbnail:
-      "https://images.unsplash.com/photo-1751575004372-2eeba67e52e5?w=500&auto=format&fit=crop&q=60",
-    url: "",
+    thumbnail: "https://images.unsplash.com/photo-1751575004372-2eeba67e52e5?w=500&auto=format&fit=crop&q=60",
+    url: "/videos//Agriculture.mp4",
   },
   {
     id: 3,
-    title: "Ocean Waves",
-    thumbnail:
-      "https://images.unsplash.com/photo-1752035680950-79d735be5499?w=500&auto=format&fit=crop&q=60",
-    url: "",
+    thumbnail: "https://images.unsplash.com/photo-1752035680950-79d735be5499?w=500&auto=format&fit=crop&q=60",
+    url: "/videos//eaducation .mp4",
   },
   {
     id: 4,
-    title: "Mountain Adventure",
-    thumbnail:
-      "https://images.unsplash.com/photo-1751528962027-ac9f0370ff5d?w=500&auto=format&fit=crop&q=60",
-    url: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm",
+    thumbnail: "https://images.unsplash.com/photo-1751528962027-ac9f0370ff5d?w=500&auto=format&fit=crop&q=60",
+    url: "/videos//enviroment .mp4",
   },
   {
     id: 5,
-    title: "Urban Life",
-    thumbnail:
-      "https://images.unsplash.com/photo-1753622118655-136a65245d89?w=500&auto=format&fit=crop&q=60",
-    url: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm",
+    thumbnail: "https://images.unsplash.com/photo-1753622118655-136a65245d89?w=500&auto=format&fit=crop&q=60",
+    url: "/videos/old-.mp4",
+  },
+  {
+    id: 6,
+    thumbnail: "https://images.unsplash.com/photo-1753622118655-136a65245d89?w=500&auto=format&fit=crop&q=60",
+    url: "/videos/old-2.mp4",
   },
 ];
 
@@ -130,11 +132,11 @@ const InstagramVideoCarousel = () => {
   };
 
   return (
-    <div className="relative mx-auto max-w-6xl px-4 p-6">
-     <div className="titleContainer mb-8">
-       <h2 className="text-3xl font-bold text-center mb-3">Our Instagram</h2>
+    <div className="relative mx-auto max-w-6xl px-4 p-6 scale-104">
+      <div className="titleContainer mb-8">
+        <h2 className="text-3xl font-bold text-center mb-3">Our Instagram</h2>
         <div className="mx-auto mb-12 w-24 h-1 rounded-full bg-gradient-to-r from-[var(--primary-main)] to-blue-500"></div>
-     </div>
+      </div>
       <div
         className="relative h-[520px] w-full overflow-hidden rounded-xl shadow-gray-500 shadow-lg bg-[#111829]"
         onMouseEnter={() => setIsHovered(true)}
@@ -147,11 +149,11 @@ const InstagramVideoCarousel = () => {
             transform: adjustTransform(video.positionOffset),
           };
 
-          const titleOverlay = (
-            <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/70 to-transparent text-white text-sm font-medium px-4 py-2 rounded-b-[15px] text-left">
-              {video.title}
+          const titleOverlay = video?.title ? (
+            <div className="absolute bottom-0 left-0 w-full bg-black/50 text-white p-4 rounded-b-lg">
+              <h3 className="text-lg font-semibold">{video.title}</h3>
             </div>
-          );
+          ) : null;
 
           if (video.positionOffset === 0 && video.url) {
             return (
@@ -159,7 +161,7 @@ const InstagramVideoCarousel = () => {
                 <video
                   ref={videoRef}
                   src={video.url}
-                  className="w-full h-full object-cover rounded-[15px]"
+                  className="w-full h-full object-cover rounded-[15px] hover:scale-108 transition-transform duration-500 ease-in-out"
                   autoPlay
                   muted
                   playsInline
@@ -178,7 +180,7 @@ const InstagramVideoCarousel = () => {
               <div key={video.id} style={style} className="relative overflow-hidden">
                 <img
                   src={video.thumbnail}
-                  alt={video.title}
+                  alt={video.title ?? "Video thumbnail"}
                   className="w-full h-full object-cover rounded-[15px]"
                   draggable={false}
                 />
