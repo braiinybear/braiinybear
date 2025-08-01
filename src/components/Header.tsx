@@ -111,15 +111,15 @@ const Header: React.FC = () => {
             />
           </div>
 
-          {/* Title text container grows to fill remaining space */}
+          {/* Title text container with wrapping on small screens */}
           <div
-            className="ml-3 flex-grow min-w-0"
+            className="ml-3 flex-grow min-w-0 w-full sm:w-auto"
             style={{ wordBreak: "break-word" }}
           >
-            <span className="block font-semibold text-[1.125rem] sm:text-[1.25rem] text-brainy-blue whitespace-normal">
+            <span className="block font-semibold text-[1.125rem] sm:text-[1.25rem] text-[var(--primary-main) text-brainy-blue sm:whitespace-nowrap">
               BraiinyBear Educational and Training Society
             </span>
-            <span className="block font-semibold text-[1.125rem] sm:text-[1.25rem] text-brainy-blue whitespace-normal">
+            <span className="block font-semibold text-[1.125rem] sm:text-[1.25rem] text-[var(--primary-main) text-brainy-blue sm:whitespace-nowrap">
               ब्रैनीबियर शिक्षा प्रशिक्षण एवं सामाजिक संस्था
             </span>
           </div>
@@ -129,69 +129,69 @@ const Header: React.FC = () => {
         <nav className="hidden lg:flex content-center items-center space-x-4 xl:space-x-8 flex-shrink-0">
           <div className="flex flex-col items-end gap-4">
             <div className="nav-items flex items-center space-x-2 xl:space-x-8">
-            {navItems.map((item) => (
-              <div key={item.name} className="relative group">
-                <Link
-                  to={item.path}
-                  onClick={() => setActiveItem(item.path)}
-                  className={`relative text-base xl:text-lg font-medium transition-all duration-300 group-hover:text-[var(--primary-main)] ${
-                    activeItem === item.path
-                      ? "text-[var(--primary-main)]"
-                      : "text-black"
-                  } flex items-center whitespace-nowrap`}
-                  aria-expanded={item.children ? "false" : undefined}
-                  aria-haspopup={item.children ? "true" : undefined}
-                >
-                  {item.name}
-                  {item.children && (
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  )}
-                  <span
-                    className={`absolute -bottom-2 left-0 w-0 h-0.5 bg-[var(--primary-main)] transition-all duration-300 ${
-                      activeItem === item.path ? "w-full" : "group-hover:w-full"
-                    }`}
-                  ></span>
-                </Link>
-
-                {/* Desktop Dropdown */}
-                {item.children && (
-                  <div className="absolute left-0 mt-2 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 min-w-[12.5rem]">
-                    {item.children.map((child) => (
-                      <Link
-                        key={child.path}
-                        to={child.path}
-                        onClick={() => {
-                          setActiveItem(child.path);
-                          setIsMenuOpen(false);
-                        }}
-                        className="block px-4 py-2 text-sm text-black hover:bg-gray-100 hover:text-[var(--primary-main)] transition-all duration-200 whitespace-nowrap"
+              {navItems.map((item) => (
+                <div key={item.name} className="relative group">
+                  <Link
+                    to={item.path}
+                    onClick={() => setActiveItem(item.path)}
+                    className={`relative text-base xl:text-lg font-medium transition-all duration-300 group-hover:text-[var(--primary-main)] ${
+                      activeItem === item.path
+                        ? "text-[var(--primary-main)]"
+                        : "text-black"
+                    } flex items-center whitespace-nowrap`}
+                    aria-expanded={item.children ? "false" : undefined}
+                    aria-haspopup={item.children ? "true" : undefined}
+                  >
+                    {item.name}
+                    {item.children && (
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-4 w-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        aria-hidden="true"
                       >
-                        {child.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-          <div className="flex space-x-2 xl:space-x-4 pr-2">
-            <button className={buttonClasses}>Volunteer</button>
-            <button className={buttonClasses}>Get Involved</button>
-          </div>
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    )}
+                    <span
+                      className={`absolute -bottom-2 left-0 w-0 h-0.5 bg-[var(--primary-main)] transition-all duration-300 ${
+                        activeItem === item.path ? "w-full" : "group-hover:w-full"
+                      }`}
+                    ></span>
+                  </Link>
+
+                  {/* Desktop Dropdown */}
+                  {item.children && (
+                    <div className="absolute left-0 mt-2 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 min-w-[12.5rem]">
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.path}
+                          to={child.path}
+                          onClick={() => {
+                            setActiveItem(child.path);
+                            setIsMenuOpen(false);
+                          }}
+                          className="block px-4 py-2 text-sm text-black hover:bg-gray-100 hover:text-[var(--primary-main)] transition-all duration-200 whitespace-nowrap"
+                        >
+                          {child.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+            <div className="flex space-x-2 xl:space-x-4 pr-2">
+              <button className={buttonClasses}>Volunteer</button>
+              <button className={buttonClasses}>Get Involved</button>
+            </div>
           </div>
         </nav>
 
@@ -202,7 +202,7 @@ const Header: React.FC = () => {
             e.stopPropagation();
             setIsMenuOpen(!isMenuOpen);
           }}
-          className="lg:hidden text-black focus:outline-none bg-white/80 p-2 rounded-md transition-all duration-300 hover:bg-gray-100 mr-2"
+          className="lg:hidden text-black focus:outline-none bg-white/80 p-2 rounded-md transition-all duration-300 hover:bg-gray-100 absolute right-4 top-1/2 transform -translate-y-1/2 z-50"
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           aria-expanded={isMenuOpen}
         >
@@ -296,7 +296,7 @@ const Header: React.FC = () => {
                       activeItem === item.path
                         ? "text-[var(--primary-main)] bg-gray-100"
                         : "text-black hover:text-[var(--primary-main)] hover:bg-gray-100"
-                    } whitespace-nowrap`}
+                    }`}
                     onClick={() => {
                       setActiveItem(item.path);
                       setIsMenuOpen(false);
@@ -307,16 +307,6 @@ const Header: React.FC = () => {
                 )}
               </li>
             ))}
-            <ul className="w-full flex flex-col items-center space-y-2 mt-4">
-              <li className="w-full px-4 pt-4 flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
-                <button className={`${buttonClasses} w-full sm:w-1/2`}>
-                  Volunteer
-                </button>
-                <button className={`${buttonClasses} w-full sm:w-1/2`}>
-                  Donate
-                </button>
-              </li>
-            </ul>
           </ul>
         </div>
       </div>
