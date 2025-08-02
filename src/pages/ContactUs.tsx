@@ -210,14 +210,13 @@ const Contact: React.FC = () => {
         <div className="mt-12 bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="relative w-full h-80 sm:h-[500px]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d53575.75207559795!2d78.02122877045902!3d30.325073917930606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1744367721722!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d444.19928262020716!2d78.05097314666982!3d30.340222096789756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390929000460a1ab%3A0xfbe090db47be29a1!2sBrainy%20Bear%20Educational%20and%20Training%20Society!5e0!3m2!1sen!2sin!4v1754121540956!5m2!1sen!2sin"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="absolute top-0 left-0 w-full h-full border-0"
             ></iframe>
           </div>
         </div>
-
         {/* FAQ Redirect Section */}
         <div className="mt-16 text-center">
           <h2 className="text-3xl font-bold mb-6 text-gray-800">Have Questions?</h2>
