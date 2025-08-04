@@ -6,9 +6,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-import {
-  ArrowRight,
-} from "lucide-react";
+// import {
+//   ArrowRight,
+// } from "lucide-react";
 
 import img2 from "../assets/images/IMG_3998.JPG";
 import ImpactSection from "../sections/home/ImpactSection";
@@ -31,7 +31,7 @@ const Home: React.FC = () => {
         <meta property="og:title" content="BraiinyBear | Empowering Livestock & Farmers through AI Insemination" />
         <meta property="og:description" content="Partnering with AI Training Institute accredited by the Department of Animal Husbandry & Fisheries to empower farmers." />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://yourwebsite.com/" />
+        <link rel="canonical" href="https://braiinybear.org/" />
       </Helmet>
 
       <Hero />
@@ -49,107 +49,9 @@ const Home: React.FC = () => {
       {/* InstagramVideoSection  */}
       <InstagramVideoCarousel />
 
-      {/* Success Stories */}
-      <section className="py-16 px-6">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-3">
-              Success Stories
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-[var(--primary-main)] to-blue-500 mx-auto mb-6 rounded-full"></div>
-            <p className="max-w-2xl mx-auto text-gray-600">
-              Real stories of transformation and hope from our beneficiaries
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg overflow-hidden shadow-md">
-              <img
-                src="/api/placeholder/600/400"
-                alt="Education success story"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">
-                  Education
-                </span>
-                <h3 className="text-xl font-semibold mt-3 mb-2">
-                  From Dropout to Graduate
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Ravi was a school dropout due to financial constraints. Our
-                  education program provided him with scholarships and
-                  mentoring, enabling him to complete his education and secure
-                  employment.
-                </p>
-                <Link
-                  to="/stories/education"
-                  className="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center"
-                >
-                  Read more <ArrowRight className="ml-1 h-4 w-4" />
-                </Link>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-lg overflow-hidden shadow-md">
-              <img
-                src="/api/placeholder/600/400"
-                alt="Women empowerment story"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <span className="bg-pink-100 text-pink-800 text-xs font-medium px-2.5 py-0.5 rounded">
-                  Women Empowerment
-                </span>
-                <h3 className="text-xl font-semibold mt-3 mb-2">
-                  The Entrepreneur's Journey
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Seema joined our skills training program and started her own
-                  tailoring business. Today, she employs five women from her
-                  village and supports her family with dignity.
-                </p>
-                <Link
-                  to="/stories/women-empowerment"
-                  className="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center"
-                >
-                  Read more <ArrowRight className="ml-1 h-4 w-4" />
-                </Link>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-lg overflow-hidden shadow-md">
-              <img
-                src="/api/placeholder/600/400"
-                alt="Agriculture success story"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <span className="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">
-                  Agriculture
-                </span>
-                <h3 className="text-xl font-semibold mt-3 mb-2">
-                  Sustainable Farming Success
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  A farming collective of 15 families adopted organic farming
-                  practices through our agricultural program, increasing their
-                  yield by 40% while reducing costs and environmental impact.
-                </p>
-                <Link
-                  to="/stories/agriculture"
-                  className="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center"
-                >
-                  Read more <ArrowRight className="ml-1 h-4 w-4" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Volunteer/Donate CTA */}
-      <section className="py-16 px-6 bg-blue-50">
+      <section className="mt-20 py-16 px-6 bg-blue-50">
         <div className="container mx-auto">
           <div className="bg-white rounded-lg shadow-xl overflow-hidden">
             <div className="grid md:grid-cols-2">
