@@ -69,12 +69,12 @@ const Home: React.FC = () => {
                   >
                     Volunteer With Us
                   </Link>
-                  <Link
+                  {/* <Link
                     to="/donate"
                     className="bg-[var(--primary-main)] hover:bg-[var(--primary-main)] text-white font-bold py-3 px-6 rounded-md text-center transition-colors duration-300"
                   >
                     Donate Now
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
               <div className="hidden md:block relative">

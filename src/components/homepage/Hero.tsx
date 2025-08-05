@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import backgroundImage1 from "../../assets/heroimg3.jpeg";
 import backgroundImage2 from "../../assets/heroimg2.jpeg";
 import backgroundImage3 from "../../assets/heroimg.jpeg";
+import { Link } from "react-router-dom";
 
 interface Slide {
   image: string;
@@ -122,7 +123,8 @@ const Hero: React.FC = () => {
 
                   <div className="flex flex-col sm:flex-row gap-4">
                     {slide.cta && (
-                      <button className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg flex items-center">
+                      <Link to="/courses">
+                      <button className=" cursor-pointer bg-yellow-400 hover:bg-yellow-500 text-blue-900 px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg flex items-center">
                         {slide.cta}
                         <svg
                           className="w-5 h-5 ml-2"
@@ -138,10 +140,13 @@ const Hero: React.FC = () => {
                           />
                         </svg>
                       </button>
+                      </Link>
                     )}
-                    <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-white/10">
+                    <Link to="/courses">
+                    <button className="cursor-pointer bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-white/10">
                       Discover More
                     </button>
+                    </Link>
                   </div>
                 </div>
               </div>

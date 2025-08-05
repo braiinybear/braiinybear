@@ -53,11 +53,11 @@ const Header: React.FC = () => {
     { name: "Home", path: "/" },
     {
       name: "Who We Are",
-      path: "/about",
+      path: "/overview",
       children: [
         { name: "Overview", path: "/overview" },
         { name: "Our People", path: "/about/our-people" },
-        { name: "Achievements", path: "/about/achievements" },
+        // { name: "Achievements", path: "/about/achievements" },
       ],
     },
     { name: "Courses", path: "/courses" },
@@ -200,12 +200,19 @@ const Header: React.FC = () => {
                 ))}
               </div>
               <div className="flex space-x-2 xl:space-x-4 pr-2 max-h-fit">
-                <button className={`${buttonClasses} text-nowrap`}>
+             <Link to={"/volunteer"} className="flex items-center">
+                <button className={`${buttonClasses} text-nowrap cursor-pointer`}>
                   Volunteer
                 </button>
-                <button className={`${buttonClasses} text-nowrap`}>
-                  Get Involved
+              </Link>
+             <Link to={"/volunteer"} className="flex items-center">
+                <button className={`${buttonClasses} text-nowrap cursor-pointer`}>
+                   Get Involved
                 </button>
+              </Link>
+                {/* <button className={`${buttonClasses} text-nowrap`}>
+                  Get Involved
+                </button> */}
               </div>
             </div>
           </nav>

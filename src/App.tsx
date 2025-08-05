@@ -26,6 +26,12 @@ const InnovationTechnology = lazy(
 const WomenEmpowerment = lazy(
   () => import("./pages/work-areas/WomenEmpowerment")
 );
+const OurWork = lazy(
+  () => import("./pages/OurWork")
+);
+const Volunteer = lazy(
+  () => import("./pages/volunteer")
+);
 const Course = lazy(() => import("./pages/courses/Courses"));
 const CourseDetails = lazy(() => import("./pages/courses/CourseDetails"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -127,6 +133,16 @@ function App() {
           }
         />
         <Route
+          path="/volunteer"
+          element={
+            <Suspense fallback={<Loader />}>
+              <Layout>
+                <Volunteer />
+              </Layout>
+            </Suspense>
+          }
+        />
+        <Route
           path="/drug-rehabilitation"
           element={
             <Suspense fallback={<Loader />}>
@@ -192,6 +208,16 @@ function App() {
             <Suspense fallback={<Loader />}>
               <Layout>
                 <Faq />
+              </Layout>
+            </Suspense>
+          }
+        />
+        <Route
+          path="/our-work"
+          element={
+            <Suspense fallback={<Loader />}>
+              <Layout>
+                <OurWork />
               </Layout>
             </Suspense>
           }
