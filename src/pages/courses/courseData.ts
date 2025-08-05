@@ -770,57 +770,58 @@ Graduates can work as operation theatre technicians in hospitals, clinics, and s
     "approvedBy": "LAKSHAY GROUP OF EDUCATION",
     "status": "Ongoing",
     "shortDescription": `Gain expertise in operation theatre procedures, assist surgeons and medical staff, and receive hands-on practical training. This 2-year program, approved by the Paramedical Council, New Delhi, is designed to prepare you for a rewarding career in surgical support and healthcare.`,
-    "fullDescription": `### What is BEMS – Bachelor in Electro Homoeopathy?  
-BEMS (Bachelor in Electro Homoeopathy Medicine and Surgery) is a 4-year undergraduate program focused on electro homoeopathy – a natural, herbal-based medical system. The course provides deep knowledge of plant-based remedies and non-toxic treatments, aiming to restore balance in the body’s systems without side effects.
+    "fullDescription":`
+### What is NTT – Nursery Teacher Training?  
+NTT (Nursery Teacher Training) is a 2-year diploma program designed to train individuals in early childhood education and teaching methods. It focuses on child psychology, pedagogy, classroom management, and creative activities to nurture young learners during their foundational years.
 
-### BEMS – बैचलर इन इलेक्ट्रो होम्योपैथी क्या है?  
-BEMS (बैचलर इन इलेक्ट्रो होम्योपैथी मेडिसिन एंड सर्जरी) एक 4 वर्षीय स्नातक कोर्स है, जो इलेक्ट्रो होम्योपैथी पर आधारित है – यह एक प्राकृतिक और हर्बल चिकित्सा प्रणाली है। इस कोर्स में हर्बल दवाओं के प्रयोग द्वारा बिना किसी दुष्प्रभाव के शरीर में संतुलन स्थापित करने का ज्ञान दिया जाता है।
+### NTT – नर्सरी टीचर ट्रेनिंग क्या है?  
+एनटीटी (नर्सरी टीचर ट्रेनिंग) एक 2 वर्षीय डिप्लोमा कोर्स है, जो प्रारंभिक बाल शिक्षा और शिक्षण विधियों में प्रशिक्षण प्रदान करता है। इसमें बाल मनोविज्ञान, शिक्षाशास्त्र, कक्षा प्रबंधन और रचनात्मक गतिविधियों का गहन अध्ययन कराया जाता है, ताकि बच्चों के प्रारंभिक वर्षों को सही दिशा दी जा सके।
 
 ---
 
 ### Course Benefits  
-- Learn herbal-based non-toxic treatments  
-- In-depth study of electro homoeopathy principles  
-- Holistic, side-effect-free medical approach  
-- Opportunities in private practice and alternative healthcare centers  
-- Approved by Paramedical Council, New Delhi
+- Learn modern teaching techniques for pre-primary students  
+- Develop understanding of child development and psychology  
+- Hands-on training in nursery school environments  
+- Boost confidence and communication skills  
+- Approved by Lakshay Group of Education
 
 ### कोर्स के लाभ  
-- बिना साइड इफेक्ट वाली हर्बल चिकित्सा पद्धति सीखें  
-- इलेक्ट्रो होम्योपैथी के सिद्धांतों का गहन अध्ययन  
-- सम्पूर्ण और प्राकृतिक इलाज की विधि  
-- निजी प्रैक्टिस और आयुर्वेदिक/वैकल्पिक चिकित्सा केंद्रों में अवसर  
-- पैरामेडिकल काउंसिल, नई दिल्ली द्वारा मान्यता प्राप्त
+- प्री-प्राइमरी छात्रों के लिए आधुनिक शिक्षण तकनीकों का प्रशिक्षण  
+- बाल विकास और मनोविज्ञान की समझ विकसित करें  
+- नर्सरी स्कूल के वातावरण में व्यावहारिक प्रशिक्षण  
+- आत्मविश्वास और संप्रेषण कौशल में वृद्धि  
+- लक्षय ग्रुप ऑफ एजुकेशन द्वारा मान्यता प्राप्त
 
 ---
 
 ### Duration and Fee  
-- **Duration:** 4 Years  
-- **Total Fee:** ₹50,000  
+- **Duration:** 2 Years  
+- **Total Fee:** ₹12,000
 
 ### अवधि और शुल्क  
-- **अवधि:** 4 वर्ष  
-- **कुल शुल्क:** ₹50,000  
+- **अवधि:** 2 वर्ष  
+- **कुल शुल्क:** ₹12,000
 
 ---
 
 ### Eligibility Criteria  
-- Minimum age: 17 years  
-- Qualification: 12th pass (Science stream preferred)  
-- Interest in alternative and herbal medicine
+- Minimum age: 16 years  
+- Qualification: 10+2 pass in any stream  
+- Passion for teaching and child care
 
 ### पात्रता मानदंड  
-- न्यूनतम आयु: 17 वर्ष  
-- योग्यता: 12वीं पास (विज्ञान विषय वरीयता प्राप्त)  
-- वैकल्पिक और हर्बल चिकित्सा में रुचि होनी चाहिए
+- न्यूनतम आयु: 16 वर्ष  
+- योग्यता: 10+2 किसी भी विषय में उत्तीर्ण  
+- बच्चों को सिखाने और उनकी देखभाल में रुचि होनी चाहिए
 
 ---
 
-### Career Opportunities After BEMS  
-Graduates can work as electro homoeopathy practitioners, health consultants, or set up their own clinics. They can also collaborate with wellness centers, naturopathy clinics, and herbal medicine manufacturers. BEMS offers a sustainable and growing career path in natural healing.
+### Career Opportunities After NTT  
+Graduates can work as nursery teachers, pre-primary educators, or assistant teachers in private and public schools. The course also opens doors to starting one’s own daycare, play school, or working as a curriculum developer for early education centers.
 
-### BEMS के बाद करियर के अवसर  
-पाठ्यक्रम पूर्ण करने के बाद छात्र इलेक्ट्रो होम्योपैथी चिकित्सक, स्वास्थ्य सलाहकार के रूप में कार्य कर सकते हैं या स्वयं का क्लिनिक शुरू कर सकते हैं। वे वेलनेस सेंटर्स, नेचुरोपैथी क्लीनिक्स और हर्बल दवा उद्योग से भी जुड़ सकते हैं। यह कोर्स प्राकृतिक चिकित्सा में एक स्थायी और उभरता हुआ करियर विकल्प प्रदान करता है।
+### NTT के बाद करियर के अवसर  
+इस कोर्स के बाद छात्र नर्सरी शिक्षक, प्री-प्राइमरी शिक्षक या सहायक शिक्षक के रूप में सरकारी व निजी स्कूलों में कार्य कर सकते हैं। साथ ही स्वयं का डे-केयर, प्ले स्कूल शुरू करने या प्रारंभिक शिक्षा केंद्रों के लिए पाठ्यक्रम डिजाइनर बनने का अवसर भी मिलता है।
 `
   },
   {

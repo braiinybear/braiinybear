@@ -78,7 +78,7 @@ const Header: React.FC = () => {
   return (
     <>
       {/* Top Banner Strip */}
-      <div className="w-full bg-[#ffd16d] text-white text-xs sm:text-sm font-semibold py-2 px-4 sm:px-8 flex items-center justify-between h-[6rem]">
+      <div className="w-full bg-[#ffd16d] text-white text-xs sm:text-sm font-semibold py-2 px-4 sm:px-8 flex items-center justify-between h-[6.5rem]">
         <div className="flex items-center space-x-2">
           <Link
             to="/"
@@ -114,13 +114,13 @@ const Header: React.FC = () => {
         </div>
 
         {/* Right Logos - Show only on lg and up */}
-        <div className="hidden lg:flex items-center space-x-2 sm:space-x-3">
+        <div className="hidden lg:flex items-center gap-6 space-x-2 sm:space-x-3 mr-4">
           {topLogos.map((logo) => (
             <img
               key={logo.alt}
               src={logo.src}
               alt={logo.alt}
-              className="h-12 sm:h-[3rem] md:h-[4rem] lg:h-[5rem] object-contain drop-shadow-lg"
+              className={` ${logo.alt === "Azadi Ka Amrit Mahotsav" ? "h-14 sm:h-[4rem] md:h-[5rem] lg:h-[6.5rem]" : "h-12 sm:h-[3rem] md:h-[4rem] lg:h-[5rem]"} object-contain drop-shadow-lg  ${logo.alt === "Narendra Modi Ji" ? "h-12 sm:h-[3.5rem] md:h-[4.5rem] lg:h-[5.5rem]" : "h-12 sm:h-[3rem] md:h-[4rem] lg:h-[5rem]"}` }
               style={{ filter: "drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5))" }}
 
             />
@@ -211,13 +211,14 @@ const Header: React.FC = () => {
           </nav>
 
           {/* ✅ Fixed: Left Logos for Mobile (horizontal layout) */}
-          <div className="flex flex-row items-center justify-start space-x-2 px-2 lg:hidden w-full max-w-full overflow-x-auto">
+          <div className="flex flex-row items-center justify-start space-x-2 px-2 lg:hidden w-full max-w-full overflow-x-auto gap-4">
             {topLogos.map((logo) => (
               <img
                 key={logo.alt}
                 src={logo.src}
                 alt={logo.alt}
-                className="h-12 sm:h-[4rem] md:h-[5rem] object-contain drop-shadow-lg"
+                className={`${logo.alt === "Azadi Ka Amrit Mahotsav" ? "h-15 sm:h-[4.5rem] md:h-[6rem]" : "h-12 sm:h-[4rem] md:h-[5rem]"} object-contain drop-shadow-lg  ${logo.alt === "Narendra Modi Ji" ? "h-15 sm:h-[4.5rem] md:h-[5.5rem] " : "h-12 sm:h-[4rem] md:h-[5rem]"}
+                ` }
               style={{ filter: "drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5))" }}
 
               />

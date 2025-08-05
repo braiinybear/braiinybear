@@ -60,7 +60,7 @@ const Course: React.FC = () => {
                 >
                   {/* Course Image */}
                   {course.image && (
-                    <div className="relative h-50 overflow-hidden">
+                    <div className="relative h-55 overflow-hidden">
                       <img
                         src={course.image}
                         alt={course.title}

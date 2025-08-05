@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { courseData } from "./courseData";
 import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 
 const CourseDetails = () => {
   const { id } = useParams();
@@ -38,7 +39,9 @@ const CourseDetails = () => {
           {/* Left Column: Description */}
           <div className="lg:col-span-2">
             <div className="prose prose-p:leading-relaxed prose-headings:mt-6 prose-headings:font-semibold prose-headings:text-gray-800 prose-p:text-gray-700 prose-strong:text-gray-900 max-w-none space-y-6">
-              <ReactMarkdown>{event.fullDescription}</ReactMarkdown>
+              <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+                {event.fullDescription}
+              </ReactMarkdown>
             </div>
           </div>
 
