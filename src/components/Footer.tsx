@@ -9,10 +9,11 @@ const Footer: React.FC = () => {
     { name: "Home", path: "/" },
     { name: "Overview", path: "/overview" },
     { name: "Our People", path: "/about/our-people" },
-    // { name: "What We Do", path: "/our-work" },
+    { name: "What We Do", path: "/our-work" },
     { name: "Faq", path: "/faq" },
     { name: "Gallery", path: "/gallery" },
     { name: "Inquiry", path: "/contact" },
+    { name: "Privacy Policy", path: "/privacy-policy" },
   ];
 
   return (

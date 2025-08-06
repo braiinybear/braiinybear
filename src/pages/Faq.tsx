@@ -1,45 +1,13 @@
 import { Helmet } from "react-helmet";
-import { MessageSquare, Clock, HelpCircle, Rocket } from "lucide-react";
 
-const faqs = [
-  {
-    question: "What services do you offer?",
-    answer:
-      "We offer a wide range of services including web design, development, branding, and digital marketing solutions tailored to your specific needs.",
-    icon: <Rocket className="h-8 w-8 text-blue-600" />,
-  },
-  {
-    question: "How quickly can you respond to my inquiry?",
-    answer:
-      "We typically respond to all inquiries within 24 hours during business days. For urgent matters, please call our office directly.",
-    icon: <Clock className="h-8 w-8 text-yellow-500" />,
-  },
-  {
-    question: "Do you offer free consultations?",
-    answer:
-      "Yes, we offer a free 30-minute initial consultation to discuss your project needs and how we can help you achieve your goals.",
-    icon: <HelpCircle className="h-8 w-8 text-green-600" />,
-  },
-  {
-    question: "What is your typical project timeline?",
-    answer:
-      "Project timelines vary depending on scope and complexity. A standard website project typically takes 4–8 weeks from concept to launch.",
-    icon: <MessageSquare className="h-8 w-8 text-pink-600" />,
-  },
-];
-
-const FaqPage = () => {
+const PrivacyPolicyPage = () => {
   return (
     <>
       <Helmet>
-        <title>FAQs - Braiiny Bear Society</title>
+        <title>Privacy Policy - Braiiny Bear Society</title>
         <meta
           name="description"
-          content="Frequently Asked Questions about Braiiny Bear Society. Learn about our services, response times, consultations, and project timelines."
-        />
-        <meta
-          name="keywords"
-          content="FAQs, Braiiny Bear Society, services, response time, consultations, project duration"
+          content="Read our Privacy Policy to understand how we handle and protect your data at Braiiny Bear Society."
         />
       </Helmet>
 
@@ -47,32 +15,101 @@ const FaqPage = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-gray-800 mb-4">
-              Frequently Asked Questions
+              Privacy Policy
             </h1>
             <div className="w-24 h-1 bg-gradient-to-r from-[var(--primary-main)] to-blue-500 mx-auto rounded-full mb-6"></div>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Got questions? We’ve got answers. Here's everything you need to
-              know about our services and how we operate.
+              Your privacy is important to us. This policy explains how we
+              collect, use, and safeguard your information.
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2">
-            {faqs.map((faq, idx) => (
-              <div
-                key={idx}
-                className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300"
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="flex-shrink-0 bg-gray-100 p-3 rounded-full">
-                    {faq.icon}
-                  </div>
-                  <h3 className="text-lg font-semibold text-gray-800">
-                    {faq.question}
-                  </h3>
-                </div>
-                <p className="text-gray-600">{faq.answer}</p>
-              </div>
-            ))}
+          <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-md space-y-6 text-gray-700 leading-relaxed">
+            <section>
+              <h2 className="text-xl font-semibold text-gray-800 mb-2">
+                1. Information We Collect
+              </h2>
+              <p>
+                We collect personal information such as your name, email
+                address, phone number, and any other details you provide
+                voluntarily through forms or account registration.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-semibold text-gray-800 mb-2">
+                2. How We Use Your Information
+              </h2>
+              <p>
+                Your information is used to provide our services, respond to
+                inquiries, send updates, and improve user experience. We may
+                also use it for internal analytics and marketing purposes.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-semibold text-gray-800 mb-2">
+                3. Data Sharing
+              </h2>
+              <p>
+                We do not sell or rent your personal data. We may share your
+                data with trusted third-party service providers for
+                functionality (e.g., payment processing), under strict
+                confidentiality agreements.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-semibold text-gray-800 mb-2">
+                4. Cookies & Tracking
+              </h2>
+              <p>
+                Our website uses cookies and similar technologies to enhance
+                your experience. You can modify your browser settings to
+                decline cookies, though some features may not function properly.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-semibold text-gray-800 mb-2">
+                5. Data Security
+              </h2>
+              <p>
+                We implement industry-standard security measures to protect your
+                data from unauthorized access, misuse, or alteration.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-semibold text-gray-800 mb-2">
+                6. Your Rights
+              </h2>
+              <p>
+                You have the right to access, update, or delete your personal
+                data. Contact us anytime at{" "}
+                <a
+                  href="mailto:privacy@braiinybear.org"
+                  className="text-blue-600 underline"
+                >
+                  privacy@braiinybear.org
+                </a>{" "}
+                for assistance.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-semibold text-gray-800 mb-2">
+                7. Updates to This Policy
+              </h2>
+              <p>
+                We may update this privacy policy from time to time. Any changes
+                will be posted on this page with an updated revision date.
+              </p>
+            </section>
+
+            <p className="text-sm text-gray-500 mt-4">
+              Last updated: August 5, 2025
+            </p>
           </div>
         </div>
       </section>
@@ -80,4 +117,4 @@ const FaqPage = () => {
   );
 };
 
-export default FaqPage;
+export default PrivacyPolicyPage;

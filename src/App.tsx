@@ -6,6 +6,8 @@ import Loader from "./components/Loader";
 import Faq from "./pages/Faq";
 
 const Home = lazy(() => import("./pages/Home"));
+const Volunteer = lazy(() => import("./pages/Volunteer"));
+const Privacy = lazy(() => import("./pages/PrivacyPolicy"));
 const Overview = lazy(() => import("./pages/about/Overview"));
 const OurPeople = lazy(() => import("./pages/about/OurPeople"));
 const Contact = lazy(() => import("./pages/ContactUs"));
@@ -29,9 +31,7 @@ const WomenEmpowerment = lazy(
 const OurWork = lazy(
   () => import("./pages/OurWork")
 );
-const Volunteer = lazy(
-  () => import("./pages/volunteer")
-);
+
 const Course = lazy(() => import("./pages/courses/Courses"));
 const CourseDetails = lazy(() => import("./pages/courses/CourseDetails"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -148,6 +148,16 @@ function App() {
             <Suspense fallback={<Loader />}>
               <Layout>
                 <DrugRehabilitation />
+              </Layout>
+            </Suspense>
+          }
+        />
+        <Route
+          path="/privacy-policy"
+          element={
+            <Suspense fallback={<Loader />}>
+              <Layout>
+                <Privacy />
               </Layout>
             </Suspense>
           }
