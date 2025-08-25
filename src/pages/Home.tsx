@@ -4,6 +4,39 @@ import { Helmet } from "react-helmet";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+// const videos = [
+//   {
+//     id: 1,
+//     thumbnail: "https://images.unsplash.com/photo-1744231413143-67086a79977b?w=500&auto=format&fit=crop&q=60",
+//     url: "/videos/drug .mp4",
+//   },
+//   {
+//     id: 2,
+//     thumbnail: "https://images.unsplash.com/photo-1751575004372-2eeba67e52e5?w=500&auto=format&fit=crop&q=60",
+//     url: "/videos//Agriculture.mp4",
+//   },
+//   {
+//     id: 3,
+//     thumbnail: "https://images.unsplash.com/photo-1752035680950-79d735be5499?w=500&auto=format&fit=crop&q=60",
+//     url: "/videos//eaducation .mp4",
+//   },
+//   {
+//     id: 4,
+//     thumbnail: "https://images.unsplash.com/photo-1751528962027-ac9f0370ff5d?w=500&auto=format&fit=crop&q=60",
+//     url: "/videos//enviroment .mp4",
+//   },
+//   {
+//     id: 5,
+//     thumbnail: "https://images.unsplash.com/photo-1753622118655-136a65245d89?w=500&auto=format&fit=crop&q=60",
+//     url: "/videos/old-.mp4",
+//   },
+//   {
+//     id: 6,
+//     thumbnail: "https://ik.imagekit.io/1hypebptk/videos/Education-thumb_nJxHWwnx-V.jpg",
+//     url: "https://ik.imagekit.io/1hypebptk/videos/Education-video_J3E_-jq7o.mp4",
+//   },
+// ];
+
 gsap.registerPlugin(ScrollTrigger);
 
 // import {
@@ -17,10 +50,33 @@ import WorkAreaSection from "../sections/home/WorkAreaSection";
 import { Link } from "react-router-dom";
 import NewsletterSubscriptionSection from "../sections/home/NewsletterSubscriptionSection";
 import InstagramVideoCarousel from "../sections/home/InstagramVideoSection";
+import { useEffect, useState } from "react";
 // import Events from "./courses/Courses";
 
 
 const Home: React.FC = () => {
+const [videos,setVideos] = useState([]);
+
+  useEffect(()=>{
+
+    const fetchVideos = async() =>{
+
+    try {
+        const res = await fetch("https://braiinybear-admin.vercel.app/api/videos");
+
+      if(res.ok){
+        const data = await res.json();
+        setVideos(data);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+
+    }
+
+    fetchVideos();
+
+  },[])
 
   return (
     <div className="bg-gray-50">
@@ -47,7 +103,7 @@ const Home: React.FC = () => {
       <WorkAreaSection />
 
       {/* InstagramVideoSection  */}
-      <InstagramVideoCarousel />
+      <InstagramVideoCarousel videos={videos} />
 
 
       {/* Volunteer/Donate CTA */}
