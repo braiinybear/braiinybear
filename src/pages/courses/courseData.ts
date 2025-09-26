@@ -26,6 +26,7 @@ import bpharma from "../../assets/courses/bpharma.jpg"
 import gnm from "../../assets/courses/gnm.jpg"
 import drt from "../../assets/courses/drt.jpg"
 import hsi from "../../assets/courses/hsi.jpg"
+import mushroom from "../../assets/courses/Mushroom Farming_page-0001.jpg"
 
 
 
@@ -1564,6 +1565,75 @@ Graduates can work in municipal corporations, health departments, industries, an
 
 ### रोजगार के अवसर
 ग्रेजुएट नगर निगम, स्वास्थ्य विभाग, उद्योगों, और जन स्वास्थ्य एवं स्वच्छता से संबंधित गैर-सरकारी संगठनों में कार्य कर सकते हैं।
+`
+},
+ {
+  "id": "mushroom-farming-training",
+  "title": "MUSHROOM FARMING TRAINING PROGRAM",
+  "totalFee": "25000 + Hostel",
+  "duration": "30 DAYS (15 Days Theory + 15 Days Practical)",
+  "image": mushroom,
+  "approvedBy": "BraiinyBear Educational & Training Society",
+  "status": "Ongoing",
+  "shortDescription": "Learn scientific mushroom cultivation ➤ Hands-on harvesting & post-harvest management ➤ Business setup guidance ➤ Market linkage & financial planning ➤ Lifetime expert mentorship.",
+ "fullDescription": `markdown
+### What is Mushroom Farming Training?  
+The Mushroom Farming Training Program is designed to equip learners with scientific and practical knowledge of mushroom cultivation. This course blends theory and hands-on training, enabling participants to successfully set up and manage their own mushroom farming units.  
+
+### मशरूम फार्मिंग ट्रेनिंग क्या है?  
+मशरूम फार्मिंग ट्रेनिंग प्रोग्राम शिक्षार्थियों को मशरूम की खेती का वैज्ञानिक और व्यावहारिक ज्ञान प्रदान करने के लिए बनाया गया है। यह कोर्स थ्योरी और प्रैक्टिकल ट्रेनिंग का संतुलन है, जिससे प्रतिभागी अपने स्वयं के मशरूम फार्मिंग यूनिट को सफलतापूर्वक स्थापित और प्रबंधित कर सकें।  
+
+---
+
+### Course Overview  
+This 30-day program includes 15 days of theory and 15 days of practical training.  
+- **Theory Focus:** Climate, soil & environment requirements, setup planning, spawn production, composting, pest & disease management, packaging, storage & marketing.  
+- **Practical Focus:** Bed preparation, spawning & incubation, harvesting, post-harvest management, market linkage, financial planning, and networking with buyers.  
+
+### कोर्स का अवलोकन  
+यह 30 दिवसीय कार्यक्रम 15 दिन थ्योरी और 15 दिन प्रैक्टिकल ट्रेनिंग का संयोजन है।  
+- **थ्योरी विषय:** जलवायु, मिट्टी और पर्यावरण की आवश्यकताएँ, सेटअप योजना, स्पॉन उत्पादन, कम्पोस्टिंग, कीट एवं रोग प्रबंधन, पैकेजिंग, भंडारण और विपणन।  
+- **प्रैक्टिकल विषय:** बेड प्रिपरेशन, स्पॉनिंग एवं इनक्यूबेशन, हार्वेस्टिंग, पोस्ट-हार्वेस्ट प्रबंधन, मार्केट लिंकिंग, वित्तीय योजना और खरीदारों से नेटवर्किंग।  
+
+---
+
+### Eligibility Criteria  
+- Students, farmers, entrepreneurs, or anyone interested in agribusiness opportunities.  
+- Basic interest in farming and agribusiness.  
+
+### पात्रता मानदंड  
+- विद्यार्थी, किसान, उद्यमी या कोई भी जो एग्रीबिजनेस अवसरों में रुचि रखता हो।  
+- खेती और कृषि व्यवसाय में बुनियादी रुचि।  
+
+---
+
+### Training and Certification  
+- Practical sessions with expert guidance.  
+- Lifetime mentorship from trainers.  
+- Study materials included.  
+- Certificate awarded by **BraiinyBear Educational & Training Society** upon successful completion.  
+
+### प्रशिक्षण और प्रमाणपत्र  
+- विशेषज्ञों के मार्गदर्शन में व्यावहारिक सत्र।  
+- प्रशिक्षकों से आजीवन परामर्श।  
+- अध्ययन सामग्री शामिल।  
+- सफलतापूर्वक पूरा करने पर **ब्रैइनीबियर एजुकेशनल एंड ट्रेनिंग सोसाइटी** से प्रमाणपत्र।  
+
+---
+
+### Career Opportunities  
+Graduates can work as:  
+- Independent mushroom farm owners  
+- Agribusiness entrepreneurs  
+- Suppliers to local and urban markets  
+- Professionals in food processing and export industries  
+
+### रोजगार के अवसर  
+ग्रेजुएट कार्य कर सकते हैं:  
+- स्वतंत्र मशरूम फार्म मालिक के रूप में  
+- एग्रीबिजनेस उद्यमी के रूप में  
+- स्थानीय और शहरी बाजारों में सप्लायर के रूप में  
+- फूड प्रोसेसिंग और निर्यात उद्योगों में पेशेवर के रूप में  
 `
 }
 
