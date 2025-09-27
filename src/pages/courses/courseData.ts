@@ -1576,8 +1576,7 @@ Graduates can work in municipal corporations, health departments, industries, an
   "approvedBy": "BraiinyBear Educational & Training Society",
   "status": "Ongoing",
   "shortDescription": "Learn scientific mushroom cultivation ➤ Hands-on harvesting & post-harvest management ➤ Business setup guidance ➤ Market linkage & financial planning ➤ Lifetime expert mentorship.",
- "fullDescription": `markdown
-### What is Mushroom Farming Training?  
+ "fullDescription": `### What is Mushroom Farming Training?  
 The Mushroom Farming Training Program is designed to equip learners with scientific and practical knowledge of mushroom cultivation. This course blends theory and hands-on training, enabling participants to successfully set up and manage their own mushroom farming units.  
 
 ### मशरूम फार्मिंग ट्रेनिंग क्या है?  
