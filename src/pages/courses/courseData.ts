@@ -1609,13 +1609,13 @@ This 30-day program includes 15 days of theory and 15 days of practical training
 
 ### Training and Certification  
 - Practical sessions with expert guidance.  
-- Lifetime mentorship from trainers.  
+- Mentorship from our expert trainers.  
 - Study materials included.  
 - Certificate awarded by **BraiinyBear Educational & Training Society** upon successful completion.  
 
 ### प्रशिक्षण और प्रमाणपत्र  
 - विशेषज्ञों के मार्गदर्शन में व्यावहारिक सत्र।  
-- प्रशिक्षकों से आजीवन परामर्श।  
+- कुशल प्रशिक्षकों से परामर्श।  
 - अध्ययन सामग्री शामिल।  
 - सफलतापूर्वक पूरा करने पर **ब्रैइनीबियर एजुकेशनल एंड ट्रेनिंग सोसाइटी** से प्रमाणपत्र।  
 
