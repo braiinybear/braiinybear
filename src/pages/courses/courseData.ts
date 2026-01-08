@@ -1,6 +1,6 @@
 import img1 from "../../assets/courses/artificial insamination.webp";
 import img2 from "../../assets/courses/dairy enterpreneurship.webp";
-import img3 from "../../assets/courses/Goat-Farming-Advantages2.jpg"
+import img3 from "../../assets/courses/Goat-Farming-Advantages2.jpg";
 import img4 from "../../assets/courses/refreshre training on ai.webp";
 import img5 from "../../assets/courses/animal health worker.webp";
 import physiotherepist from "../../assets/courses/physiotherepist.webp";
@@ -14,42 +14,38 @@ import md from "../../assets/courses/md.png";
 import bems from "../../assets/courses/bems.jpeg";
 import ott from "../../assets/courses/ott.jpg";
 import ntt from "../../assets/courses/ntt.webp";
-import dh from "../../assets/courses/dental-hygeine-1.jpg"
-import ccch from "../../assets/courses/ccch.jpg"
-import xray from "../../assets/courses/xray.jpg"
-import ocoe from "../../assets/courses/ocoe.webp"
-import optometrist from "../../assets/courses/optometrist.jpg"
-import dt from "../../assets/courses/dt.avif"
-import dnys from "../../assets/courses/dnys.jpg"
-import dpharma from "../../assets/courses/dpharma.jpg"
-import bpharma from "../../assets/courses/bpharma.jpg"
-import gnm from "../../assets/courses/gnm.jpg"
-import drt from "../../assets/courses/drt.jpg"
-import hsi from "../../assets/courses/hsi.jpg"
-import mushroom from "../../assets/courses/Mushroom Farming_page-0001.jpg"
-
-
-
+import dh from "../../assets/courses/dental-hygeine-1.jpg";
+import ccch from "../../assets/courses/ccch.jpg";
+import xray from "../../assets/courses/xray.jpg";
+import ocoe from "../../assets/courses/ocoe.webp";
+import optometrist from "../../assets/courses/optometrist.jpg";
+import dt from "../../assets/courses/dt.avif";
+import dnys from "../../assets/courses/dnys.jpg";
+import dpharma from "../../assets/courses/dpharma.jpg";
+import bpharma from "../../assets/courses/bpharma.jpg";
+import gnm from "../../assets/courses/gnm.jpg";
+import drt from "../../assets/courses/drt.jpg";
+import hsi from "../../assets/courses/hsi.jpg";
+import mushroom from "../../assets/courses/Mushroom Farming_page-0001.jpg";
 
 export type ICourse = {
   id: string;
   title: string;
-  status: "Ongoing" | 'Finished';
+  status: "Ongoing" | "Finished";
   shortDescription: string;
   fullDescription: string;
   image?: string; // Optional image URL or path
   totalFee?: string;
-  duration? : string;
+  duration?: string;
   approvedBy?: string;
 };
 
-
-export const courseData:Array<ICourse> = [
+export const courseData: Array<ICourse> = [
   {
     id: "maitri-training",
     title: "Artificial Insemination Training",
     status: "Ongoing",
-    image : img1,
+    image: img1,
     totalFee: "40000 + HOSTEL",
     duration: "3 MONTHS",
     approvedBy: "DEPARTMENT OF ANIMAL HUSBANDRY, GOV. OF INDIA",
@@ -86,17 +82,17 @@ Only certified MAITRI technicians should perform AI as per the **National Animal
     `,
   },
 
-{
-  id: "dairy-entrepreneurship",
-  title: "Dairy Farming",
-  status: "Ongoing",
-  "totalFee": "6000 + HOSTEL",
-  "duration": "21 DAYS",
-  image : img2,
-  "approvedBy": "DEPARTMENT OF ANIMAL HUSBANDRY, GOV. OF INDIA",
-  shortDescription:
-  "Comprehensive training focused on establishing modern dairy farms, enhancing milk processing, and promoting rural self-employment through dairy entrepreneurship.",
-  fullDescription: `
+  {
+    id: "dairy-entrepreneurship",
+    title: "Dairy Farming",
+    status: "Ongoing",
+    totalFee: "6000 + HOSTEL",
+    duration: "21 DAYS",
+    image: img2,
+    approvedBy: "DEPARTMENT OF ANIMAL HUSBANDRY, GOV. OF INDIA",
+    shortDescription:
+      "Comprehensive training focused on establishing modern dairy farms, enhancing milk processing, and promoting rural self-employment through dairy entrepreneurship.",
+    fullDescription: `
 ### Objectives of Dairy Entrepreneurship
 
 This training is designed to equip participants with practical knowledge to start and manage dairy-based ventures successfully.
@@ -121,18 +117,18 @@ This training is designed to equip participants with practical knowledge to star
 5. **पारंपरिक तकनीक का उन्नयन**, ताकि दूध को व्यावसायिक स्तर पर संभाला जा सके।
 6. **दुग्ध उत्पादों के प्रसंस्करण और उत्पादन** के माध्यम से दूध को अतिरिक्त मूल्य प्रदान करना।
   `,
-},
-{
-  id: "goat-farming-training",
-  title: "Goat Farming",
-  status: "Ongoing",
-  image : img3,
-  "totalFee": "8,000",
-  "duration": "7 DAYS",
-  "approvedBy": "DEPARTMENT OF ANIMAL HUSBANDRY, GOV. OF INDIA",
-  shortDescription:
-    "Seven-day hands-on training for farmers and youth in goat breeding, healthcare, and marketing by Innovation AI Training Institute.",
-  fullDescription: `
+  },
+  {
+    id: "goat-farming-training",
+    title: "Goat Farming",
+    status: "Ongoing",
+    image: img3,
+    totalFee: "8,000",
+    duration: "7 DAYS",
+    approvedBy: "DEPARTMENT OF ANIMAL HUSBANDRY, GOV. OF INDIA",
+    shortDescription:
+      "Seven-day hands-on training for farmers and youth in goat breeding, healthcare, and marketing by Innovation AI Training Institute.",
+    fullDescription: `
 ### Goat Farming Training
 
 This seven-day Goat Farming Training, organized by the Innovation Artificial Insemination Training Institute, empowers farmers and unemployed youth with practical knowledge for self-employment in goat farming.
@@ -183,17 +179,17 @@ In the end, valid certificates are provided to support applications for loans an
 
 **प्रशिक्षण के अंत में** ऋण आदि के लिए वैध प्रमाण पत्र प्रदान किए जाते हैं।
   `,
-},
-{
-  id: "refresher-ai-training",
-  title: "Refresher Artificial Insemination (AI) Training",
-  status: "Ongoing",
-  totalFee: "2000",
-  duration: "7 Days",
-  image : img4,
-  shortDescription:
-    "Five-day refresher training program for existing AI technicians to enhance knowledge and skills in artificial insemination techniques.",
-  fullDescription: `
+  },
+  {
+    id: "refresher-ai-training",
+    title: "Refresher Artificial Insemination (AI) Training",
+    status: "Ongoing",
+    totalFee: "2000",
+    duration: "7 Days",
+    image: img4,
+    shortDescription:
+      "Five-day refresher training program for existing AI technicians to enhance knowledge and skills in artificial insemination techniques.",
+    fullDescription: `
 ### Refresher Training on Artificial Insemination (AI)
 
 We offer refresher training on Artificial Insemination for existing AI workers such as Paravets, Pasu Maitra, and other livestock service providers.
@@ -223,17 +219,17 @@ At the end of the training, valid certificates are awarded to all successful tec
 
 प्रशिक्षण के अंत में सभी सफल तकनीशियनों को **वैध प्रमाण पत्र** प्रदान किया जाता है।
   `,
-},
-{
-  id: "maitri-worker-training",
-  title: "Maitri Worker / Animal Health Worker (AHW) Training",
-  status: "Ongoing",
-  image : img5,
-  "totalFee": "2000",
-  "duration": "3 Months",
-  shortDescription:
-    "Certified 3-month training program under the Government of India to create rural animal health professionals for artificial insemination and primary veterinary services.",
-  fullDescription: `
+  },
+  {
+    id: "maitri-worker-training",
+    title: "Maitri Worker / Animal Health Worker (AHW) Training",
+    status: "Ongoing",
+    image: img5,
+    totalFee: "2000",
+    duration: "3 Months",
+    shortDescription:
+      "Certified 3-month training program under the Government of India to create rural animal health professionals for artificial insemination and primary veterinary services.",
+    fullDescription: `
 ### Maitri Worker / Animal Health Worker (AHW) Training
 
 This national-level program provides 3-month training to unemployed rural youth (minimum 10th pass), certified by the Government of India, to become **Maitri Workers / Animal Health Workers**. They are trained to run **animal service centers** or offer doorstep AI and basic veterinary care, creating sustainable rural self-employment.
@@ -269,17 +265,18 @@ After completing the course, a certified Maitri Worker can easily earn ₹2000�
 ### सरकारी नियुक्ति एवं चयन का आधार:
 Under government schemes like **Rashtriya Gokul Mission**, one Maitri Worker is appointed per 1000 animals. Many states have already implemented this, and candidates can apply when positions are announced.
   `,
-},
+  },
   {
-    "id": "veterinary-field-assistant",
-    "title": "VETERINARY FIELD ASSISTANT",
-    "totalFee": "80,000",
-    "duration": "2 YEARS",
-    image : veterinary,
-    "approvedBy": "SKILL INDIA , NSDC",
-    "status": "Ongoing",
-    "shortDescription": "Care for animals ➤ Assist veterinary doctors ➤ Learn treatment, vaccination & livestock care ➤ NSDC-certified ➤ Build a career in animal healthcare.",
-    "fullDescription": `### What is a Veterinary Field Assistant?  
+    id: "veterinary-field-assistant",
+    title: "VETERINARY FIELD ASSISTANT",
+    totalFee: "80,000",
+    duration: "2 YEARS",
+    image: veterinary,
+    approvedBy: "SKILL INDIA , NSDC",
+    status: "Ongoing",
+    shortDescription:
+      "Care for animals ➤ Assist veterinary doctors ➤ Learn treatment, vaccination & livestock care ➤ NSDC-certified ➤ Build a career in animal healthcare.",
+    fullDescription: `### What is a Veterinary Field Assistant?  
 A Veterinary Field Assistant (VFA) supports veterinary doctors in treating and caring for animals. VFAs are trained in animal anatomy, basic treatment, vaccination, disease prevention, and livestock management. They work in animal hospitals, veterinary clinics, dairy farms, and government livestock departments.
 
 ### वेटरनरी फील्ड असिस्टेंट क्या होता है?  
@@ -330,18 +327,19 @@ After completing the course, students can work as animal care assistants in vete
 
 ### VFA के बाद करियर के अवसर  
 कोर्स के बाद छात्र पशु अस्पतालों, डेयरी फार्म, एनजीओ, पशु शरणालयों और पशुपालन विभागों में कार्य कर सकते हैं। वे टीकाकरण अभियानों और सरकारी पशु कल्याण कार्यक्रमों में भी योगदान दे सकते हैं।
-`
+`,
   },
   {
-    "id": "drone-pilot",
-    "title": "DRONE PILOT",
-    "totalFee": "36,500",
-    image : drone,
-    "duration": "5 DAYS",
-    "approvedBy": "OVCT VENTURE, DGCA CERTIFIED",
-    "status": "Ongoing",
-  shortDescription: "Learn the essential rules ➤ Fly a drone ➤ Get certified ➤ Complete process ➤ Fly with license.",
-  fullDescription: `
+    id: "drone-pilot",
+    title: "DRONE PILOT",
+    totalFee: "36,500",
+    image: drone,
+    duration: "5 DAYS",
+    approvedBy: "OVCT VENTURE, DGCA CERTIFIED",
+    status: "Ongoing",
+    shortDescription:
+      "Learn the essential rules ➤ Fly a drone ➤ Get certified ➤ Complete process ➤ Fly with license.",
+    fullDescription: `
 ## What is a Drone Pilot?
 A drone pilot is a person who controls, navigates, and flies drones. Such pilots use drones for agriculture, surveying, photography, and surveillance. Drone pilots need technical knowledge, an understanding of flight rules, and proper training.  
 After training from the institute, students are assisted in obtaining a license as per DGCA guidelines.  
@@ -411,15 +409,16 @@ With the growing use of drone technology, India’s drone industry is estimated 
   `,
   },
   {
-    "id": "cmsed-emt",
-    "title": "CMS-ED + EMT",
-    "totalFee": "15,000",
-    "duration": "2 YEARS",
+    id: "cmsed-emt",
+    title: "CMS-ED + EMT",
+    totalFee: "15,000",
+    duration: "2 YEARS",
     image: cmsEd,
-    "approvedBy": "PARAMEDICAL COUNCIL, NEW DELHI",
-    "status": "Ongoing",
-    "shortDescription": "Become a certified healthcare professional ➤ Learn emergency medical skills ➤ Work in clinics, hospitals & ambulances ➤ Government-recognized ➤ Start your medical career.",
-    "fullDescription": `### What is CMS-ED + EMT?  
+    approvedBy: "PARAMEDICAL COUNCIL, NEW DELHI",
+    status: "Ongoing",
+    shortDescription:
+      "Become a certified healthcare professional ➤ Learn emergency medical skills ➤ Work in clinics, hospitals & ambulances ➤ Government-recognized ➤ Start your medical career.",
+    fullDescription: `### What is CMS-ED + EMT?  
 CMS-ED (Community Medical Services and Essential Drugs) + EMT (Emergency Medical Technician) is a dual healthcare program designed to equip students with essential medical knowledge and emergency response skills. This course enables students to work in clinics, primary health centers, and ambulance services under certified supervision.
 
 ### CMS-ED + EMT क्या है?  
@@ -470,18 +469,19 @@ Students can work in clinics, rural hospitals, ambulance services, nursing homes
 
 ### CMS-ED + EMT के बाद करियर के अवसर  
 छात्र क्लीनिक, ग्रामीण अस्पतालों, एम्बुलेंस सेवाओं, नर्सिंग होम्स, पैथोलॉजी लैब्स और प्राथमिक चिकित्सा केंद्रों में कार्य कर सकते हैं। यह कोर्स निजी चिकित्सा प्रैक्टिस और विभिन्न राज्यों में पैरामेडिकल पंजीकरण के लिए भी पात्रता प्रदान करता है।
-`
+`,
   },
   {
-    "id": "medical-laboratory-technician",
-    "title": "MEDICAL LABORATORY TECHNICIAN",
-    "totalFee": "30,000",
-    "duration": "2 YEARS",
-    image : mlt,
-    "approvedBy": "PARAMEDICAL COUNCIL, NEW DELHI",
-    "status": "Ongoing",
-    "shortDescription": "Work in diagnostic labs ➤ Learn blood, urine & sample testing ➤ Gain hospital lab skills ➤ 2-year certified course ➤ Govt-recognized qualification.",
-    "fullDescription": `### What is a Medical Laboratory Technician?  
+    id: "medical-laboratory-technician",
+    title: "MEDICAL LABORATORY TECHNICIAN",
+    totalFee: "30,000",
+    duration: "2 YEARS",
+    image: mlt,
+    approvedBy: "PARAMEDICAL COUNCIL, NEW DELHI",
+    status: "Ongoing",
+    shortDescription:
+      "Work in diagnostic labs ➤ Learn blood, urine & sample testing ➤ Gain hospital lab skills ➤ 2-year certified course ➤ Govt-recognized qualification.",
+    fullDescription: `### What is a Medical Laboratory Technician?  
 A Medical Laboratory Technician (MLT) is trained to conduct diagnostic tests on blood, urine, stool, and other body samples. MLTs play a critical role in the detection, diagnosis, and treatment of diseases. They work in diagnostic labs, hospitals, clinics, and pathology centers, using advanced medical equipment and following proper safety protocols.
 
 ### मेडिकल लैबोरेटरी टेक्नीशियन क्या होता है?  
@@ -532,18 +532,19 @@ After completing the course, students can work as lab technicians in diagnostic 
 
 ### MLT के बाद करियर के अवसर  
 कोर्स पूरा करने के बाद छात्र डायग्नोस्टिक सेंटर्स, पैथोलॉजी लैब्स, अस्पतालों, रिसर्च लैब्स और ब्लड बैंकों में कार्य कर सकते हैं। फार्मास्युटिकल कंपनियों और पब्लिक हेल्थ विभागों में भी अवसर उपलब्ध हैं।
-`
+`,
   },
   {
-    "id": "diploma-in-medical-laboratory-technician",
-    "title": "DIPLOMA IN MEDICAL LABORATORY TECHNICIAN",
-    "totalFee": "50,000",
-    "duration": "2 YEARS",
-    image : dmlt,
-    "approvedBy": "PARAMEDICAL COUNCIL, NEW DELHI",
-    "status": "Ongoing",
-    "shortDescription": "Master lab testing skills ➤ Learn pathology, microbiology & biochemistry ➤ Work in hospitals & diagnostic labs ➤ Govt-recognized diploma ➤ Launch a career in diagnostics.",
-    "fullDescription": `### What is a Diploma in Medical Laboratory Technician?  
+    id: "diploma-in-medical-laboratory-technician",
+    title: "DIPLOMA IN MEDICAL LABORATORY TECHNICIAN",
+    totalFee: "50,000",
+    duration: "2 YEARS",
+    image: dmlt,
+    approvedBy: "PARAMEDICAL COUNCIL, NEW DELHI",
+    status: "Ongoing",
+    shortDescription:
+      "Master lab testing skills ➤ Learn pathology, microbiology & biochemistry ➤ Work in hospitals & diagnostic labs ➤ Govt-recognized diploma ➤ Launch a career in diagnostics.",
+    fullDescription: `### What is a Diploma in Medical Laboratory Technician?  
 This diploma course trains students to work as skilled lab technicians who analyze blood, urine, tissue, and other body samples. Students learn to use medical lab equipment and follow diagnostic procedures used in hospitals, clinics, and pathology labs. The course is recognized by the Paramedical Council, New Delhi.
 
 ### डिप्लोमा इन मेडिकल लैबोरेटरी टेक्नीशियन क्या है?  
@@ -594,18 +595,19 @@ Diploma holders can work in hospitals, diagnostic labs, blood banks, pathology c
 
 ### डिप्लोमा के बाद करियर के अवसर  
 डिप्लोमा पूरा करने के बाद छात्र अस्पतालों, डायग्नोस्टिक लैब्स, ब्लड बैंकों, पैथोलॉजी सेंटर्स और रिसर्च लैब्स में कार्य कर सकते हैं। वे परीक्षण करने में डॉक्टरों की सहायता कर सकते हैं और शीघ्र निदान में योगदान दे सकते हैं।
-`
+`,
   },
   {
-    "id": "medical-dresser",
-    "title": "MEDICAL DRESSER",
-    "totalFee": "30,000",
-    "duration": "2 YEARS",
-    image : md,
-    "approvedBy": "PARAMEDICAL COUNCIL, NEW DELHI",
-    "status": "Ongoing",
-    "shortDescription": "Assist doctors in wound care ➤ Learn bandaging, first aid & minor procedures ➤ Work in clinics & hospitals ➤ Govt-recognized ➤ Start a career in patient care.",
-    "fullDescription": `### What is a Medical Dresser?  
+    id: "medical-dresser",
+    title: "MEDICAL DRESSER",
+    totalFee: "30,000",
+    duration: "2 YEARS",
+    image: md,
+    approvedBy: "PARAMEDICAL COUNCIL, NEW DELHI",
+    status: "Ongoing",
+    shortDescription:
+      "Assist doctors in wound care ➤ Learn bandaging, first aid & minor procedures ➤ Work in clinics & hospitals ➤ Govt-recognized ➤ Start a career in patient care.",
+    fullDescription: `### What is a Medical Dresser?  
 A Medical Dresser is trained to assist in basic medical care, especially in dressing wounds, applying bandages, giving first aid, and supporting minor medical procedures. They work alongside doctors and nurses in clinics, hospitals, and emergency care units, ensuring patients receive proper wound care.
 
 ### मेडिकल ड्रेसर क्या होता है?  
@@ -656,18 +658,19 @@ After completing the course, students can work in hospitals, clinics, trauma cen
 
 ### कोर्स के बाद करियर के अवसर  
 कोर्स पूरा करने के बाद छात्र अस्पतालों, क्लीनिकों, ट्रॉमा सेंटर्स और प्राथमिक उपचार केंद्रों में कार्य कर सकते हैं। मेडिकल ड्रेसर्स की मांग निजी और सरकारी दोनों स्वास्थ्य संस्थानों में होती है, विशेष रूप से ग्रामीण क्षेत्रों में।
-`
+`,
   },
- {
-  "id": "bems-electro-homopathy",
-  "title": "BEMS Bachelor in electro homopathy",
-  "totalFee": "50,000",
-  "duration": "4 YEARS",
-  "image": bems,
-  "approvedBy": "PARAMEDICAL COUNCIL, NEW DELHI",
-  "status": "Ongoing",
-  "shortDescription": "Study electro homoeopathy ➤ Learn herbal & natural treatment methods ➤ Govt-recognized degree ➤ 4-year program ➤ Build a career in alternative medicine.",
-  "fullDescription": `
+  {
+    id: "bems-electro-homopathy",
+    title: "BEMS Bachelor in electro homopathy",
+    totalFee: "50,000",
+    duration: "4 YEARS",
+    image: bems,
+    approvedBy: "PARAMEDICAL COUNCIL, NEW DELHI",
+    status: "Ongoing",
+    shortDescription:
+      "Study electro homoeopathy ➤ Learn herbal & natural treatment methods ➤ Govt-recognized degree ➤ 4-year program ➤ Build a career in alternative medicine.",
+    fullDescription: `
 ### What is BEMS (Bachelor in Electro Homopathy)?
 BEMS is a 4-year undergraduate degree focusing on Electro Homopathy, a system of alternative medicine that uses natural and herbal remedies combined with electrotherapy principles to treat various ailments.
 
@@ -707,19 +710,19 @@ Graduates can work as Electro Homopathy practitioners, consultants in alternativ
 
 ### रोजगार के अवसर
 स्नातक इलेक्ट्रो होम्योपैथी प्रैक्टिशनर, वैकल्पिक चिकित्सा क्लीनिक के सलाहकार या अपने हर्बल उपचार केंद्र शुरू कर सकते हैं।
-`
-}
-,
-{
-  "id": "ott-operation-theatre-technician",
-  "title": "OTT OPERATION THEATRE TECHNICIAN",
-  "totalFee": "30,000",
-  "duration": "2 YEARS",
-  "image": ott,
-  "approvedBy": "PARAMEDICAL COUNCIL, NEW DELHI",
-  "status": "Ongoing",
-  "shortDescription": "Learn operation theatre procedures ➤ Assist surgeons & staff ➤ Get certified ➤ Hands-on practical training ➤ Build career in surgical support.",
-  "fullDescription": `
+`,
+  },
+  {
+    id: "ott-operation-theatre-technician",
+    title: "OTT OPERATION THEATRE TECHNICIAN",
+    totalFee: "30,000",
+    duration: "2 YEARS",
+    image: ott,
+    approvedBy: "PARAMEDICAL COUNCIL, NEW DELHI",
+    status: "Ongoing",
+    shortDescription:
+      "Learn operation theatre procedures ➤ Assist surgeons & staff ➤ Get certified ➤ Hands-on practical training ➤ Build career in surgical support.",
+    fullDescription: `
 ### What is an Operation Theatre Technician (OTT)?
 An Operation Theatre Technician is a trained professional who assists surgeons, nurses, and anesthetists in the operation theatre by preparing equipment, maintaining sterile environments, and ensuring smooth surgical procedures.
 
@@ -759,19 +762,18 @@ Graduates can work as operation theatre technicians in hospitals, clinics, and s
 
 ### रोजगार के अवसर
 ग्रेजुएट अस्पतालों, क्लीनिकों, और सर्जिकल केंद्रों में ऑपरेशन थियेटर तकनीशियन के रूप में कार्य कर सकते हैं। कुशल OTT पेशेवरों की मांग बढ़ रही है।
-`
-}
-,
+`,
+  },
   {
-    "id": "ntt-nursery-teacher-training",
-    "title": "NTT NURSERY TEACHER TRAINING",
-    "totalFee": "12,000",
-    "duration": "2 YEARS",
-    image : ntt,
-    "approvedBy": "LAKSHAY GROUP OF EDUCATION",
-    "status": "Ongoing",
-    "shortDescription": `Gain expertise in operation theatre procedures, assist surgeons and medical staff, and receive hands-on practical training. This 2-year program, approved by the Paramedical Council, New Delhi, is designed to prepare you for a rewarding career in surgical support and healthcare.`,
-    "fullDescription":`
+    id: "ntt-nursery-teacher-training",
+    title: "NTT NURSERY TEACHER TRAINING",
+    totalFee: "12,000",
+    duration: "2 YEARS",
+    image: ntt,
+    approvedBy: "LAKSHAY GROUP OF EDUCATION",
+    status: "Ongoing",
+    shortDescription: `Gain expertise in operation theatre procedures, assist surgeons and medical staff, and receive hands-on practical training. This 2-year program, approved by the Paramedical Council, New Delhi, is designed to prepare you for a rewarding career in surgical support and healthcare.`,
+    fullDescription: `
 ### What is NTT – Nursery Teacher Training?  
 NTT (Nursery Teacher Training) is a 2-year diploma program designed to train individuals in early childhood education and teaching methods. It focuses on child psychology, pedagogy, classroom management, and creative activities to nurture young learners during their foundational years.
 
@@ -823,18 +825,19 @@ Graduates can work as nursery teachers, pre-primary educators, or assistant teac
 
 ### NTT के बाद करियर के अवसर  
 इस कोर्स के बाद छात्र नर्सरी शिक्षक, प्री-प्राइमरी शिक्षक या सहायक शिक्षक के रूप में सरकारी व निजी स्कूलों में कार्य कर सकते हैं। साथ ही स्वयं का डे-केयर, प्ले स्कूल शुरू करने या प्रारंभिक शिक्षा केंद्रों के लिए पाठ्यक्रम डिजाइनर बनने का अवसर भी मिलता है।
-`
+`,
   },
   {
-  "id": "dental-hygiene",
-  "title": "DENTAL HYGIENE",
-  "totalFee": "35,000",
-  "duration": "2 YEARS",
-  "image": dh,
-  "approvedBy": "PARAMEDICAL COUNCIL, NEW DELHI",
-  "status": "Ongoing",
-  "shortDescription": "Learn oral care basics ➤ Develop clinical skills ➤ Get certified ➤ Practical training ➤ Start your dental hygiene career.",
-  "fullDescription": `
+    id: "dental-hygiene",
+    title: "DENTAL HYGIENE",
+    totalFee: "35,000",
+    duration: "2 YEARS",
+    image: dh,
+    approvedBy: "PARAMEDICAL COUNCIL, NEW DELHI",
+    status: "Ongoing",
+    shortDescription:
+      "Learn oral care basics ➤ Develop clinical skills ➤ Get certified ➤ Practical training ➤ Start your dental hygiene career.",
+    fullDescription: `
 ### What is Dental Hygiene?
 Dental hygiene involves the prevention and treatment of oral diseases, promoting oral health through cleaning, education, and clinical care. Dental hygienists work alongside dentists to improve patient oral health.
 
@@ -876,18 +879,19 @@ Graduates can work in dental clinics, hospitals, community health centers, and d
 
 ### रोजगार के अवसर
 ग्रेजुएट दंत क्लीनिक, अस्पताल, सामुदायिक स्वास्थ्य केंद्र और दंत अनुसंधान में कार्य कर सकते हैं। मौखिक स्वास्थ्य जागरूकता के कारण मांग बढ़ रही है।
-`
-},
-{
-  "id": "diploma-in-physiotherapist",
-  "title": "DIPLOMA IN PHYSIOTHERAPIST",
-  "totalFee": "50,000",
-  "duration": "2 YEARS",
-  "image": physiotherepist,
-  "approvedBy": "PARAMEDICAL COUNCIL, NEW DELHI",
-  "status": "Ongoing",
-  "shortDescription": "Learn rehabilitation techniques ➤ Develop therapeutic skills ➤ Get certified ➤ Practical training ➤ Build physiotherapy career.",
-  "fullDescription": `
+`,
+  },
+  {
+    id: "diploma-in-physiotherapist",
+    title: "DIPLOMA IN PHYSIOTHERAPIST",
+    totalFee: "50,000",
+    duration: "2 YEARS",
+    image: physiotherepist,
+    approvedBy: "PARAMEDICAL COUNCIL, NEW DELHI",
+    status: "Ongoing",
+    shortDescription:
+      "Learn rehabilitation techniques ➤ Develop therapeutic skills ➤ Get certified ➤ Practical training ➤ Build physiotherapy career.",
+    fullDescription: `
 ### What is Physiotherapy?
 Physiotherapy focuses on restoring and maintaining physical function and mobility through exercises, manual therapy, and rehabilitation techniques. Physiotherapists help patients recover from injuries, surgeries, and chronic conditions.
 
@@ -929,19 +933,19 @@ Graduates can work in hospitals, rehabilitation centers, sports clinics, and wel
 
 ### रोजगार के अवसर
 ग्रेजुएट अस्पतालों, पुनर्वास केंद्रों, खेल क्लीनिक और वेलनेस केंद्रों में काम कर सकते हैं। फिजियोथेरेपी की बढ़ती मांग है।
-`
-}
-,
+`,
+  },
   {
-  "id": "ccch-child-care-health",
-  "title": "CCCH CERTIFICATE IN CHILD CARE HEALTH",
-  "totalFee": "30,000",
-  "duration": "2 YEARS",
-  "image": ccch,
-  "approvedBy": "PARAMEDICAL COUNCIL, NEW DELHI",
-  "status": "Ongoing",
-  "shortDescription": "Learn child care basics ➤ Health and nutrition ➤ Get certified ➤ Practical training ➤ Build a career in child health.",
-  "fullDescription": `
+    id: "ccch-child-care-health",
+    title: "CCCH CERTIFICATE IN CHILD CARE HEALTH",
+    totalFee: "30,000",
+    duration: "2 YEARS",
+    image: ccch,
+    approvedBy: "PARAMEDICAL COUNCIL, NEW DELHI",
+    status: "Ongoing",
+    shortDescription:
+      "Learn child care basics ➤ Health and nutrition ➤ Get certified ➤ Practical training ➤ Build a career in child health.",
+    fullDescription: `
 ### What is Child Care Health?
 Child Care Health focuses on the physical, mental, and emotional wellbeing of children. Professionals in this field promote healthy growth, disease prevention, and proper nutrition.
 
@@ -983,19 +987,19 @@ Graduates can work in hospitals, daycare centers, schools, and NGOs focusing on 
 
 ### रोजगार के अवसर
 ग्रेजुएट अस्पताल, डेकेयर केंद्र, स्कूल और बाल स्वास्थ्य से जुड़े एनजीओ में काम कर सकते हैं। योग्य पेशेवरों की मांग बढ़ रही है।
-`
-}
-,
- {
-  "id": "x-ray-technician",
-  "title": "X- RAY TECHNICIAN",
-  "totalFee": "40,000",
-  "duration": "2 YEARS",
-  "image": xray,
-  "approvedBy": "PARAMEDICAL COUNCIL, NEW DELHI",
-  "status": "Ongoing",
-  "shortDescription": "Learn radiology basics ➤ Operate X-ray machines ➤ Get certified ➤ Practical training ➤ Build a career in diagnostic imaging.",
-  "fullDescription": `
+`,
+  },
+  {
+    id: "x-ray-technician",
+    title: "X- RAY TECHNICIAN",
+    totalFee: "40,000",
+    duration: "2 YEARS",
+    image: xray,
+    approvedBy: "PARAMEDICAL COUNCIL, NEW DELHI",
+    status: "Ongoing",
+    shortDescription:
+      "Learn radiology basics ➤ Operate X-ray machines ➤ Get certified ➤ Practical training ➤ Build a career in diagnostic imaging.",
+    fullDescription: `
 ### What is an X-Ray Technician?
 An X-Ray Technician operates radiographic equipment to produce images of the body’s internal structures. These images assist doctors in diagnosing and treating medical conditions.
 
@@ -1037,19 +1041,19 @@ Graduates can work in hospitals, clinics, diagnostic labs, and imaging centers. 
 
 ### रोजगार के अवसर
 ग्रेजुएट अस्पतालों, क्लीनिकों, डायग्नोस्टिक लैब और इमेजिंग सेंटर में कार्य कर सकते हैं। इमेजिंग तकनीक के बढ़ते उपयोग से मांग बढ़ रही है।
-`
-}
-,
+`,
+  },
   {
-  "id": "only-cmsed-emt",
-  "title": "ONLY CMSED OR ONLY EMT",
-  "totalFee": "10000 EACH",
-  "duration": "2YRS, 1 YR",
-  "image": ocoe,
-  "approvedBy": "PARAMEDICAL COUNCIL, NEW DELHI",
-  "status": "Ongoing",
-  "shortDescription": "Learn emergency care ➤ Develop life-saving skills ➤ Get certified ➤ Practical training ➤ Build career in emergency medical services.",
-  "fullDescription": `
+    id: "only-cmsed-emt",
+    title: "ONLY CMSED OR ONLY EMT",
+    totalFee: "10000 EACH",
+    duration: "2YRS, 1 YR",
+    image: ocoe,
+    approvedBy: "PARAMEDICAL COUNCIL, NEW DELHI",
+    status: "Ongoing",
+    shortDescription:
+      "Learn emergency care ➤ Develop life-saving skills ➤ Get certified ➤ Practical training ➤ Build career in emergency medical services.",
+    fullDescription: `
 ### What is CMSED and EMT?
 CMSED (Certified Medical Services Emergency Dispatcher) and EMT (Emergency Medical Technician) are essential roles in emergency medical response. These professionals provide urgent care and coordinate emergency services.
 
@@ -1091,19 +1095,19 @@ Graduates can work with ambulance services, hospitals, disaster management teams
 
 ### रोजगार के अवसर
 ग्रेजुएट एम्बुलेंस सेवा, अस्पताल, आपदा प्रबंधन टीम और आपातकालीन प्रतिक्रिया इकाइयों में काम कर सकते हैं। बढ़ती स्वास्थ्य सेवा मांग के कारण प्रशिक्षित CMSED और EMT पेशेवरों की आवश्यकता बढ़ रही है।
-`
-}
-,
- {
-  "id": "optometrist",
-  "title": "OPTOMETRIST",
-  "totalFee": "35,000",
-  "duration": "2 YEARS",
-  "image": optometrist,
-  "approvedBy": "PARAMEDICAL COUNCIL, NEW DELHI",
-  "status": "Ongoing",
-  "shortDescription": "Learn eye care basics ➤ Perform vision tests ➤ Get certified ➤ Practical training ➤ Build career in optometry.",
-  "fullDescription": `
+`,
+  },
+  {
+    id: "optometrist",
+    title: "OPTOMETRIST",
+    totalFee: "35,000",
+    duration: "2 YEARS",
+    image: optometrist,
+    approvedBy: "PARAMEDICAL COUNCIL, NEW DELHI",
+    status: "Ongoing",
+    shortDescription:
+      "Learn eye care basics ➤ Perform vision tests ➤ Get certified ➤ Practical training ➤ Build career in optometry.",
+    fullDescription: `
 ### What is an Optometrist?
 An Optometrist specializes in examining eyes, diagnosing vision problems, and prescribing corrective lenses. They play a key role in maintaining eye health and detecting eye diseases.
 
@@ -1145,19 +1149,19 @@ Graduates can work in eye hospitals, optical stores, clinics, and community heal
 
 ### रोजगार के अवसर
 ग्रेजुएट नेत्र अस्पताल, ऑप्टिकल स्टोर, क्लीनिक और सामुदायिक स्वास्थ्य केंद्रों में काम कर सकते हैं। नेत्र देखभाल के प्रति जागरूकता बढ़ने से योग्य ऑप्टोमेट्रिस्टों की मांग बढ़ रही है।
-`
-}
-,
+`,
+  },
   {
-  "id": "dialysis-technician",
-  "title": "DIALYSIS TECHNICIAN",
-  "totalFee": "35,000",
-  "duration": "2 YEARS",
-  "image": dt,
-  "approvedBy": "PARAMEDICAL COUNCIL, NEW DELHI",
-  "status": "Ongoing",
-  "shortDescription": "Learn dialysis procedures ➤ Operate hemodialysis machines ➤ Get certified ➤ Practical training ➤ Build career in kidney care.",
-  "fullDescription": `
+    id: "dialysis-technician",
+    title: "DIALYSIS TECHNICIAN",
+    totalFee: "35,000",
+    duration: "2 YEARS",
+    image: dt,
+    approvedBy: "PARAMEDICAL COUNCIL, NEW DELHI",
+    status: "Ongoing",
+    shortDescription:
+      "Learn dialysis procedures ➤ Operate hemodialysis machines ➤ Get certified ➤ Practical training ➤ Build career in kidney care.",
+    fullDescription: `
 ### What is a Dialysis Technician?
 A Dialysis Technician operates and maintains dialysis machines to treat patients with kidney failure. They monitor patients during treatments and ensure machine safety.
 
@@ -1199,19 +1203,19 @@ Graduates can work in hospitals, dialysis centers, kidney care clinics, and heal
 
 ### रोजगार के अवसर
 ग्रेजुएट अस्पतालों, डायलिसिस सेंटर, किडनी केयर क्लीनिक और स्वास्थ्य संस्थानों में कार्य कर सकते हैं। बढ़ती किडनी बीमारी की वजह से प्रशिक्षित तकनीशियनों की मांग बढ़ रही है।
-`
-}
-,
- {
-  "id": "dnys-neuropathy-yogic-sci",
-  "title": "DNYS DIPLOMA IN NEUROPATHY & YOGIC SCI",
-  "totalFee": "45,000",
-  "duration": "2 YEARS",
-  "image": dnys,
-  "approvedBy": "PARAMEDICAL COUNCIL, NEW DELHI",
-  "status": "Ongoing",
-  "shortDescription": "Study neuropathy and yoga science ➤ Learn healing therapies ➤ Get certified ➤ Hands-on training ➤ Build holistic health career.",
-  "fullDescription": `
+`,
+  },
+  {
+    id: "dnys-neuropathy-yogic-sci",
+    title: "DNYS DIPLOMA IN NEUROPATHY & YOGIC SCI",
+    totalFee: "45,000",
+    duration: "2 YEARS",
+    image: dnys,
+    approvedBy: "PARAMEDICAL COUNCIL, NEW DELHI",
+    status: "Ongoing",
+    shortDescription:
+      "Study neuropathy and yoga science ➤ Learn healing therapies ➤ Get certified ➤ Hands-on training ➤ Build holistic health career.",
+    fullDescription: `
 ### What is DNYS (Diploma in Neuropathy & Yogic Science)?
 DNYS integrates neuropathy techniques with yogic science to promote healing and wellness. Graduates learn therapeutic methods to treat neurological and lifestyle disorders using natural approaches.
 
@@ -1253,19 +1257,19 @@ Graduates can work in wellness centers, yoga institutes, rehabilitation clinics,
 
 ### रोजगार के अवसर
 ग्रेजुएट वेलनेस सेंटर, योग संस्थान, पुनर्वास क्लीनिक और वैकल्पिक चिकित्सा क्लीनिक में काम कर सकते हैं। समग्र स्वास्थ्य पेशेवरों की बढ़ती मांग से अवसर बढ़ रहे हैं।
-`
-}
-,
- {
-  "id": "dpharma",
-  "title": "D.PHARMA",
-  "totalFee": "1,80,000",
-  "duration": "2 YEARS",
-  "image": dpharma,
-  "approvedBy": "KESHAV COLLEGE OF PHARMACY, BHIWANI",
-  "status": "Ongoing",
-  "shortDescription": "Learn pharmaceutical sciences ➤ Understand drug formulation ➤ Get certified ➤ Practical lab training ➤ Build career in pharmacy.",
-  "fullDescription": `
+`,
+  },
+  {
+    id: "dpharma",
+    title: "D.PHARMA",
+    totalFee: "1,80,000",
+    duration: "2 YEARS",
+    image: dpharma,
+    approvedBy: "KESHAV COLLEGE OF PHARMACY, BHIWANI",
+    status: "Ongoing",
+    shortDescription:
+      "Learn pharmaceutical sciences ➤ Understand drug formulation ➤ Get certified ➤ Practical lab training ➤ Build career in pharmacy.",
+    fullDescription: `
 ### What is D.PHARMA?
 D.Pharm (Diploma in Pharmacy) is a professional course focusing on the preparation, dispensing, and proper use of medications. It trains students to become licensed pharmacists.
 
@@ -1305,19 +1309,19 @@ Graduates can work as pharmacists, pharmacy technicians, medical representatives
 
 ### रोजगार के अवसर
 ग्रेजुएट फार्मासिस्ट, फार्मेसी तकनीशियन, मेडिकल प्रतिनिधि के रूप में काम कर सकते हैं या अपनी खुद की फार्मेसी शुरू कर सकते हैं। फार्मास्यूटिकल उद्योग में निरंतर वृद्धि रोजगार के अवसर बढ़ा रही है।
-`
-}
-,
- {
-  "id": "bpharma",
-  "title": "B.PHARMA",
-  "totalFee": "3,20,000",
-  "duration": "4 YEARS",
-  "image": bpharma,
-  "approvedBy": "KESHAV COLLEGE OF PHARMACY, BHIWANI",
-  "status": "Ongoing",
-  "shortDescription": "Study pharmaceutical sciences deeply ➤ Learn drug development ➤ Get certified ➤ Extensive lab & clinical training ➤ Launch pharmacy career.",
-  "fullDescription": `
+`,
+  },
+  {
+    id: "bpharma",
+    title: "B.PHARMA",
+    totalFee: "3,20,000",
+    duration: "4 YEARS",
+    image: bpharma,
+    approvedBy: "KESHAV COLLEGE OF PHARMACY, BHIWANI",
+    status: "Ongoing",
+    shortDescription:
+      "Study pharmaceutical sciences deeply ➤ Learn drug development ➤ Get certified ➤ Extensive lab & clinical training ➤ Launch pharmacy career.",
+    fullDescription: `
 ### What is B.PHARMA?
 B.Pharma (Bachelor of Pharmacy) is an undergraduate degree that provides comprehensive knowledge of pharmaceutical sciences including drug formulation, development, and patient care.
 
@@ -1357,19 +1361,19 @@ Graduates can work as pharmacists, researchers, quality controllers, medical rep
 
 ### रोजगार के अवसर
 ग्रेजुएट फार्मासिस्ट, शोधकर्ता, गुणवत्ता नियंत्रक, मेडिकल प्रतिनिधि के रूप में कार्य कर सकते हैं या उच्च शिक्षा कर सकते हैं। फार्मास्यूटिकल क्षेत्र में विविध करियर विकल्प उपलब्ध हैं।
-`
-}
-,
- {
-  "id": "anm",
-  "title": "ANM",
-  "totalFee": "1,20,000",
-  "duration": "2 YEARS",
-  "image": anm,
-  "approvedBy": "KARNATAKA UNIVERSITY, INC APPROVED",
-  "status": "Ongoing",
-  "shortDescription": "Learn nursing & midwifery skills ➤ Community health focus ➤ Get certified ➤ Practical clinical training ➤ Build healthcare career.",
-  "fullDescription": `
+`,
+  },
+  {
+    id: "anm",
+    title: "ANM",
+    totalFee: "1,20,000",
+    duration: "2 YEARS",
+    image: anm,
+    approvedBy: "KARNATAKA UNIVERSITY, INC APPROVED",
+    status: "Ongoing",
+    shortDescription:
+      "Learn nursing & midwifery skills ➤ Community health focus ➤ Get certified ➤ Practical clinical training ➤ Build healthcare career.",
+    fullDescription: `
 ### What is ANM (Auxiliary Nurse Midwifery)?
 ANM is a diploma course designed to train students in basic nursing and midwifery care, focusing on community health and maternal-child care.
 
@@ -1409,19 +1413,19 @@ Graduates can work as ANMs in hospitals, primary health centers, NGOs, and gover
 
 ### रोजगार के अवसर
 ग्रेजुएट अस्पतालों, प्राथमिक स्वास्थ्य केंद्रों, गैर-सरकारी संगठनों और सरकारी स्वास्थ्य कार्यक्रमों में ANM के रूप में कार्य कर सकते हैं। कुशल नर्सिंग पेशेवरों की मांग बढ़ रही है।
-`
-}
-,
+`,
+  },
   {
-  "id": "gnm",
-  "title": "GNM",
-  "totalFee": "2,70,000",
-  "duration": "4 YEARS",
-  "image": gnm,
-  "approvedBy": "KARNATAKA UNIVERSITY, INC APPROVED",
-  "status": "Ongoing",
-  "shortDescription": "Comprehensive nursing training ➤ Patient care skills ➤ Certified diploma ➤ Clinical & community practice ➤ Advance your nursing career.",
-  "fullDescription": `
+    id: "gnm",
+    title: "GNM",
+    totalFee: "2,70,000",
+    duration: "4 YEARS",
+    image: gnm,
+    approvedBy: "KARNATAKA UNIVERSITY, INC APPROVED",
+    status: "Ongoing",
+    shortDescription:
+      "Comprehensive nursing training ➤ Patient care skills ➤ Certified diploma ➤ Clinical & community practice ➤ Advance your nursing career.",
+    fullDescription: `
 ### What is GNM (General Nursing and Midwifery)?
 GNM is a diploma course aimed at training students in nursing and midwifery, preparing them for professional healthcare roles in hospitals and community settings.
 
@@ -1461,19 +1465,19 @@ Graduates can work as staff nurses, community health nurses, or pursue higher st
 
 ### रोजगार के अवसर
 ग्रेजुएट स्टाफ नर्स, सामुदायिक स्वास्थ्य नर्स के रूप में कार्य कर सकते हैं या B.Sc नर्सिंग जैसे उच्च अध्ययन कर सकते हैं। नर्सिंग एक तेजी से बढ़ता हुआ क्षेत्र है जहाँ विश्वव्यापी मांग है।
-`
-}
-,
+`,
+  },
   {
-  "id": "drt-radiographer",
-  "title": "DRT (RADIOGRAPHER)",
-  "totalFee": "1,08,000",
-  "duration": "2 YEARS",
-  "image": drt,
-  "approvedBy": "NCVT APPROVED ITI",
-  "status": "Ongoing",
-  "shortDescription": "Learn to operate X-ray & imaging equipment ➤ Understand radiographic techniques ➤ Get certified ➤ Gain clinical experience ➤ Start radiography career.",
-  "fullDescription": `
+    id: "drt-radiographer",
+    title: "DRT (RADIOGRAPHER)",
+    totalFee: "1,08,000",
+    duration: "2 YEARS",
+    image: drt,
+    approvedBy: "NCVT APPROVED ITI",
+    status: "Ongoing",
+    shortDescription:
+      "Learn to operate X-ray & imaging equipment ➤ Understand radiographic techniques ➤ Get certified ➤ Gain clinical experience ➤ Start radiography career.",
+    fullDescription: `
 ### What is DRT (Radiographer)?
 DRT (Diploma in Radiography Technology) trains students to operate diagnostic imaging equipment such as X-rays, CT scans, and MRI to assist medical professionals in diagnosing diseases.
 
@@ -1513,19 +1517,19 @@ Graduates can work as radiographers in hospitals, diagnostic labs, clinics, and 
 
 ### रोजगार के अवसर
 ग्रेजुएट अस्पतालों, डायग्नोस्टिक लैब, क्लीनिक, और स्वास्थ्य केंद्रों में रेडियोग्राफर के रूप में कार्य कर सकते हैं। कुशल रेडियोग्राफरों की मांग निरंतर बढ़ रही है।
-`
-}
-,
- {
-  "id": "health-sanitary-inspector",
-  "title": "HEALTH SANITARY INSPECTOR",
-  "totalFee": "25,000",
-  "duration": "1 YEAR",
-  "image": hsi,
-  "approvedBy": "NCVT APPROVED ITI",
-  "status": "Ongoing",
-  "shortDescription": "Learn hygiene & sanitation protocols ➤ Monitor public health standards ➤ Get certified ➤ Practical field training ➤ Build career in health inspection.",
-  "fullDescription": `
+`,
+  },
+  {
+    id: "health-sanitary-inspector",
+    title: "HEALTH SANITARY INSPECTOR",
+    totalFee: "25,000",
+    duration: "1 YEAR",
+    image: hsi,
+    approvedBy: "NCVT APPROVED ITI",
+    status: "Ongoing",
+    shortDescription:
+      "Learn hygiene & sanitation protocols ➤ Monitor public health standards ➤ Get certified ➤ Practical field training ➤ Build career in health inspection.",
+    fullDescription: `
 ### What is a Health Sanitary Inspector?
 A Health Sanitary Inspector is responsible for ensuring public health and hygiene by inspecting sanitation standards in communities, public places, and industries to prevent disease outbreaks.
 
@@ -1565,18 +1569,19 @@ Graduates can work in municipal corporations, health departments, industries, an
 
 ### रोजगार के अवसर
 ग्रेजुएट नगर निगम, स्वास्थ्य विभाग, उद्योगों, और जन स्वास्थ्य एवं स्वच्छता से संबंधित गैर-सरकारी संगठनों में कार्य कर सकते हैं।
-`
-},
- {
-  "id": "mushroom-farming-training",
-  "title": "MUSHROOM FARMING TRAINING PROGRAM",
-  "totalFee": "25000 + Hostel",
-  "duration": "30 DAYS (15 Days Theory + 15 Days Practical)",
-  "image": mushroom,
-  "approvedBy": "BraiinyBear Educational & Training Society",
-  "status": "Ongoing",
-  "shortDescription": "Learn scientific mushroom cultivation ➤ Hands-on harvesting & post-harvest management ➤ Business setup guidance ➤ Market linkage & financial planning ➤ Lifetime expert mentorship.",
- "fullDescription": `### What is Mushroom Farming Training?  
+`,
+  },
+  {
+    id: "mushroom-farming-training",
+    title: "MUSHROOM FARMING TRAINING PROGRAM",
+    totalFee: "25000 + Hostel",
+    duration: "30 DAYS (15 Days Theory + 15 Days Practical)",
+    image: mushroom,
+    approvedBy: "BraiinyBear Educational & Training Society",
+    status: "Ongoing",
+    shortDescription:
+      "Learn scientific mushroom cultivation ➤ Hands-on harvesting & post-harvest management ➤ Business setup guidance ➤ Market linkage & financial planning ➤ Lifetime expert mentorship.",
+    fullDescription: `### What is Mushroom Farming Training?  
 The Mushroom Farming Training Program is designed to equip learners with scientific and practical knowledge of mushroom cultivation. This course blends theory and hands-on training, enabling participants to successfully set up and manage their own mushroom farming units.  
 
 ### मशरूम फार्मिंग ट्रेनिंग क्या है?  
@@ -1633,9 +1638,6 @@ Graduates can work as:
 - एग्रीबिजनेस उद्यमी के रूप में  
 - स्थानीय और शहरी बाजारों में सप्लायर के रूप में  
 - फूड प्रोसेसिंग और निर्यात उद्योगों में पेशेवर के रूप में  
-`
-}
-
-
+`,
+  },
 ];
-
