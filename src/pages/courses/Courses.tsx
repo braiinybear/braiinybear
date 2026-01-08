@@ -1,15 +1,15 @@
 import React, { useMemo, useState } from "react";
 import { Helmet } from "react-helmet";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { courseData } from "./courseData";
 import { ArrowRight } from "lucide-react";
 
 const Course: React.FC = () => {
+  const navigate = useNavigate();
   const [query, setQuery] = useState<string>("");
-  const [fee,setfee] = useState<number>(320000);
   const filteredCourses = useMemo(() => {
     const q = query.trim().toLowerCase();
-    if (!q) return courseData.filter((c) => c.totalFee ? parseInt(c.totalFee) <= fee : true);
+    if (!q) return courseData
     return courseData.filter((c) => {
       return (
         (c.title.toLowerCase().includes(q) ||
@@ -18,11 +18,10 @@ const Course: React.FC = () => {
         (c.status && c.status.toLowerCase().includes(q)) ||
         (c.fullDescription && c.fullDescription.toLowerCase().includes(q)) ||
         (c.totalFee && c.totalFee.toString().includes(q)) ||
-        (c.duration && c.duration.toLowerCase().includes(q))) &&
-        (c.totalFee ? parseInt(c.totalFee) <= fee : true)
+        (c.duration && c.duration.toLowerCase().includes(q)))
       );
     });
-  }, [query,fee]);
+  }, [query]);
   return (
     <>
       <Helmet>
@@ -94,34 +93,13 @@ const Course: React.FC = () => {
                   className="w-full pl-4 pr-10 py-3 rounded-full border border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-sky-500"
                 />
               </div>
-              <div className="w-auto">
-                <label htmlFor="fee-range" className="block mb-2 font-medium">
-                  Maximum Fee: ₹ {fee.toLocaleString()}
-                </label>
-                <input
-                  type="range"
-                  min={2000}
-                  max={320000}
-                  step={10000}
-                  onChange={(e)=>setfee(parseInt(e.target.value))}
-                  className="w-full md:w-56"
-                />
-                <div className="w-full">
-                  <span className="text-sm text-gray-600">
-                    ₹ 2,000
-                  </span>
-                  <span className="float-right text-sm text-gray-600">
-                    ₹ 3,20,000
-                  </span>
-                </div>
-              </div>
             </div>
           </div>
 
           {/* Courses Grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredCourses.map((course) => (
-              <div key={course.id} className="w-full h-full flex flex-col">
+              <div  onClick={()=>navigate(`/courses/${course.id}`)} key={course.id} className="w-full h-full flex flex-col">
                 <div
                   className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-100 group flex flex-col"
                   style={{ height: "100%" }}
