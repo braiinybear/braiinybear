@@ -6,22 +6,23 @@ import { ArrowRight } from "lucide-react";
 
 const Course: React.FC = () => {
   const [query, setQuery] = useState<string>("");
+  const [fee,setfee] = useState<number>(320000);
   const filteredCourses = useMemo(() => {
     const q = query.trim().toLowerCase();
-    if (!q) return courseData;
+    if (!q) return courseData.filter((c) => c.totalFee ? parseInt(c.totalFee) <= fee : true);
     return courseData.filter((c) => {
       return (
-        (c.title.toLowerCase().includes(q)) ||
-        ( c.shortDescription.toLowerCase().includes(q)) ||
-        (c. approvedBy && c.approvedBy.toLowerCase().includes(q)) ||
+        (c.title.toLowerCase().includes(q) ||
+        c.shortDescription.toLowerCase().includes(q) ||
+        (c.approvedBy && c.approvedBy.toLowerCase().includes(q)) ||
         (c.status && c.status.toLowerCase().includes(q)) ||
         (c.fullDescription && c.fullDescription.toLowerCase().includes(q)) ||
         (c.totalFee && c.totalFee.toString().includes(q)) ||
-        (c.duration && c.duration.toLowerCase().includes(q))
-
+        (c.duration && c.duration.toLowerCase().includes(q))) &&
+        (c.totalFee ? parseInt(c.totalFee) <= fee : true)
       );
     });
-  }, [query]);
+  }, [query,fee]);
   return (
     <>
       <Helmet>
@@ -77,26 +78,46 @@ const Course: React.FC = () => {
             </p>
           </div>
           {/* Search Bar */}
-          <div className="max-w-lg mx-auto mb-8">
-            <h3 className="text-center font-semibold mb-5">Search your courses</h3>
+          <div className="max-w-[1200px] w-full mx-auto mb-8 ">
+            <h3 className="text-center font-semibold mb-5">
+              Search your courses
+            </h3>
 
-            <label htmlFor="course-search" className="sr-only">
-              Search courses
-            </label>
-            <div className="relative">
-              <input
-                id="course-search"
-                type="search"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                placeholder="name,description, status, approval, totalFee..."
-                className="w-full pl-4 pr-10 py-3 rounded-full border border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-sky-500"
-              />
-            
+            <div className="md:flex items-center justify-between gap-4">
+              <div className="flex-1 relative mb-2">
+                <input
+                  id="course-search"
+                  type="search"
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  placeholder="name,description, status, approval, totalFee..."
+                  className="w-full pl-4 pr-10 py-3 rounded-full border border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-sky-500"
+                />
+              </div>
+              <div className="w-auto">
+                <label htmlFor="fee-range" className="block mb-2 font-medium">
+                  Maximum Fee: ₹ {fee.toLocaleString()}
+                </label>
+                <input
+                  type="range"
+                  min={2000}
+                  max={320000}
+                  step={10000}
+                  onChange={(e)=>setfee(parseInt(e.target.value))}
+                  className="w-full md:w-56"
+                />
+                <div className="w-full">
+                  <span className="text-sm text-gray-600">
+                    ₹ 2,000
+                  </span>
+                  <span className="float-right text-sm text-gray-600">
+                    ₹ 3,20,000
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
 
-          
           {/* Courses Grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredCourses.map((course) => (
