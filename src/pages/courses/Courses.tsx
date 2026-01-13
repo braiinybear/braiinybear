@@ -2,26 +2,28 @@ import React, { useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet";
 import { Link, useNavigate } from "react-router-dom";
 import { courseData } from "./courseData";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Loader } from "lucide-react";
 import { ICourse } from "./courseData";
 
 const Course: React.FC = () => {
+  const [loading,setLoading] = useState<boolean>(false);
   // const courseApi = "https://braiinybear-admin.vercel.app/api/courses";
   const courseApi = "http://localhost:3000/api/courses";
   const [courses, setCourses] = useState<ICourse[]>([]);
   const fetchCourses = async (courseApi: string) => {
     try {
-
+      setLoading(true)
       const res = await fetch(courseApi)
       const courseDataBackend = await res.json()
       console.log(courseDataBackend);
-
+     
       setCourses(courseDataBackend.courses)
 
     }
     catch (err) {
       console.log(err)
       setCourses(courseData)
+      setLoading(false)
     }
   }
 
@@ -46,8 +48,7 @@ const Course: React.FC = () => {
   useEffect(() => {
     fetchCourses(courseApi)
   }, [])
-
-
+ 
   return (
     <>
       <Helmet>
@@ -123,7 +124,10 @@ const Course: React.FC = () => {
           </div>
 
           {/* Courses Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+           {
+            loading ? <div className="flex justify-center items-center min-h-[300px]">
+              <Loader className="w-10 h-10 text-sky-600 animate-spin" />
+            </div> :  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredCourses.map((course) => (
               <div onClick={() => navigate(`/courses/${course.id}`)} key={course.id} className="w-full h-full flex flex-col">
                 <div
@@ -165,6 +169,10 @@ const Course: React.FC = () => {
               </div>
             ))}
           </div>
+           }
+
+          
+         
 
           {/* View All Button */}
 
