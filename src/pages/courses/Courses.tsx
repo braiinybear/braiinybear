@@ -1,27 +1,53 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet";
 import { Link, useNavigate } from "react-router-dom";
 import { courseData } from "./courseData";
 import { ArrowRight } from "lucide-react";
+import { ICourse } from "./courseData";
 
 const Course: React.FC = () => {
+  // const courseApi = "https://braiinybear-admin.vercel.app/api/courses";
+  const courseApi = "http://localhost:3000/api/courses";
+  const [courses, setCourses] = useState<ICourse[]>([]);
+  const fetchCourses = async (courseApi: string) => {
+    try {
+
+      const res = await fetch(courseApi)
+      const courseDataBackend = await res.json()
+      console.log(courseDataBackend);
+
+      setCourses(courseDataBackend.courses)
+
+    }
+    catch (err) {
+      console.log(err)
+      setCourses(courseData)
+    }
+  }
+
   const navigate = useNavigate();
   const [query, setQuery] = useState<string>("");
+
   const filteredCourses = useMemo(() => {
     const q = query.trim().toLowerCase();
-    if (!q) return courseData
-    return courseData.filter((c) => {
+    if (!q) return courses
+    return courses.filter((c) => {
       return (
         (c.title.toLowerCase().includes(q) ||
-        c.shortDescription.toLowerCase().includes(q) ||
-        (c.approvedBy && c.approvedBy.toLowerCase().includes(q)) ||
-        (c.status && c.status.toLowerCase().includes(q)) ||
-        (c.fullDescription && c.fullDescription.toLowerCase().includes(q)) ||
-        (c.totalFee && c.totalFee.toString().includes(q)) ||
-        (c.duration && c.duration.toLowerCase().includes(q)))
+          c.shortDescription.toLowerCase().includes(q) ||
+          (c.approvedBy && c.approvedBy.toLowerCase().includes(q)) ||
+          (c.status && c.status.toLowerCase().includes(q)) ||
+          (c.fullDescription && c.fullDescription.toLowerCase().includes(q)) ||
+          (c.totalFee && c.totalFee.toString().includes(q)) ||
+          (c.duration && c.duration.toLowerCase().includes(q)))
       );
     });
-  }, [query]);
+  }, [query, courses]);
+  useEffect(() => {
+    fetchCourses(courseApi)
+  }, [])
+
+
   return (
     <>
       <Helmet>
@@ -99,7 +125,7 @@ const Course: React.FC = () => {
           {/* Courses Grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredCourses.map((course) => (
-              <div  onClick={()=>navigate(`/courses/${course.id}`)} key={course.id} className="w-full h-full flex flex-col">
+              <div onClick={() => navigate(`/courses/${course.id}`)} key={course.id} className="w-full h-full flex flex-col">
                 <div
                   className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-100 group flex flex-col"
                   style={{ height: "100%" }}
@@ -125,7 +151,7 @@ const Course: React.FC = () => {
                       {course.title}
                     </h2>
                     <p className="text-gray-600 mb-4 line-clamp-3">
-                      {course.shortDescription}
+                      {course.shortDescription || ""}
                     </p>
                     <Link
                       to={`/courses/${course.id}`}

@@ -1,13 +1,13 @@
 import { Helmet } from "react-helmet";
 
-const PrivacyPolicyPage = () => {
+const FAQPage = () => {
   return (
     <>
       <Helmet>
-        <title>Privacy Policy - Braiiny Bear Society</title>
+        <title>FAQ - Braiiny Bear Society</title>
         <meta
           name="description"
-          content="Read our Privacy Policy to understand how we handle and protect your data at Braiiny Bear Society."
+          content="Frequently asked questions about Braiiny Bear Society, our website, content, and policies."
         />
       </Helmet>
 
@@ -15,101 +15,73 @@ const PrivacyPolicyPage = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-gray-800 mb-4">
-              Privacy Policy
+              Frequently Asked Questions
             </h1>
             <div className="w-24 h-1 bg-gradient-to-r from-[var(--primary-main)] to-blue-500 mx-auto rounded-full mb-6"></div>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Your privacy is important to us. This policy explains how we
-              collect, use, and safeguard your information.
+              Common questions about Braiiny Bear Society and how this website works.
             </p>
           </div>
 
           <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-md space-y-6 text-gray-700 leading-relaxed">
             <section>
               <h2 className="text-xl font-semibold text-gray-800 mb-2">
-                1. Information We Collect
+                1. What is Braiiny Bear Society?
               </h2>
               <p>
-                We collect personal information such as your name, email
-                address, phone number, and any other details you provide
-                voluntarily through forms or account registration.
+                Braiiny Bear Society is an informational and educational platform
+                designed to share resources, ideas, and content for families and
+                children.
               </p>
             </section>
 
             <section>
               <h2 className="text-xl font-semibold text-gray-800 mb-2">
-                2. How We Use Your Information
+                2. Do I need to create an account?
               </h2>
               <p>
-                Your information is used to provide our services, respond to
-                inquiries, send updates, and improve user experience. We may
-                also use it for internal analytics and marketing purposes.
+                No. This is a static website and does not require account creation
+                or user registration.
               </p>
             </section>
 
             <section>
               <h2 className="text-xl font-semibold text-gray-800 mb-2">
-                3. Data Sharing
+                3. Do you collect personal information?
               </h2>
               <p>
-                We do not sell or rent your personal data. We may share your
-                data with trusted third-party service providers for
-                functionality (e.g., payment processing), under strict
-                confidentiality agreements.
+                We do not collect personal information directly. Basic technical
+                data such as anonymous analytics or cookies may be used to improve
+                website performance.
               </p>
             </section>
 
             <section>
               <h2 className="text-xl font-semibold text-gray-800 mb-2">
-                4. Cookies & Tracking
+                4. Does this website use cookies?
               </h2>
               <p>
-                Our website uses cookies and similar technologies to enhance
-                your experience. You can modify your browser settings to
-                decline cookies, though some features may not function properly.
+                Yes, limited cookies or similar technologies may be used for basic
+                analytics and site functionality. You can control cookies through
+                your browser settings.
               </p>
             </section>
 
             <section>
               <h2 className="text-xl font-semibold text-gray-800 mb-2">
-                5. Data Security
+                5. How can I contact you?
               </h2>
               <p>
-                We implement industry-standard security measures to protect your
-                data from unauthorized access, misuse, or alteration.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-semibold text-gray-800 mb-2">
-                6. Your Rights
-              </h2>
-              <p>
-                You have the right to access, update, or delete your personal
-                data. Contact us anytime at{" "}
+                If you have any questions, you can contact us at{" "}
                 <a
-                  href="mailto:privacy@braiinybear.org"
+                  href="mailto:info@braiinybear.org"
                   className="text-blue-600 underline"
                 >
-                  privacy@braiinybear.org
-                </a>{" "}
-                for assistance.
+                  info@braiinybear.org
+                </a>
+                .
               </p>
             </section>
-
-            <section>
-              <h2 className="text-xl font-semibold text-gray-800 mb-2">
-                7. Updates to This Policy
-              </h2>
-              <p>
-                We may update this privacy policy from time to time. Any changes
-                will be posted on this page with an updated revision date.
-              </p>
-            </section>
-
-            <p className="text-sm text-gray-500 mt-4">
-              Last updated: August 5, 2025
-            </p>
           </div>
         </div>
       </section>
@@ -117,4 +89,4 @@ const PrivacyPolicyPage = () => {
   );
 };
 
-export default PrivacyPolicyPage;
+export default FAQPage;

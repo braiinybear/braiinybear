@@ -63,6 +63,7 @@ const [videos,setVideos] = useState([]);
 
     try {
         const res = await fetch("https://braiinybear-admin.vercel.app/api/videos");
+        // const res = await fetch("http://localhost:3000/api/videos");
 
       if(res.ok){
         const data = await res.json();
