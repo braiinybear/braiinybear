@@ -167,15 +167,7 @@ const Course: React.FC = () => {
           </div>
 
           {/* View All Button */}
-          <div className="text-center mt-12">
-            <Link
-              to="/courses"
-              className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold"
-            >
-              View all courses
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </div>
+
         </div>
       </section>
     </>
