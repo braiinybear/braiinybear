@@ -4,10 +4,13 @@ import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import { useEffect, useState } from "react";
 
-const courseApi = "http://localhost:3000/api/courses";
+// const courseApi = "http://localhost:3000/api/courses";
+  const courseApi = "https://braiinybear-admin.vercel.app/api/courses";
 
 const CourseDetails = () => {
+  
   const { id } = useParams();
+  const [loading,setLoading] = useState<boolean>(false)
 
   const localEvent = courseData.find((e) => e.id === id);
 
@@ -20,13 +23,16 @@ const [event, setEvent] = useState<ICourse | null>(localEvent ?? null);
 
     const fetchCourse = async () => {
       try {
+        setLoading(true)
         const res = await fetch(`${courseApi}/${id}`);
         if (!res.ok) throw new Error("Course not found");
 
         const data = await res.json();
         setEvent(data);
+        setLoading(false)
       } catch (err) {
        console.log(err);
+       setLoading(false)
        
       }
     };

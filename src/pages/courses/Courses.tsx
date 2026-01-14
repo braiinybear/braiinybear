@@ -1,14 +1,15 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { courseData } from "./courseData";
-import { ArrowRight, Loader } from "lucide-react";
+
 import { ICourse } from "./courseData";
+import { Loader } from "lucide-react";
 
 const Course: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
-  // const courseApi = "https://braiinybear-admin.vercel.app/api/courses";
-  const courseApi = "http://localhost:3000/api/courses";
+   const courseApi = "https://braiinybear-admin.vercel.app/api/courses";
+  // const courseApi = "http://localhost:3000/api/courses";
   const [courses, setCourses] = useState<ICourse[]>([]);
   const fetchCourses = async (courseApi: string) => {
     try {
@@ -16,8 +17,8 @@ const Course: React.FC = () => {
       const res = await fetch(courseApi)
       const courseDataBackend = await res.json()
       console.log(courseDataBackend);
-
       setCourses(courseDataBackend.courses)
+      setLoading(false)
 
     }
     catch (err) {
@@ -157,13 +158,6 @@ const Course: React.FC = () => {
                       <p className="text-gray-600 mb-4 line-clamp-3">
                         {course.shortDescription || ""}
                       </p>
-                      <Link
-                        to={`/courses/${course.id}`}
-                        className="inline-flex items-center text-sky-600 hover:text-sky-800 font-medium transition"
-                      >
-                        Learn more
-                        <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
-                      </Link>
                     </div>
                   </div>
                 </div>
