@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { courseData, ICourse } from "./courseData";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
@@ -9,6 +9,7 @@ const courseApi = "https://braiinybear-admin.vercel.app/api/courses";
 
 const CourseDetails = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const localEvent = courseData.find((e) => e.id === id);
 
@@ -98,15 +99,20 @@ const CourseDetails = () => {
               )}
             </div>
 
-            <div className="mt-6 text-center">
+            <div className="mt-6 space-y-3 text-center">
               <a
                 href="tel:+917302942784"
-                className="block bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2 rounded-md"
+                className="block bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2 rounded-md transition-colors"
               >
                 📲 Call Now
               </a>
+              <button
+                onClick={() => navigate("/registration", { state: { courseName: event.title } })}
+                className="block w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 rounded-md transition-colors"
+              >
+                Register Now
+              </button>
             </div>
-            
           </div>
         </div>
       </div>

@@ -63,6 +63,7 @@ const Header: React.FC = () => {
     { name: "Courses", path: "/courses" },
     { name: "What We Do", path: "/our-work" },
     { name: "Gallery", path: "/gallery" },
+    { name: "Online Registration", path: "/registration" },
     { name: "Inquiry", path: "/contact" },
   ];
 
@@ -120,7 +121,7 @@ const Header: React.FC = () => {
               key={logo.alt}
               src={logo.src}
               alt={logo.alt}
-              className={` ${logo.alt === "Azadi Ka Amrit Mahotsav" ? "h-14 sm:h-[4rem] md:h-[5rem] lg:h-[6.5rem]" : "h-12 sm:h-[3rem] md:h-[4rem] lg:h-[5rem]"} object-contain drop-shadow-lg  ${logo.alt === "Narendra Modi Ji" ? "h-12 sm:h-[3.5rem] md:h-[4.5rem] lg:h-[5.5rem]" : "h-12 sm:h-[3rem] md:h-[4rem] lg:h-[5rem]"}` }
+              className={` ${logo.alt === "Azadi Ka Amrit Mahotsav" ? "h-14 sm:h-[4rem] md:h-[5rem] lg:h-[6.5rem]" : "h-12 sm:h-[3rem] md:h-[4rem] lg:h-[5rem]"} object-contain drop-shadow-lg  ${logo.alt === "Narendra Modi Ji" ? "h-12 sm:h-[3.5rem] md:h-[4.5rem] lg:h-[5.5rem]" : "h-12 sm:h-[3rem] md:h-[4rem] lg:h-[5rem]"}`}
               style={{ filter: "drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5))" }}
 
             />
@@ -130,11 +131,10 @@ const Header: React.FC = () => {
 
       {/* Navigation Header */}
       <header
-        className={`w-full top-0 left-0 z-50 transition-all duration-700 h-fit ${
-          isScrolled
+        className={`w-full top-0 left-0 z-50 transition-all duration-700 h-fit ${isScrolled
             ? "bg-white shadow-lg py-2"
             : "bg-white/80 backdrop-blur-md py-2 sm:py-4"
-        }`}
+          }`}
       >
         <div className="container mx-auto px-4 flex justify-between items-center min-h-[2rem] sm:min-h-[2rem] md:min-h-[3rem]">
           {/* Desktop Navigation */}
@@ -146,11 +146,10 @@ const Header: React.FC = () => {
                     <Link
                       to={item.path}
                       onClick={() => setActiveItem(item.path)}
-                      className={`relative text-base xl:text-lg font-medium transition-all duration-300 group-hover:text-[var(--primary-main)] ${
-                        activeItem === item.path
+                      className={`relative text-base xl:text-lg md:text-sm md:m-2 font-medium transition-all duration-300 group-hover:text-[var(--primary-main)] ${activeItem === item.path
                           ? "text-[var(--primary-main)]"
                           : "text-black"
-                      } flex items-center whitespace-nowrap`}
+                        } flex items-center whitespace-nowrap`}
                     >
                       {item.name}
                       {item.children && (
@@ -170,11 +169,10 @@ const Header: React.FC = () => {
                         </svg>
                       )}
                       <span
-                        className={`absolute -bottom-2 left-0 w-0 h-0.5 bg-[var(--primary-main)] transition-all duration-300 ${
-                          activeItem === item.path
+                        className={`absolute -bottom-2 left-0 w-0 h-0.5 bg-[var(--primary-main)] transition-all duration-300 ${activeItem === item.path
                             ? "w-full"
                             : "group-hover:w-full"
-                        }`}
+                          }`}
                       />
                     </Link>
 
@@ -200,16 +198,16 @@ const Header: React.FC = () => {
                 ))}
               </div>
               <div className="flex space-x-2 xl:space-x-4 pr-2 max-h-fit">
-             <Link to={"/volunteer"} className="flex items-center">
-                <button className={`${buttonClasses} text-nowrap cursor-pointer`}>
-                  Volunteer
-                </button>
-              </Link>
-             <Link to={"/volunteer"} className="flex items-center">
-                <button className={`${buttonClasses} text-nowrap cursor-pointer`}>
-                   Get Involved
-                </button>
-              </Link>
+                <Link to={"/volunteer"} className="flex items-center">
+                  <button className={`${buttonClasses} text-nowrap cursor-pointer`}>
+                    Volunteer
+                  </button>
+                </Link>
+                <Link to={"/volunteer"} className="flex items-center">
+                  <button className={`${buttonClasses} text-nowrap cursor-pointer`}>
+                    Get Involved
+                  </button>
+                </Link>
                 {/* <button className={`${buttonClasses} text-nowrap`}>
                   Get Involved
                 </button> */}
@@ -226,7 +224,7 @@ const Header: React.FC = () => {
                 alt={logo.alt}
                 className={`${logo.alt === "Azadi Ka Amrit Mahotsav" ? "h-15 sm:h-[4.5rem] md:h-[6rem]" : "h-12 sm:h-[4rem] md:h-[5rem]"} object-contain drop-shadow-lg  ${logo.alt === "Narendra Modi Ji" ? "h-15 sm:h-[4.5rem] md:h-[5.5rem] " : "h-12 sm:h-[4rem] md:h-[5rem]"}
                 ` }
-              style={{ filter: "drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5))" }}
+                style={{ filter: "drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5))" }}
 
               />
             ))}
@@ -245,19 +243,16 @@ const Header: React.FC = () => {
           >
             <div className="w-6 h-6 relative flex items-center justify-center">
               <span
-                className={`absolute h-0.5 w-full bg-black transform transition-all duration-300 ${
-                  isMenuOpen ? "rotate-45 top-3" : "rotate-0 top-1"
-                }`}
+                className={`absolute h-0.5 w-full bg-black transform transition-all duration-300 ${isMenuOpen ? "rotate-45 top-3" : "rotate-0 top-1"
+                  }`}
               />
               <span
-                className={`absolute h-0.5 w-full bg-black transform transition-all duration-300 ${
-                  isMenuOpen ? "opacity-0 w-0" : "opacity-100 w-full top-3"
-                }`}
+                className={`absolute h-0.5 w-full bg-black transform transition-all duration-300 ${isMenuOpen ? "opacity-0 w-0" : "opacity-100 w-full top-3"
+                  }`}
               />
               <span
-                className={`absolute h-0.5 w-full bg-black transform transition-all duration-300 ${
-                  isMenuOpen ? "-rotate-45 top-3" : "rotate-0 top-5"
-                }`}
+                className={`absolute h-0.5 w-full bg-black transform transition-all duration-300 ${isMenuOpen ? "-rotate-45 top-3" : "rotate-0 top-5"
+                  }`}
               />
             </div>
           </button>
@@ -265,11 +260,10 @@ const Header: React.FC = () => {
           {/* Mobile Menu */}
           <div
             ref={menuRef}
-            className={`fixed top-[60px] sm:top-[72px] md:top-[84px] left-0 w-full bg-white shadow-xl transition-all duration-500 ease-in-out ${
-              isMenuOpen
+            className={`fixed top-[60px] sm:top-[72px] md:top-[84px] left-0 w-full bg-white shadow-xl transition-all duration-500 ease-in-out ${isMenuOpen
                 ? "max-h-screen opacity-100 overflow-y-auto"
                 : "max-h-0 opacity-0 pointer-events-none overflow-hidden"
-            } lg:hidden`}
+              } lg:hidden`}
             role="menu"
           >
             <ul className="flex flex-col items-center space-y-1 py-4">
@@ -286,9 +280,8 @@ const Header: React.FC = () => {
                         {item.name}
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          className={`h-4 w-4 transition-transform duration-300 ${
-                            openDropdown === item.name ? "rotate-180" : ""
-                          }`}
+                          className={`h-4 w-4 transition-transform duration-300 ${openDropdown === item.name ? "rotate-180" : ""
+                            }`}
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -303,11 +296,10 @@ const Header: React.FC = () => {
                       </button>
                       <div
                         id={`${item.name}-submenu`}
-                        className={`flex flex-col text-left transition-all duration-300 overflow-hidden ${
-                          openDropdown === item.name
+                        className={`flex flex-col text-left transition-all duration-300 overflow-hidden ${openDropdown === item.name
                             ? "max-h-48 opacity-100 py-2"
                             : "max-h-0 opacity-0"
-                        }`}
+                          }`}
                       >
                         {item.children.map((child) => (
                           <Link
@@ -328,11 +320,10 @@ const Header: React.FC = () => {
                   ) : (
                     <Link
                       to={item.path}
-                      className={`block py-3 px-4 text-base md:text-lg font-medium transition-all duration-300 ${
-                        activeItem === item.path
+                      className={`block py-3 px-4 text-base md:text-lg font-medium transition-all duration-300 ${activeItem === item.path
                           ? "text-[var(--primary-main)] bg-gray-100"
                           : "text-black hover:text-[var(--primary-main)] hover:bg-gray-100"
-                      }`}
+                        }`}
                       onClick={() => {
                         setActiveItem(item.path);
                         setIsMenuOpen(false);

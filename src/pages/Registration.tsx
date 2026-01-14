@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
+import { useLocation } from "react-router-dom";
 
 interface FormData {
     name: string;
@@ -26,12 +27,21 @@ interface UploadedMarksheet {
     name: string;
 }
 
+interface ICourse {
+    id: string;
+    title: string;
+}
+
 const Registration: React.FC = () => {
+    const location = useLocation();
+    const [courses, setCourses] = useState<ICourse[]>([]);
+    const [loadingCourses, setLoadingCourses] = useState(true);
+
     const [formData, setFormData] = useState<FormData>({
         name: "",
         motherName: "",
         fatherName: "",
-        courseName: "",
+        courseName: location.state?.courseName || "",
         email: "",
         phoneNo: "",
         address: "",
@@ -70,6 +80,29 @@ const Registration: React.FC = () => {
         type: "success" | "error" | null;
         message: string;
     }>({ type: null, message: "" });
+
+    // Fetch courses on component mount
+    useEffect(() => {
+        const fetchCourses = async () => {
+            try {
+                setLoadingCourses(true);
+                const response = await fetch("https://braiinybear-admin.vercel.app/api/courses");
+                // const response = await fetch("http://localhost:3000/api/courses");
+
+                if (response.ok) {
+                    const data = await response.json();
+                    setCourses(data.courses || []);
+                }
+            } catch (error) {
+                console.error("Error fetching courses:", error);
+                // Keep courses as empty array on error
+            } finally {
+                setLoadingCourses(false);
+            }
+        };
+
+        fetchCourses();
+    }, []);
 
     const handleInputChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -339,7 +372,7 @@ const Registration: React.FC = () => {
             };
 
             // const response = await fetch("http://localhost:3000/api/online-registration", {
-                const response = await fetch("https://braiinybear-admin.vercel.app/api/online-registration", {
+            const response = await fetch("https://braiinybear-admin.vercel.app/api/online-registration", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -538,16 +571,24 @@ const Registration: React.FC = () => {
                                         >
                                             Course Name <span className="text-red-500">*</span>
                                         </label>
-                                        <input
-                                            type="text"
+                                        <select
                                             id="courseName"
                                             name="courseName"
                                             value={formData.courseName}
                                             onChange={handleInputChange}
                                             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                                            placeholder="Enter course name"
                                             required
-                                        />
+                                            disabled={loadingCourses}
+                                        >
+                                            <option value="">
+                                                {loadingCourses ? "Loading courses..." : "Select a course"}
+                                            </option>
+                                            {courses.map((course) => (
+                                                <option key={course.id} value={course.title}>
+                                                    {course.title}
+                                                </option>
+                                            ))}
+                                        </select>
                                     </div>
                                 </div>
                             </div>
