@@ -31,6 +31,9 @@ const WomenEmpowerment = lazy(
 const OurWork = lazy(
   () => import("./pages/OurWork")
 );
+const Registration = lazy(
+  () => import("./pages/Registration")
+);
 
 const Course = lazy(() => import("./pages/courses/Courses"));
 const CourseDetails = lazy(() => import("./pages/courses/CourseDetails"));
@@ -228,6 +231,16 @@ function App() {
             <Suspense fallback={<Loader />}>
               <Layout>
                 <OurWork />
+              </Layout>
+            </Suspense>
+          }
+        />
+        <Route
+          path="/registration"
+          element={
+            <Suspense fallback={<Loader />}>
+              <Layout>
+                <Registration />
               </Layout>
             </Suspense>
           }
