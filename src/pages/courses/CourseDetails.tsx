@@ -92,7 +92,7 @@ const CourseDetails = () => {
           <div className="bg-white rounded-xl shadow-md p-6">
             <div className="space-y-2 text-gray-700">
               <div><strong>Name:</strong> {event.title}</div>
-              <div><strong>Registration Fee:</strong> ₹{event.totalFee || "N/A"}</div>
+              <div><strong>Registration Fee + Course Fee:</strong> ₹{event.totalFee || "N/A"}</div>
               <div><strong>Duration:</strong> {event.duration || "N/A"}</div>
               {event.approvedBy && (
                 <div><strong>Approved By:</strong> {event.approvedBy}</div>

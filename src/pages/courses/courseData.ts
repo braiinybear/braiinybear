@@ -46,7 +46,7 @@ export const courseData: Array<ICourse> = [
     title: "Artificial Insemination Training",
     status: "Ongoing",
     image: img1,
-    totalFee: "40000 + HOSTEL",
+    totalFee: "40000",
     duration: "3 MONTHS",
     approvedBy: "DEPARTMENT OF ANIMAL HUSBANDRY, GOV. OF INDIA",
     shortDescription:
@@ -86,7 +86,7 @@ Only certified MAITRI technicians should perform AI as per the **National Animal
     id: "dairy-entrepreneurship",
     title: "Dairy Farming",
     status: "Ongoing",
-    totalFee: "6000 + HOSTEL",
+    totalFee: "6000 ",
     duration: "21 DAYS",
     image: img2,
     approvedBy: "DEPARTMENT OF ANIMAL HUSBANDRY, GOV. OF INDIA",
@@ -1574,7 +1574,7 @@ Graduates can work in municipal corporations, health departments, industries, an
   {
     id: "mushroom-farming-training",
     title: "MUSHROOM FARMING TRAINING PROGRAM",
-    totalFee: "25000 + Hostel",
+    totalFee: "25000",
     duration: "30 DAYS (15 Days Theory + 15 Days Practical)",
     image: mushroom,
     approvedBy: "BraiinyBear Educational & Training Society",
