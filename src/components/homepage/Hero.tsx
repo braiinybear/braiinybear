@@ -14,15 +14,15 @@ interface Slide {
 }
 
 const Hero: React.FC = () => {
-  
+
   const mainSlides: Slide[] = [
     {
       image: backgroundImage1,
-      titleLine1: "We are tie-up with",
+      titleLine1: "We have a Tie- up with",
       titleLine2: "A.I. TRAINING INSTITUTE",
       titleLine3: "Accredited by",
       titleLine4:
-        "Department of Animal Husbandry & Fisheries, Ministry of Agriculture & Farmer Welfare",
+        "The Dept. Of Animal Husbandry & Fisheries, Ministry of Agriculture & Farmer Welfare",
       cta: "Learn More",
     },
 
@@ -69,10 +69,9 @@ const Hero: React.FC = () => {
           <div
             key={index}
             className={`absolute inset-0 transition-opacity duration-1000 ease-in-out           
-              ${
-                index === currentSlideIndex
-                  ? "opacity-100 z-10"
-                  : "opacity-0 z-0"
+              ${index === currentSlideIndex
+                ? "opacity-100 z-10"
+                : "opacity-0 z-0"
               }`}
           >
             {/* Background image */}
@@ -83,13 +82,12 @@ const Hero: React.FC = () => {
 
             {/* Gradient overlay - different for each slide */}
             <div
-              className={`absolute inset-0 ${
-                index === 0
-                  ? "bg-gradient-to-r from-blue-900/80 via-blue-800/60 to-transparent"
-                  : index === 1
+              className={`absolute inset-0 ${index === 0
+                ? "bg-gradient-to-r from-blue-900/80 via-blue-800/60 to-transparent"
+                : index === 1
                   ? "bg-gradient-to-tr from-black/70 via-purple-900/40 to-transparent"
                   : "bg-gradient-to-b from-teal-900/70 via-teal-800/50 to-transparent/30"
-              }`}
+                }`}
             />
 
             {/* Content area with decorative elements */}
@@ -97,7 +95,7 @@ const Hero: React.FC = () => {
               {/* Decorative vertical line */}
               <div className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-yellow-400 via-yellow-500 to-transparent"></div>
 
-              <div className="container mx-auto px-6 md:px-12 lg:px-24 relative">
+              <div className="container mx-auto px-6 md:px-12 lg:px-16 xl:px-24 relative">
                 {/* Decorative shape behind text */}
                 <div className="absolute -left-4 top-0 w-2/3 h-full bg-gradient-to-r from-black/30 to-transparent rounded-r-3xl -skew-x-6 transform origin-top-left"></div>
 
@@ -105,48 +103,43 @@ const Hero: React.FC = () => {
                   {/* Accent line */}
                   <div className="w-24 h-2 bg-yellow-400 mb-6 rounded-full"></div>
 
-                  <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-yellow-300 mb-4">
+                  <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-yellow-300 mb-4">
                     {slide.titleLine1}
                   </h1>
 
-                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium text-white mb-4">
+                  <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium text-white mb-4">
                     {slide.titleLine2}
                   </h2>
 
-                  <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3">
+                  <div className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-3">
                     {slide.titleLine3}
                   </div>
 
-                  <div className="text-xl md:text-2xl lg:text-3xl font-medium text-gray-200 mb-10 max-w-2xl">
+                  <div className="text-lg md:text-xl lg:text-2xl xl:text-3xl font-medium text-gray-200 mb-10 max-w-2xl">
                     {slide.titleLine4}
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-4">
                     {slide.cta && (
                       <Link to="/courses">
-                      <button className=" cursor-pointer bg-yellow-400 hover:bg-yellow-500 text-blue-900 px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg flex items-center">
-                        {slide.cta}
-                        <svg
-                          className="w-5 h-5 ml-2"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M14 5l7 7m0 0l-7 7m7-7H3"
-                          />
-                        </svg>
-                      </button>
+                        <button className=" cursor-pointer bg-yellow-400 hover:bg-yellow-500 text-blue-900 px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg flex items-center">
+                          {slide.cta}
+                          <svg
+                            className="w-5 h-5 ml-2"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            />
+                          </svg>
+                        </button>
                       </Link>
                     )}
-                    <Link to="/courses">
-                    <button className="cursor-pointer bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-white/10">
-                      Discover More
-                    </button>
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -162,10 +155,9 @@ const Hero: React.FC = () => {
             <div
               key={index}
               className={`w-24 h-16 overflow-hidden rounded-lg cursor-pointer transition-all duration-300 
-                ${
-                  index === currentSlideIndex
-                    ? "ring-4 ring-yellow-400 scale-110 shadow-lg shadow-yellow-400/30"
-                    : "opacity-60 hover:opacity-100"
+                ${index === currentSlideIndex
+                  ? "ring-4 ring-yellow-400 scale-110 shadow-lg shadow-yellow-400/30"
+                  : "opacity-60 hover:opacity-100"
                 }`}
               onClick={() => handleSlideChange(index)}
             >
@@ -176,11 +168,10 @@ const Hero: React.FC = () => {
                   className="w-full h-full object-cover"
                 />
                 <div
-                  className={`absolute inset-0 ${
-                    index === currentSlideIndex
-                      ? "bg-transparent"
-                      : "bg-black/30"
-                  }`}
+                  className={`absolute inset-0 ${index === currentSlideIndex
+                    ? "bg-transparent"
+                    : "bg-black/30"
+                    }`}
                 ></div>
               </div>
             </div>
@@ -196,10 +187,9 @@ const Hero: React.FC = () => {
               key={index}
               onClick={() => handleSlideChange(index)}
               className={`transition-all duration-300 rounded-full
-                ${
-                  index === currentSlideIndex
-                    ? "w-12 h-3 bg-yellow-400"
-                    : "w-3 h-3 bg-white/50 hover:bg-white/70"
+                ${index === currentSlideIndex
+                  ? "w-12 h-3 bg-yellow-400"
+                  : "w-3 h-3 bg-white/50 hover:bg-white/70"
                 }`}
               aria-label={`Go to slide ${index + 1}`}
             />
@@ -215,10 +205,9 @@ const Hero: React.FC = () => {
               key={index}
               onClick={() => handleSlideChange(index)}
               className={`transition-all duration-300 rounded-full h-2
-                ${
-                  index === currentSlideIndex
-                    ? "w-8 bg-yellow-400"
-                    : "w-2 bg-white/50"
+                ${index === currentSlideIndex
+                  ? "w-8 bg-yellow-400"
+                  : "w-2 bg-white/50"
                 }`}
               aria-label={`Go to slide ${index + 1}`}
             />

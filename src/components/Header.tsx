@@ -52,10 +52,10 @@ const Header: React.FC = () => {
   const navItems = [
     { name: "Home", path: "/" },
     {
-      name: "Who We Are",
+      name: "About Us",
       path: "/overview",
       children: [
-        { name: "Overview", path: "/overview" },
+        { name: "About Us", path: "/overview" },
         { name: "Our People", path: "/about/our-people" },
         // { name: "Achievements", path: "/about/achievements" },
       ],
@@ -64,7 +64,7 @@ const Header: React.FC = () => {
     { name: "What We Do", path: "/our-work" },
     { name: "Gallery", path: "/gallery" },
     { name: "Online Registration", path: "/registration" },
-    { name: "Inquiry", path: "/contact" },
+    { name: "Contact Us", path: "/contact" },
   ];
 
   const buttonClasses =
@@ -132,8 +132,8 @@ const Header: React.FC = () => {
       {/* Navigation Header */}
       <header
         className={`w-full top-0 left-0 z-50 transition-all duration-700 h-fit ${isScrolled
-            ? "bg-white shadow-lg py-2"
-            : "bg-white/80 backdrop-blur-md py-2 sm:py-4"
+          ? "bg-white shadow-lg py-2"
+          : "bg-white/80 backdrop-blur-md py-2 sm:py-4"
           }`}
       >
         <div className="container mx-auto px-4 flex justify-between items-center min-h-[2rem] sm:min-h-[2rem] md:min-h-[3rem]">
@@ -147,8 +147,8 @@ const Header: React.FC = () => {
                       to={item.path}
                       onClick={() => setActiveItem(item.path)}
                       className={`relative text-base xl:text-lg md:text-sm md:m-2 font-medium transition-all duration-300 group-hover:text-[var(--primary-main)] ${activeItem === item.path
-                          ? "text-[var(--primary-main)]"
-                          : "text-black"
+                        ? "text-[var(--primary-main)]"
+                        : "text-black"
                         } flex items-center whitespace-nowrap`}
                     >
                       {item.name}
@@ -170,8 +170,8 @@ const Header: React.FC = () => {
                       )}
                       <span
                         className={`absolute -bottom-2 left-0 w-0 h-0.5 bg-[var(--primary-main)] transition-all duration-300 ${activeItem === item.path
-                            ? "w-full"
-                            : "group-hover:w-full"
+                          ? "w-full"
+                          : "group-hover:w-full"
                           }`}
                       />
                     </Link>
@@ -201,11 +201,6 @@ const Header: React.FC = () => {
                 <Link to={"/volunteer"} className="flex items-center">
                   <button className={`${buttonClasses} text-nowrap cursor-pointer`}>
                     Volunteer
-                  </button>
-                </Link>
-                <Link to={"/volunteer"} className="flex items-center">
-                  <button className={`${buttonClasses} text-nowrap cursor-pointer`}>
-                    Get Involved
                   </button>
                 </Link>
                 {/* <button className={`${buttonClasses} text-nowrap`}>
@@ -261,8 +256,8 @@ const Header: React.FC = () => {
           <div
             ref={menuRef}
             className={`fixed top-[60px] sm:top-[72px] md:top-[84px] left-0 w-full bg-white shadow-xl transition-all duration-500 ease-in-out ${isMenuOpen
-                ? "max-h-screen opacity-100 overflow-y-auto"
-                : "max-h-0 opacity-0 pointer-events-none overflow-hidden"
+              ? "max-h-screen opacity-100 overflow-y-auto"
+              : "max-h-0 opacity-0 pointer-events-none overflow-hidden"
               } lg:hidden`}
             role="menu"
           >
@@ -297,8 +292,8 @@ const Header: React.FC = () => {
                       <div
                         id={`${item.name}-submenu`}
                         className={`flex flex-col text-left transition-all duration-300 overflow-hidden ${openDropdown === item.name
-                            ? "max-h-48 opacity-100 py-2"
-                            : "max-h-0 opacity-0"
+                          ? "max-h-48 opacity-100 py-2"
+                          : "max-h-0 opacity-0"
                           }`}
                       >
                         {item.children.map((child) => (
@@ -321,8 +316,8 @@ const Header: React.FC = () => {
                     <Link
                       to={item.path}
                       className={`block py-3 px-4 text-base md:text-lg font-medium transition-all duration-300 ${activeItem === item.path
-                          ? "text-[var(--primary-main)] bg-gray-100"
-                          : "text-black hover:text-[var(--primary-main)] hover:bg-gray-100"
+                        ? "text-[var(--primary-main)] bg-gray-100"
+                        : "text-black hover:text-[var(--primary-main)] hover:bg-gray-100"
                         }`}
                       onClick={() => {
                         setActiveItem(item.path);
