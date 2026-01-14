@@ -6,7 +6,7 @@ import { ArrowRight, Loader } from "lucide-react";
 import { ICourse } from "./courseData";
 
 const Course: React.FC = () => {
-  const [loading,setLoading] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
   // const courseApi = "https://braiinybear-admin.vercel.app/api/courses";
   const courseApi = "http://localhost:3000/api/courses";
   const [courses, setCourses] = useState<ICourse[]>([]);
@@ -16,7 +16,7 @@ const Course: React.FC = () => {
       const res = await fetch(courseApi)
       const courseDataBackend = await res.json()
       console.log(courseDataBackend);
-     
+
       setCourses(courseDataBackend.courses)
 
     }
@@ -48,7 +48,7 @@ const Course: React.FC = () => {
   useEffect(() => {
     fetchCourses(courseApi)
   }, [])
- 
+
   return (
     <>
       <Helmet>
@@ -124,55 +124,55 @@ const Course: React.FC = () => {
           </div>
 
           {/* Courses Grid */}
-           {
+          {
             loading ? <div className="flex justify-center items-center min-h-[300px]">
               <Loader className="w-10 h-10 text-sky-600 animate-spin" />
-            </div> :  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredCourses.map((course) => (
-              <div onClick={() => navigate(`/courses/${course.id}`)} key={course.id} className="w-full h-full flex flex-col">
-                <div
-                  className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-100 group flex flex-col"
-                  style={{ height: "100%" }}
-                >
-                  {/* Course Image */}
-                  {course.image && (
-                    <div className="relative h-65 overflow-hidden">
-                      <img
-                        src={course.image}
-                        alt={course.title}
-                        className="w-full h-full object-fill transform transition duration-500 group-hover:scale-105 group-hover:blur-[1px]"
-                      />
-                      {/* Status Tag */}
-                      <span className="absolute top-3 left-3 bg-indigo-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
-                        {course.status}
-                      </span>
-                    </div>
-                  )}
+            </div> : <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredCourses.map((course) => (
+                <div onClick={() => navigate(`/courses/${course.id}`)} key={course.id} className="w-full h-full flex flex-col">
+                  <div
+                    className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-100 group flex flex-col"
+                    style={{ height: "100%" }}
+                  >
+                    {/* Course Image */}
+                    {course.image && (
+                      <div className="relative h-65 overflow-hidden">
+                        <img
+                          src={course.image}
+                          alt={course.title}
+                          className="w-full h-full object-fill transform transition duration-500 group-hover:scale-105 group-hover:blur-[1px]"
+                        />
+                        {/* Status Tag */}
+                        <span className="absolute top-3 left-3 bg-indigo-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
+                          {course.status}
+                        </span>
+                      </div>
+                    )}
 
-                  {/* Course Info */}
-                  <div className="p-6 flex flex-col justify-between flex-grow">
-                    <h2 className="text-xl uppercase font-semibold mb-2 text-gray-800 group-hover:text-sky-600 transition">
-                      {course.title}
-                    </h2>
-                    <p className="text-gray-600 mb-4 line-clamp-3">
-                      {course.shortDescription || ""}
-                    </p>
-                    <Link
-                      to={`/courses/${course.id}`}
-                      className="inline-flex items-center text-sky-600 hover:text-sky-800 font-medium transition"
-                    >
-                      Learn more
-                      <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
-                    </Link>
+                    {/* Course Info */}
+                    <div className="p-6 flex flex-col justify-between flex-grow">
+                      <h2 className="text-xl uppercase font-semibold mb-2 text-gray-800 group-hover:text-sky-600 transition">
+                        {course.title}
+                      </h2>
+                      <p className="text-gray-600 mb-4 line-clamp-3">
+                        {course.shortDescription || ""}
+                      </p>
+                      <Link
+                        to={`/courses/${course.id}`}
+                        className="inline-flex items-center text-sky-600 hover:text-sky-800 font-medium transition"
+                      >
+                        Learn more
+                        <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-           }
+              ))}
+            </div>
+          }
 
-          
-         
+
+
 
           {/* View All Button */}
 

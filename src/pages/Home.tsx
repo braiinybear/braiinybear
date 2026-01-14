@@ -44,7 +44,7 @@ gsap.registerPlugin(ScrollTrigger);
 // } from "lucide-react";
 
 import img2 from "../assets/images/IMG_3998.JPG";
-import ImpactSection from "../sections/home/ImpactSection";
+// import ImpactSection from "../sections/home/ImpactSection";
 import MissionSection from "../sections/home/MissionSection";
 import WorkAreaSection from "../sections/home/WorkAreaSection";
 import { Link } from "react-router-dom";
@@ -98,7 +98,7 @@ const [videos,setVideos] = useState([]);
 
       {/* Our Impact Section */}
 
-      <ImpactSection />
+      {/* <ImpactSection /> */}
 
       {/* Our Work Areas */}
       <WorkAreaSection />
