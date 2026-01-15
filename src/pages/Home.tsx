@@ -1,6 +1,6 @@
 import Hero from "../components/homepage/Hero";
 import { Helmet } from "react-helmet";
-
+const courseApi = import.meta.env.VITE_API_URL
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -56,13 +56,13 @@ import { useEffect, useState } from "react";
 
 const Home: React.FC = () => {
 const [videos,setVideos] = useState([]);
-
+ 
   useEffect(()=>{
 
     const fetchVideos = async() =>{
 
     try {
-        const res = await fetch("https://braiinybear-admin.vercel.app/api/videos");
+        const res = await fetch(courseApi+"videos");
         // const res = await fetch("http://localhost:3000/api/videos");
 
       if(res.ok){

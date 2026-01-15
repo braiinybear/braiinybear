@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { useLocation } from "react-router-dom";
 
+
 interface FormData {
     name: string;
     motherName: string;
@@ -72,7 +73,9 @@ const Registration: React.FC = () => {
         aadharBack: false,
         marksheets: false,
     });
-
+     const courseApi = import.meta.env.VITE_API_URL
+     console.log(courseApi);
+     
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isUploading, setIsUploading] = useState(false);
     const [uploadProgress, setUploadProgress] = useState("");
@@ -86,7 +89,7 @@ const Registration: React.FC = () => {
         const fetchCourses = async () => {
             try {
                 setLoadingCourses(true);
-                const response = await fetch("https://braiinybear-admin.vercel.app/api/courses");
+                const response = await fetch(courseApi+"courses");
                 // const response = await fetch("http://localhost:3000/api/courses");
 
                 if (response.ok) {
@@ -372,7 +375,7 @@ const Registration: React.FC = () => {
             };
 
             // const response = await fetch("http://localhost:3000/api/online-registration", {
-            const response = await fetch("https://braiinybear-admin.vercel.app/api/online-registration", {
+            const response = await fetch(courseApi+"online-registration", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -577,7 +580,7 @@ const Registration: React.FC = () => {
                                             value={formData.courseName}
                                             onChange={handleInputChange}
                                             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                                            required
+                                            // required
                                             disabled={loadingCourses}
                                         >
                                             <option value="">

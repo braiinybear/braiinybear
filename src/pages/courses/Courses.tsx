@@ -8,7 +8,7 @@ import { Loader } from "lucide-react";
 
 const Course: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
-  const courseApi = "https://braiinybear-admin.vercel.app/api/courses";
+   const courseApi = import.meta.env.VITE_API_URL + "courses"
   // const courseApi = "http://localhost:3000/api/courses";
   const [courses, setCourses] = useState<ICourse[]>([]);
   const fetchCourses = async (courseApi: string) => {
