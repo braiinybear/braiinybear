@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { useLocation } from "react-router-dom";
+import { toast } from "react-toastify";
 
 
 interface FormData {
@@ -384,6 +385,7 @@ const Registration: React.FC = () => {
             });
 
             if (response.ok) {
+                toast.success("🎉 Registration submitted successfully!");
                 setSubmitStatus({
                     type: "success",
                     message: "Registration submitted successfully!",
@@ -415,12 +417,14 @@ const Registration: React.FC = () => {
                     });
                 }, 5000);
             } else {
+                 toast.error("Registration failed. Please try again.");
                 setSubmitStatus({
                     type: "error",
                     message: "Registration failed. Please try again.",
                 });
             }
         } catch (error) {
+             toast.error("Registration failed. Please try again.");
             setSubmitStatus({
                 type: "error",
                 message: `Upload error: ${error instanceof Error ? error.message : 'Please check your ImageKit configuration'}`,

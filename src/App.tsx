@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
-
+import { ToastContainer, Bounce } from "react-toastify";
 import ScrollToTop from "./components/ScrollToTop";
 import Loader from "./components/Loader";
 import Faq from "./pages/Faq";
@@ -42,6 +42,20 @@ const Layout = lazy(() => import("./components/layout/Layout"));
 
 function App() {
   return (
+    <>
+       <ToastContainer
+position="top-right"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick={false}
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="light"
+transition={Bounce}
+/>
     <Router>
       <ScrollToTop />
       <Routes>
@@ -268,6 +282,8 @@ function App() {
 
       </Routes>
     </Router>
+    </>
+ 
   );
 }
 
