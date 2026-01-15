@@ -5,7 +5,8 @@ import rehypeRaw from "rehype-raw";
 import { useEffect, useState } from "react";
 
 // const courseApi = "http://localhost:3000/api/courses";
-const courseApi = "https://braiinybear-admin.vercel.app/api/courses";
+ console.log(import.meta.env.VITE_API_URL)
+ const courseApi = import.meta.env.VITE_API_URL
 
 const CourseDetails = () => {
   const { id } = useParams();
@@ -25,7 +26,7 @@ const CourseDetails = () => {
         setLoading(true);
         setError(null);
 
-        const res = await fetch(`${courseApi}/${id}`);
+        const res = await fetch(`${courseApi}courses/${id}`);
         if (!res.ok) throw new Error("Course not found");
 
         const data = await res.json();
