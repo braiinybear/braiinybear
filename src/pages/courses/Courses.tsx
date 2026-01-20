@@ -128,7 +128,7 @@ const Course: React.FC = () => {
           {
             loading ? <div className="flex justify-center items-center min-h-[300px]">
               <Loader className="w-10 h-10 text-sky-600 animate-spin" />
-            </div> : <div className="grid grid-cols-2 gap-3 sm:gap-6 md:grid-cols-3 lg:grid-cols-4">
+            </div> : <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-6 md:grid-cols-3 lg:grid-cols-4">
               {filteredCourses.map((course) => (
                 <div onClick={() => navigate(`/courses/${course.id}`)} key={course.id} className="w-full h-full flex flex-col">
                   <div
