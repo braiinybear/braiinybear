@@ -132,7 +132,7 @@ const CourseDetails = () => {
               Course Overview
             </h3>
 
-            <div className="space-y-4 text-sm">
+            <div className="space-y-4 text-sm flex flex-col gap-2">
               <InfoRow label="Course" value={event.title} />
               <InfoRow
                 label="Total Fee"
@@ -142,11 +142,19 @@ const CourseDetails = () => {
               <InfoRow label="Duration" value={event.duration || "N/A"} />
 
               {event.approvedBy && (
-                <InfoRow label="Approved By" value={event.approvedBy} />
+                <div className="flex flex-col gap-1 pt-3 border-t">
+                  <span className="text-gray-500 text-sm font-medium">
+                    Approved By
+                  </span>
+                  <span className="text-gray-800 font-semibold leading-snug">
+                    {event.approvedBy}
+                  </span>
+                </div>
               )}
+
             </div>
 
-            <div className="pt-4 space-y-4">
+            <div className="pt-4 space-y-4 lex flex-col gap-2">
               <a
                 href="tel:+917302942784"
                 className="block text-center bg-sky-500 hover:bg-sky-600 text-white font-semibold py-3 rounded-xl transition"
@@ -185,9 +193,8 @@ const InfoRow = ({
   <div className="flex justify-between items-center">
     <span className="text-gray-600 font-medium">{label}</span>
     <span
-      className={`font-semibold ${
-        highlight ? "text-green-600 text-base" : "text-gray-800"
-      }`}
+      className={`font-semibold ${highlight ? "text-green-600 text-base" : "text-gray-800"
+        }`}
     >
       {value}
     </span>
