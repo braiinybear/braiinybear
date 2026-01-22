@@ -58,7 +58,7 @@ const CourseDetails = () => {
   }
 
   return (
-    <div className="bg-gray-50 min-h-screen pb-16">
+    <div className="bg-gray-50 min-h-screen pb-16 ">
 
       {/* HERO */}
       <div className="bg-gradient-to-r from-sky-600 to-sky-500 text-white py-10 px-6 text-center">
@@ -73,7 +73,7 @@ const CourseDetails = () => {
       </div>
 
       {/* MAIN */}
-      <div className="mt-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mt-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
 
         {event.image && (
           <div className="-mt-20 mb-12">
@@ -125,80 +125,81 @@ const CourseDetails = () => {
 
           </div>
 
+     
+
           {/* RIGHT SIDEBAR */}
-          <div className="sticky top-24 h-fit bg-white rounded-3xl shadow-xl p-8 space-y-6">
+          <div className="lg:col-span-1">
+            <aside className="sticky top-28 self-start">
 
-            <h3 className="text-xl font-bold text-gray-900 border-b pb-3">
-              Course Overview
-            </h3>
+              <div className="bg-white rounded-3xl shadow-xl p-8 space-y-6">
 
-            <div className="space-y-4 text-sm flex flex-col gap-2">
-              <InfoRow label="Course" value={event.title} />
-              <InfoRow
-                label="Total Fee"
-                value={`₹${event.totalFee || "N/A"}`}
-                highlight
-              />
-              <InfoRow label="Duration" value={event.duration || "N/A"} />
+                <h3 className="text-xl font-bold text-gray-900 border-b pb-3">
+                  Course Overview
+                </h3>
 
-              {event.approvedBy && (
-                <div className="flex flex-col gap-1 pt-3 border-t">
-                  <span className="text-gray-500 text-sm font-medium">
-                    Approved By
-                  </span>
-                  <span className="text-gray-800 font-semibold leading-snug">
-                    {event.approvedBy}
-                  </span>
+                <div className="space-y-4 text-sm">
+
+                  <div className="flex flex-col gap-1">
+                    <span className="text-gray-500 font-medium">Course</span>
+                    <span className="text-gray-900 font-semibold">
+                      {event.title}
+                    </span>
+                  </div>
+
+                  <div className="flex flex-col gap-1">
+                    <span className="text-gray-500 font-medium">Total Fee</span>
+                    <span className="text-sky-600 font-bold text-lg">
+                      ₹{event.totalFee || "N/A"}
+                    </span>
+                  </div>
+
+                  <div className="flex flex-col gap-1">
+                    <span className="text-gray-500 font-medium">Duration</span>
+                    <span className="text-gray-800 font-semibold">
+                      {event.duration || "N/A"}
+                    </span>
+                  </div>
+
+                  {event.approvedBy && (
+                    <div className="flex flex-col gap-1 pt-2 border-t">
+                      <span className="text-gray-500 font-medium">Approved By</span>
+                      <span className="text-gray-800 font-semibold">
+                        {event.approvedBy}
+                      </span>
+                    </div>
+                  )}
                 </div>
-              )}
 
-            </div>
+                <div className="pt-4 space-y-4">
+                  <a
+                    href="tel:+917302942784"
+                    className="block text-center bg-sky-500 hover:bg-sky-600 text-white font-semibold py-3 rounded-xl transition"
+                  >
+                    📞 Call Now
+                  </a>
 
-            <div className="pt-4 space-y-4 lex flex-col gap-2">
-              <a
-                href="tel:+917302942784"
-                className="block text-center bg-sky-500 hover:bg-sky-600 text-white font-semibold py-3 rounded-xl transition"
-              >
-                📞 Call Now
-              </a>
+                  <button
+                    onClick={() =>
+                      navigate("/registration", {
+                        state: { courseName: event.title },
+                      })
+                    }
+                    className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 rounded-xl transition"
+                  >
+                    Register Now
+                  </button>
+                </div>
 
-              <button
-                onClick={() =>
-                  navigate("/registration", {
-                    state: { courseName: event.title },
-                  })
-                }
-                className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 rounded-xl transition"
-              >
-                Register Now
-              </button>
-            </div>
-
+              </div>
+            </aside>
           </div>
+
+
         </div>
       </div>
     </div>
   );
 };
 
-const InfoRow = ({
-  label,
-  value,
-  highlight,
-}: {
-  label: string;
-  value: string;
-  highlight?: boolean;
-}) => (
-  <div className="flex justify-between items-center">
-    <span className="text-gray-600 font-medium">{label}</span>
-    <span
-      className={`font-semibold ${highlight ? "text-green-600 text-base" : "text-gray-800"
-        }`}
-    >
-      {value}
-    </span>
-  </div>
-);
 
 export default CourseDetails;
