@@ -123,7 +123,7 @@ const WorkAreaSection = () => {
           ))}
         </div>
 
-        <div className="flex flex-wrap justify-between gap-6 mt-10 w-full">
+        <div className="flex flex-wrap justify-center gap-6 mt-10 w-full">
           {workAreas.slice(4).map((area) => (
             <div
               key={area.id}
