@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
       titleLine2: "A.I. TRAINING INSTITUTE",
       titleLine3: "Accredited by",
       titleLine4:
-        "The Dept. Of Animal Husbandry & Fisheries, Ministry of Agriculture & Farmer Welfare",
+        "The Dept. of Animal Husbandry & Fisheries, Ministry of Agriculture & Farmer Welfare",
       cta: "Learn More",
     },
 
