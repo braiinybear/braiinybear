@@ -95,7 +95,7 @@ const Header: React.FC = () => {
             >
               <img
                 src={Logo}
-                alt="Brainy Bear Logo"
+                alt="BraiinyBear Logo"
                 className="w-full h-auto"
                 draggable={false}
               />

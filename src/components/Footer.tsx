@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
               <div className="min-w-[5rem] sm:min-w-[6rem] md:min-w-[7rem] mb-4">
                 <img
                   src={Logo}
-                  alt="Brainy Bear Logo"
+                  alt="BraiinyBear Logo"
                   className="w-24 sm:w-28 md:w-32 h-auto"
                 />
               </div>
@@ -112,7 +112,7 @@ const Footer: React.FC = () => {
 
         {/* Copyright */}
         <div className="text-center mt-8 sm:mt-10 pt-6 border-t border-gray-300 text-xs sm:text-sm text-gray-500">
-          <p>&copy; {currentYear} BraiinyBear Educational Society. All Rights Reserved.</p>
+          <p>&copy; {currentYear} BraiinyBear Educational and Training Society. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

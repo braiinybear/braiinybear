@@ -9,7 +9,7 @@ const Education: React.FC = () => {
         <title>Education | BraiinyBear Society</title>
         <meta
           name="description"
-          content="Explore how BraiinyBear Educational Training and Society is transforming education through community learning centers, inclusive programs, and digital empowerment."
+          content="Explore how BraiinyBear Educational and Training Society is transforming education through community learning centers, inclusive programs, and digital empowerment."
         />
         <meta
           name="keywords"

@@ -4,10 +4,10 @@ const FAQPage = () => {
   return (
     <>
       <Helmet>
-        <title>FAQ - Braiiny Bear Society</title>
+        <title>FAQ - BraiinyBear Society</title>
         <meta
           name="description"
-          content="Frequently asked questions about Braiiny Bear Society, our website, content, and policies."
+          content="Frequently asked questions about BraiinyBear Society, our website, content, and policies."
         />
       </Helmet>
 
@@ -19,17 +19,17 @@ const FAQPage = () => {
             </h1>
             <div className="w-24 h-1 bg-gradient-to-r from-[var(--primary-main)] to-blue-500 mx-auto rounded-full mb-6"></div>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Common questions about Braiiny Bear Society and how this website works.
+              Common questions about BraiinyBear Society and how this website works.
             </p>
           </div>
 
           <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-md space-y-6 text-gray-700 leading-relaxed">
             <section>
               <h2 className="text-xl font-semibold text-gray-800 mb-2">
-                1. What is Braiiny Bear Society?
+                1. What is BraiinyBear Society?
               </h2>
               <p>
-                Braiiny Bear Society is an informational and educational platform
+                BraiinyBear Society is an informational and educational platform
                 designed to share resources, ideas, and content for families and
                 children.
               </p>

@@ -8,7 +8,7 @@ import { Loader } from "lucide-react";
 
 const Course: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
-   const courseApi = import.meta.env.VITE_API_URL + "courses"
+  const courseApi = import.meta.env.VITE_API_URL + "courses"
   // const courseApi = "http://localhost:3000/api/courses";
   const [courses, setCourses] = useState<ICourse[]>([]);
   const fetchCourses = async (courseApi: string) => {
@@ -53,7 +53,7 @@ const Course: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Courses | BraiinyBear Educational Training and Society</title>
+        <title>Courses | BraiinyBear Educational and Training Society</title>
         <meta
           name="description"
           content="Explore our transformative educational courses designed to uplift communities and empower learners across rural and urban India. Join BraiinyBear’s mission for change."
@@ -64,7 +64,7 @@ const Course: React.FC = () => {
         />
         <meta
           name="author"
-          content="BraiinyBear Educational Training and Society"
+          content="BraiinyBear Educational and Training Society"
         />
 
         {/* Open Graph for social sharing */}
@@ -85,7 +85,7 @@ const Course: React.FC = () => {
         <meta name="twitter:title" content="Courses | BraiinyBear" />
         <meta
           name="twitter:description"
-          content="Explore inclusive, skill-building courses by BraiinyBear Educational Training and Society."
+          content="Explore inclusive, skill-building courses by BraiinyBear Educational and Training Society."
         />
         <meta
           name="twitter:image"
