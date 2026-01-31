@@ -37,7 +37,7 @@ const WomenEmpowerment: React.FC = () => {
             entire families and communities.
           </p>
           <p>
-            In essence, BraiinyBear Educational Training and Society is not just an
+            In essence, BraiinyBear Educational and Training Society is not just an
             organization—it is a movement. A movement that believes in inclusive growth,
             holistic development, and the power of community-driven change. Through its
             passionate work across multiple sectors, BraiinyBear is sowing seeds of
