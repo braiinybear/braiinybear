@@ -82,41 +82,7 @@ const About: React.FC = () => {
         <section className="bg-gradient-to-b from-white-500 to-gray-600 text-center py-10">
           <div className="container mx-auto px-4">
             <div className="max-w-7xl mx-auto space-y-10">
-              {/* Mission Section */}
-              <div className="bg-white rounded-xl shadow-xl overflow-hidden transform transition-all hover:scale-[1.01]">
-                <div className="flex flex-col md:flex-row">
-                  <div className="bg-[var(--primary-main)] w-full md:w-2/12 p-6 flex items-center justify-center">
-                    <span className="text-3xl text-white font-bold">Mission</span>
-                  </div>
-                  <div className="p-8 md:p-10 text-left w-full md:w-10/12">
-                    <h3 className="text-3xl font-semibold mb-6 text-[var(--primary-main)] border-b-2 border-blue-200 pb-2">Our Purpose</h3>
-                    <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                      Our mission is to serve as a beacon of hope, learning, and transformation. BraiinyBear is committed to:
-                    </p>
-                    <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                      Educating minds and empowering lives—from children discovering their potential to senior citizens rediscovering their purpose.
-                    </p>
-                    <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                      Championing women’s empowerment, ensuring every woman has the tools, voice, and confidence to shape her future.
-                    </p>
-                    <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                      Harnessing technology and innovation to solve real-world challenges, particularly in agriculture, animal husbandry, and rural livelihoods.
-                    </p>
-                    <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                      Caring for our environment, cultivating responsibility and awareness to protect our planet for future generations.
-                    </p>
-                    <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                      Standing firm against substance abuse, spreading awareness, compassion, and recovery resources to build a healthier society.
-                    </p>
-                    <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                      Creating inclusive spaces where no one is left behind, and where learning, dignity, and opportunity are rights—not privileges.
-                    </p>
-                    <h6 className="text-lg text-gray-900 leading-relaxed">
-                      With each step, we walk hand-in-hand with communities, nurturing a better tomorrow—one that reflects the power of knowledge, the strength of unity, and the beauty of human potential.
-                    </h6>
-                  </div>
-                </div>
-              </div>
+
 
               {/* Vision Section */}
               <div className="bg-white rounded-xl shadow-xl overflow-hidden transform transition-all hover:scale-[1.01]">
@@ -125,12 +91,46 @@ const About: React.FC = () => {
                     <span className="text-3xl text-white font-bold">Vision</span>
                   </div>
                   <div className="p-8 md:p-10 text-left w-full md:w-10/12">
-                    <h3 className="text-3xl font-semibold mb-6 text-[var(--primary-main)] border-b-2 border-blue-200 pb-2">Our Aspiration</h3>
                     <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                      At BraiinyBear Educational and Training Society, we envision a world where knowledge becomes the bridge to empowerment, and compassion fuels change. A society where education uplifts every soul—young minds, seasoned elders, and curious hearts alike. Where innovation harmonizes with tradition, nurturing a future rooted in sustainability, dignity, and shared growth.
+                      At BraiinyBear Educational and Training Society, we envision a world rooted in kindness, learning, and self-sufficiency. A world where generations work together; where the wisdom of elders nurtures young minds, and youthful leadership drives positive change.
                     </p>
                     <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                      We dream of communities where women rise with strength and pride, where the environment is not just protected but cherished, and where agriculture and animal care are embraced as noble, modern endeavors. A world free from the chains of addiction, where every individual has the opportunity to learn, grow, and thrive with purpose.
+                      We dream of inclusive communities where women rise with confidence and dignity, where the environment is cherished, and where agriculture and animal care are respected as vital and modern pursuits. A world free from addiction, where every individual has the opportunity to learn, grow, and thrive with purpose.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Mission Section */}
+              <div className="bg-white rounded-xl shadow-xl overflow-hidden transform transition-all hover:scale-[1.01]">
+                <div className="flex flex-col md:flex-row">
+                  <div className="bg-[var(--primary-main)] w-full md:w-2/12 p-6 flex items-center justify-center">
+                    <span className="text-3xl text-white font-bold">Mission</span>
+                  </div>
+                  <div className="p-8 md:p-10 text-left w-full md:w-10/12">
+                    <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                      Our mission is to empower individuals and communities through practical education, skill development, and compassionate action. At BraiinyBear, we are committed to:
+                    </p>
+                    <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                      Education: Fostering empathy, modern skills and entrepreneurship within communities
+                    </p>
+                    <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                      Skill Training: Equipping people to intelligently use available resources at hand and become self-sufficient
+                    </p>
+                    <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                      Women Empowerment: Providing women with the tools, confidence, and the platform to shape their own future
+                    </p>
+                    <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                      Environmental Care: Promoting awareness and accountability to protect the planet for wildlife and future generations
+                    </p>
+                    <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                      Animal Welfare: Educating people to understand the needs of animals and ensure responsible, humane care
+                    </p>
+                    <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                      Healthier Society: Combating substance abuse through awareness, compassion, and access to recovery support
+                    </p>
+                    <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                      Elderly Support: Creating inclusive spaces where elders are respected, connected, and empowered to learn modern skills.
                     </p>
                   </div>
                 </div>
