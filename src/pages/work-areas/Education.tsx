@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import educationImg from "../../assets/work-areas/education.jpg";
+import educationImg from "/servers.jpeg";
 
 const Education: React.FC = () => {
   return (

@@ -112,25 +112,25 @@ const About: React.FC = () => {
                       Our mission is to empower individuals and communities through practical education, skill development, and compassionate action. At BraiinyBear, we are committed to:
                     </p>
                     <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                      Education: Fostering empathy, modern skills and entrepreneurship within communities
+                      <span className="font-semibold underline">Education</span>: Fostering empathy, modern skills and entrepreneurship within communities
                     </p>
                     <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                      Skill Training: Equipping people to intelligently use available resources at hand and become self-sufficient
+                      <span className="font-semibold underline">Skill Training</span>: Equipping people to intelligently use available resources at hand and become self-sufficient
                     </p>
                     <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                      Women Empowerment: Providing women with the tools, confidence, and the platform to shape their own future
+                      <span className="font-semibold underline">Women Empowerment</span>: Providing women with the tools, confidence, and the platform to shape their own future
                     </p>
                     <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                      Environmental Care: Promoting awareness and accountability to protect the planet for wildlife and future generations
+                      <span className="font-semibold underline">Environmental Care</span>: Promoting awareness and accountability to protect the planet for wildlife and future generations
                     </p>
                     <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                      Animal Welfare: Educating people to understand the needs of animals and ensure responsible, humane care
+                      <span className="font-semibold underline">Animal Welfare</span>: Educating people to understand the needs of animals and ensure responsible, humane care
                     </p>
                     <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                      Healthier Society: Combating substance abuse through awareness, compassion, and access to recovery support
+                      <span className="font-semibold underline">Healthier Society</span>: Combating substance abuse through awareness, compassion, and access to recovery support
                     </p>
                     <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                      Elderly Support: Creating inclusive spaces where elders are respected, connected, and empowered to learn modern skills.
+                      <span className="font-semibold underline">Elderly Support</span>: Creating inclusive spaces where elders are respected, connected, and empowered to learn modern skills.
                     </p>
                   </div>
                 </div>
