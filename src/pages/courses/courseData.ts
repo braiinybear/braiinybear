@@ -35,6 +35,7 @@ export type ICourse = {
   shortDescription: string;
   fullDescription: string;
   image?: string; // Optional image URL or path
+  category?:string,
   totalFee?: string;
   duration?: string;
   approvedBy?: string;

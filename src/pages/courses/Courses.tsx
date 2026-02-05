@@ -1,54 +1,81 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router-dom";
-import { courseData } from "./courseData";
-
-import { ICourse } from "./courseData";
+import {courseData, ICourse } from "./courseData";
 import { Loader } from "lucide-react";
+
+
+const categoryImages: Record<string, string> = {
+  "Paramedical & B.Voc Courses": "src/assets/course-categories/Paramedical_&_B.Voc.png",
+  "NCVET / NSQF approved skill courses": "src/assets/course-categories/NCVET_NSQF.png",
+  "Veterinary courses": "src/assets/course-categories/Veterinary.png",
+  "Aviation / Drone Course": "src/assets/course-categories/Aviation_Drone.png"
+};
+
 
 const Course: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
-   const courseApi = import.meta.env.VITE_API_URL + "courses"
-  // const courseApi = "http://localhost:3000/api/courses";
+  const [courseCategoriesWise, setCourseCategoryWise] = useState<Record<string, ICourse[]>>({});
   const [courses, setCourses] = useState<ICourse[]>([]);
-  const fetchCourses = async (courseApi: string) => {
-    try {
-      setLoading(true)
-      const res = await fetch(courseApi)
-      const courseDataBackend = await res.json()
-      console.log(courseDataBackend);
-      setCourses(courseDataBackend.courses)
-      setLoading(false)
-
-    }
-    catch (err) {
-      console.log(err)
-      setCourses(courseData)
-      setLoading(false)
-    }
-  }
-
-  const navigate = useNavigate();
   const [query, setQuery] = useState<string>("");
 
-  const filteredCourses = useMemo(() => {
-    const q = query.trim().toLowerCase();
-    if (!q) return courses
-    return courses.filter((c) => {
-      return (
-        (c.title.toLowerCase().includes(q) ||
-          c.shortDescription.toLowerCase().includes(q) ||
-          (c.approvedBy && c.approvedBy.toLowerCase().includes(q)) ||
-          (c.status && c.status.toLowerCase().includes(q)) ||
-          (c.fullDescription && c.fullDescription.toLowerCase().includes(q)) ||
-          (c.totalFee && c.totalFee.toString().includes(q)) ||
-          (c.duration && c.duration.toLowerCase().includes(q)))
+  const navigate = useNavigate();
+  const courseApi = import.meta.env.VITE_API_URL + "courses";
+
+  const fetchCourses = async (courseApi: string) => {
+    try {
+      setLoading(true);
+      const res = await fetch(courseApi);
+      const courseDataBackend = await res.json();
+      const fetchedCourses: ICourse[] = courseDataBackend.courses;
+
+      setCourses(fetchedCourses);
+
+      const grouped = fetchedCourses.reduce<Record<string, ICourse[]>>(
+        (acc, course) => {
+          const category = course.category?.trim() || "Other";
+          if (!acc[category]) acc[category] = [];
+          acc[category].push(course);
+          return acc;
+        },
+        {}
       );
-    });
-  }, [query, courses]);
+     
+      setCourseCategoryWise(grouped);
+      setLoading(false);
+    } catch (err) {
+      console.log(err);
+      setCourses(courseData);
+      setLoading(false);
+    }
+  };
+
   useEffect(() => {
-    fetchCourses(courseApi)
-  }, [])
+    fetchCourses(courseApi);
+  }, []);
+  console.log(courses);
+  
+  // Prepare categories: all except "Other"
+  const otherCourses: ICourse[] = courseCategoriesWise["Other"] ?? [];
+  const orderedCategories: [string, ICourse[]][] = Object.entries(courseCategoriesWise).filter(
+    ([category]) => category !== "Other"
+  );
+
+  // Filter courses inside each category
+  const filterCourses = (courses: ICourse[]) => {
+    const q = query.trim().toLowerCase();
+    if (!q) return courses;
+    return courses.filter(
+      (c) =>
+        c.title.toLowerCase().includes(q) ||
+        c.shortDescription.toLowerCase().includes(q) ||
+        (c.approvedBy && c.approvedBy.toLowerCase().includes(q)) ||
+        (c.status && c.status.toLowerCase().includes(q)) ||
+        (c.fullDescription && c.fullDescription.toLowerCase().includes(q)) ||
+        (c.totalFee && c.totalFee.toString().includes(q)) ||
+        (c.duration && c.duration.toLowerCase().includes(q))
+    );
+  };
 
   return (
     <>
@@ -56,40 +83,7 @@ const Course: React.FC = () => {
         <title>Courses | BraiinyBear Educational Training and Society</title>
         <meta
           name="description"
-          content="Explore our transformative educational courses designed to uplift communities and empower learners across rural and urban India. Join BraiinyBear’s mission for change."
-        />
-        <meta
-          name="keywords"
-          content="BraiinyBear courses, educational training, rural education, digital learning, empowerment through education, online courses, skill development"
-        />
-        <meta
-          name="author"
-          content="BraiinyBear Educational Training and Society"
-        />
-
-        {/* Open Graph for social sharing */}
-        <meta property="og:title" content="Courses | BraiinyBear" />
-        <meta
-          property="og:description"
-          content="Join us in transforming education through innovative and inclusive courses tailored for all learners."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://braiinybear.org/courses" />
-        <meta
-          property="og:image"
-          content="https://braiinybear.org/images/seo/course-banner.jpg"
-        />
-
-        {/* Twitter card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Courses | BraiinyBear" />
-        <meta
-          name="twitter:description"
-          content="Explore inclusive, skill-building courses by BraiinyBear Educational Training and Society."
-        />
-        <meta
-          name="twitter:image"
-          content="https://braiinybear.org/images/seo/course-banner.jpg"
+          content="Explore our transformative educational courses designed to uplift communities and empower learners."
         />
       </Helmet>
 
@@ -100,76 +94,125 @@ const Course: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-3">Courses</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-sky-500 to-blue-500 mx-auto mb-6 rounded-full"></div>
             <p className="max-w-2xl mx-auto text-gray-600">
-              Join us in our mission to transform education and be part of the
-              change.
+              Join us in our mission to transform education and be part of the change.
             </p>
           </div>
-          {/* Search Bar */}
-          <div className="max-w-[1200px] w-full mx-auto mb-8 ">
-            <h3 className="text-center font-semibold mb-5">
-              Search your courses
-            </h3>
 
-            <div className="md:flex items-center justify-between gap-4">
-              <div className="flex-1 relative mb-2">
-                <input
-                  id="course-search"
-                  type="search"
-                  value={query}
-                  onChange={(e) => setQuery(e.target.value)}
-                  placeholder="name,description, status, approval, totalFee..."
-                  className="w-full pl-4 pr-10 py-3 rounded-full border border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-sky-500"
-                />
-              </div>
-            </div>
+          {/* Search Bar */}
+          <div className="max-w-[1200px] w-full mx-auto mb-8">
+            <input
+              type="search"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search by name, description, status, approval, totalFee"
+              className="w-full px-5 py-3 rounded-full border focus:ring-2 focus:ring-sky-500"
+            />
           </div>
 
-          {/* Courses Grid */}
-          {
-            loading ? <div className="flex justify-center items-center min-h-[300px]">
+          {/* Courses */}
+          {loading ? (
+            <div className="flex justify-center items-center min-h-[300px]">
               <Loader className="w-10 h-10 text-sky-600 animate-spin" />
-            </div> : <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-6 md:grid-cols-3 lg:grid-cols-4">
-              {filteredCourses.map((course) => (
-                <div onClick={() => navigate(`/courses/${course.id}`)} key={course.id} className="w-full h-full flex flex-col">
-                  <div
-                    className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-100 group flex flex-col"
-                    style={{ height: "100%" }}
-                  >
-                    {/* Course Image */}
-                    {course.image && (
-                      <div className="relative h-36 sm:h-44 md:h-48 overflow-hidden">
-                        <img
-                          src={course.image}
-                          alt={course.title}
-                          className="w-full h-full object-fit transform transition duration-500 group-hover:scale-105 group-hover:blur-[1px]"
-                        />
-                        {/* Status Tag */}
-                        <span className="absolute top-3 left-3 bg-indigo-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
-                          {course.status}
-                        </span>
-                      </div>
-                    )}
+            </div>
+          ) : (
+            <>
+              {/* Render all categories except "Other" */}
+              {orderedCategories.map(([category, courses]) => {
+                const filteredCoursesInCategory = filterCourses(courses);
+                if (filteredCoursesInCategory.length === 0) return null;
 
-                    {/* Course Info */}
-                    <div className="p-6 flex flex-col justify-between flex-grow">
-                      <h2 className="text-xl uppercase font-semibold mb-2 text-gray-800 group-hover:text-sky-600 transition">
-                        {course.title}
-                      </h2>
-                      <p className="text-gray-600 mb-4 line-clamp-3">
-                        {course.shortDescription || ""}
-                      </p>
+                return (
+                  <div
+                    key={category}
+                    className="col-span-full mb-10 rounded-lg shadow-xl p-6"
+                    style={{
+                      backgroundImage: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url(${categoryImages[category]})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      backgroundRepeat: "no-repeat",
+                    }}
+                  >
+
+                    {/* Category Heading */}
+                    <h3 className="text-2xl font-extrabold mb-6 text-gray-800 relative inline-block">
+                      {category}
+                      <span className="absolute left-0 bottom-0 w-16 h-1 rounded-full bg-sky-500"></span>
+                    </h3>
+
+                    {/* Scrollable container if more than 5 courses */}
+                    <div
+                      className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 scrollbar-hide"
+                      style={{
+                        maxHeight: "30rem",
+                        overflowY: filteredCoursesInCategory.length > 5 ? "auto" : "visible",
+                      }}
+                    >
+                      {filteredCoursesInCategory.map((course) => (
+                        <div
+                          key={course.id}
+                          onClick={() => navigate(`/courses/${course.id}`)}
+                          className="cursor-pointer bg-white rounded-2xl shadow-md hover:shadow-xl transition p-4 flex items-start gap-4 h-24"
+                        >
+                          {course.image && (
+                            <img
+                              src={course.image}
+                              alt={course.title}
+                              className="w-16 h-16 rounded-full object-fill flex-shrink-0"
+                            />
+                          )}
+                          <div className="flex flex-col justify-start">
+                            <span className="font-semibold text-sm">{course.title}</span>
+                            {course.shortDescription && (
+                              <p className="text-xs text-gray-600 line-clamp-2 mt-1">
+                                {course.shortDescription}
+                              </p>
+                            )}
+                          </div>
+                        </div>
+
+
+                      ))}
                     </div>
                   </div>
+                );
+              })}
+
+              {/* Render "Other" category at bottom */}
+              {filterCourses(otherCourses).length > 0 && (
+                <div className="col-span-full mt-10 rounded-md shadow-xl p-6 bg-white">
+                  <h3 className="text-2xl font-extrabold mb-6 text-gray-800 relative inline-block">
+                    Other
+                    <span className="absolute left-0 bottom-0 w-16 h-1 rounded-full bg-sky-500"></span>
+                  </h3>
+
+                  <div
+                    className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+                    style={{
+                      maxHeight: "30rem",
+                      overflowY: filterCourses(otherCourses).length > 5 ? "auto" : "visible",
+                    }}
+                  >
+                    {filterCourses(otherCourses).map((course) => (
+                      <div
+                        key={course.id}
+                        onClick={() => navigate(`/courses/${course.id}`)}
+                        className="cursor-pointer bg-white rounded-2xl shadow-md hover:shadow-xl transition p-3 flex items-center gap-3"
+                      >
+                        {course.image && (
+                          <img
+                            src={course.image}
+                            alt={course.title}
+                            className="w-14 h-14 rounded-lg object-cover"
+                          />
+                        )}
+                        <span className="font-semibold text-sm">{course.title}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              ))}
-            </div>
-          }
-
-
-
-
-          {/* View All Button */}
-
+              )}
+            </>
+          )}
         </div>
       </section>
     </>
