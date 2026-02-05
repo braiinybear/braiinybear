@@ -120,7 +120,7 @@ transition={Bounce}
           }
         />
         <Route
-          path="/education"
+          path="/information-and-technology"
           element={
             <Suspense fallback={<Loader />}>
               <Layout>
@@ -160,7 +160,7 @@ transition={Bounce}
           }
         />
         <Route
-          path="/drug-rehabilitation"
+          path="/addiction-support-and-rehabilitation"
           element={
             <Suspense fallback={<Loader />}>
               <Layout>

@@ -15,7 +15,8 @@ const categoryImages: Record<string, string> = {
 
 const Course: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
-  const [courseCategoriesWise, setCourseCategoryWise] = useState<Record<string, ICourse[]>>({});
+   const courseApi = import.meta.env.VITE_API_URL + "courses"
+  // const courseApi = "http://localhost:3000/api/courses";
   const [courses, setCourses] = useState<ICourse[]>([]);
   const [query, setQuery] = useState<string>("");
 
@@ -80,10 +81,43 @@ const Course: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Courses | BraiinyBear Educational Training and Society</title>
+        <title>Courses | BraiinyBear Educational and Training Society</title>
         <meta
           name="description"
-          content="Explore our transformative educational courses designed to uplift communities and empower learners."
+          content="Explore our transformative educational courses designed to uplift communities and empower learners across rural and urban India. Join BraiinyBear’s mission for change."
+        />
+        <meta
+          name="keywords"
+          content="BraiinyBear courses, educational training, rural education, digital learning, empowerment through education, online courses, skill development"
+        />
+        <meta
+          name="author"
+          content="BraiinyBear Educational Training and Society"
+        />
+
+        {/* Open Graph for social sharing */}
+        <meta property="og:title" content="Courses | BraiinyBear" />
+        <meta
+          property="og:description"
+          content="Join us in transforming education through innovative and inclusive courses tailored for all learners."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://braiinybear.org/courses" />
+        <meta
+          property="og:image"
+          content="https://braiinybear.org/images/seo/course-banner.jpg"
+        />
+
+        {/* Twitter card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Courses | BraiinyBear" />
+        <meta
+          name="twitter:description"
+          content="Explore inclusive, skill-building courses by BraiinyBear Educational Training and Society."
+        />
+        <meta
+          name="twitter:image"
+          content="https://braiinybear.org/images/seo/course-banner.jpg"
         />
       </Helmet>
 
