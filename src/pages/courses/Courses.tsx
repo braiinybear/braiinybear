@@ -6,10 +6,10 @@ import { Loader } from "lucide-react";
 
 
 const categoryImages: Record<string, string> = {
-  "Paramedical & B.Voc Courses": "src/assets/course-categories/Paramedical_&_B.Voc.png",
-  "NCVET / NSQF approved skill courses": "src/assets/course-categories/NCVET_NSQF.png",
-  "Veterinary courses": "src/assets/course-categories/Veterinary.png",
-  "Aviation / Drone Course": "src/assets/course-categories/Aviation_Drone.png"
+  "Paramedical & B.Voc Courses": "/course-categories/Paramedical_&_B.Voc.png",
+  "NCVET / NSQF approved skill courses": "/course-categories/NCVET_NSQF.png",
+  "Veterinary courses": "/course-categories/Veterinary.png",
+  "Aviation / Drone Course": "/course-categories/Aviation_Drone.png"
 };
 
 
