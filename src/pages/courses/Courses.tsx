@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router-dom";
-import {courseData, ICourse } from "./courseData";
+import { courseData, ICourse } from "./courseData";
 import { Loader } from "lucide-react";
 
 
@@ -40,7 +40,7 @@ const Course: React.FC = () => {
         },
         {}
       );
-     
+
       setCourseCategoryWise(grouped);
       setLoading(false);
     } catch (err) {
@@ -54,7 +54,8 @@ const Course: React.FC = () => {
     fetchCourses(courseApi);
   }, []);
   console.log(courses);
-  
+console.log(courseCategoriesWise);
+
   // Prepare categories: all except "Other"
   const otherCourses: ICourse[] = courseCategoriesWise["Other"] ?? [];
   const orderedCategories: [string, ICourse[]][] = Object.entries(courseCategoriesWise).filter(
@@ -80,12 +81,49 @@ const Course: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Courses | BraiinyBear Educational Training and Society</title>
+        <title>Courses | BraiinyBear Educational and Training Society</title>
+
         <meta
           name="description"
-          content="Explore our transformative educational courses designed to uplift communities and empower learners."
+          content="Explore our transformative educational courses designed to uplift communities and empower learners across rural and urban India."
+        />
+
+        <meta
+          name="keywords"
+          content="BraiinyBear courses, educational training, rural education, digital learning, skill development, empowerment through education"
+        />
+
+        <meta
+          name="author"
+          content="BraiinyBear Educational and Training Society"
+        />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Courses | BraiinyBear" />
+        <meta
+          property="og:description"
+          content="Join us in transforming education through innovative and inclusive courses tailored for all learners."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://braiinybear.org/courses" />
+        <meta
+          property="og:image"
+          content="https://braiinybear.org/images/seo/course-banner.jpg"
+        />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Courses | BraiinyBear" />
+        <meta
+          name="twitter:description"
+          content="Explore inclusive, skill-building courses by BraiinyBear Educational and Training Society."
+        />
+        <meta
+          name="twitter:image"
+          content="https://braiinybear.org/images/seo/course-banner.jpg"
         />
       </Helmet>
+
 
       <section className="py-16 px-6 bg-gray-50">
         <div className="container mx-auto">
