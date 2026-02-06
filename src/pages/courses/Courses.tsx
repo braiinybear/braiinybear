@@ -189,7 +189,7 @@ console.log(courseCategoriesWise);
                         <div
                           key={course.id}
                           onClick={() => navigate(`/courses/${course.id}`)}
-                          className="cursor-pointer bg-white rounded-2xl shadow-md hover:shadow-xl transition p-4 flex items-start gap-4 h-24"
+                          className="cursor-pointer bg-white rounded-2xl shadow-md hover:shadow-xl transition p-4 flex items-start gap-4 "
                         >
                           {course.image && (
                             <img
@@ -224,7 +224,7 @@ console.log(courseCategoriesWise);
                   </h3>
 
                   <div
-                    className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+                    className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 scrollbar-hide"
                     style={{
                       maxHeight: "30rem",
                       overflowY: filterCourses(otherCourses).length > 5 ? "auto" : "visible",
