@@ -4,7 +4,6 @@ import { ToastContainer, Bounce } from "react-toastify";
 import ScrollToTop from "./components/ScrollToTop";
 import Loader from "./components/Loader";
 import Faq from "./pages/Faq";
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const Home = lazy(() => import("./pages/Home"));
 const Volunteer = lazy(() => import("./pages/Volunteer"));
@@ -44,7 +43,7 @@ const Layout = lazy(() => import("./components/layout/Layout"));
 function App() {
   return (
     <>
-    <SpeedInsights/>
+   
        <ToastContainer
 position="top-right"
 autoClose={5000}
