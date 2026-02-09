@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router-dom";
 import { courseData, ICourse } from "./courseData";
@@ -63,9 +63,11 @@ console.log(courseCategoriesWise);
   );
 
   // Filter courses inside each category
-  const filterCourses = (courses: ICourse[]) => {
+const filterCourses = useCallback(
+  (courses: ICourse[]) => {
     const q = query.trim().toLowerCase();
     if (!q) return courses;
+
     return courses.filter(
       (c) =>
         c.title.toLowerCase().includes(q) ||
@@ -76,7 +78,10 @@ console.log(courseCategoriesWise);
         (c.totalFee && c.totalFee.toString().includes(q)) ||
         (c.duration && c.duration.toLowerCase().includes(q))
     );
-  };
+  },
+  [query]
+);
+
 
   return (
     <>
