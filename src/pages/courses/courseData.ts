@@ -1047,8 +1047,8 @@ Graduates can work in hospitals, clinics, diagnostic labs, and imaging centers. 
   {
     id: "only-cmsed-emt",
     title: "ONLY CMSED OR ONLY EMT",
-    totalFee: "10000 EACH",
-    duration: "2YRS, 1 YR",
+    totalFee: " ₹135000, ₹90000, ₹45000, ₹25000",
+    duration: "3 YRS, 2 YRS, 1 YRS, 6 MON",
     image: ocoe,
     approvedBy: "PARAMEDICAL COUNCIL, NEW DELHI",
     status: "Ongoing",
