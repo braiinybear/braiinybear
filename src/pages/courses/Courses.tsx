@@ -28,9 +28,27 @@ const Course: React.FC = () => {
       const res = await fetch(courseApi);
       const courseDataBackend = await res.json();
       console.log("API Response:", courseDataBackend); // Debug: See full response
-      const fetchedCourses: ICourse[] = courseDataBackend.courses || courseDataBackend;
+      
+      // Ensure fetchedCourses is always an array
+      let fetchedCourses: ICourse[] = [];
+      if (Array.isArray(courseDataBackend)) {
+        fetchedCourses = courseDataBackend;
+      } else if (courseDataBackend?.courses && Array.isArray(courseDataBackend.courses)) {
+        fetchedCourses = courseDataBackend.courses;
+      } else if (courseDataBackend?.data && Array.isArray(courseDataBackend.data)) {
+        fetchedCourses = courseDataBackend.data;
+      }
 
       console.log("Fetched Courses:", fetchedCourses); // Debug: See parsed courses
+      
+      if (!Array.isArray(fetchedCourses) || fetchedCourses.length === 0) {
+        console.warn("No courses found in API response, using fallback data");
+        setCourses(courseData);
+        setCourseCategoryWise({});
+        setLoading(false);
+        return;
+      }
+
       setCourses(fetchedCourses);
 
       const grouped = fetchedCourses.reduce<Record<string, ICourse[]>>(
