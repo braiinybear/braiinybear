@@ -30,8 +30,8 @@ const Course: React.FC = () => {
       const courseDataBackend = await res.json();
       // Handle both array response and object with courses property
       const fetchedCourses: ICourse[] = Array.isArray(courseDataBackend.data.courses) 
-        ? courseDataBackend 
-        : (courseDataBackend.courses || []);
+        ? courseDataBackend.data.courses
+        : (courseDataBackend.data.courses || []);
 
       setCourses(fetchedCourses);
 
