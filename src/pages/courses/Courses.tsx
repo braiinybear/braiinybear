@@ -57,7 +57,7 @@ const Course: React.FC = () => {
     fetchCourses(courseApi);
   }, [courseApi]);
   console.log(courses);
-console.log(courseCategoriesWise);
+  console.log(courseCategoriesWise);
 
   // Prepare categories: all except "Other"
   const otherCourses: ICourse[] = courseCategoriesWise["Other"] ?? [];
@@ -66,24 +66,24 @@ console.log(courseCategoriesWise);
   );
 
   // Filter courses inside each category
-const filterCourses = useCallback(
-  (courses: ICourse[]) => {
-    const q = query.trim().toLowerCase();
-    if (!q) return courses;
+  const filterCourses = useCallback(
+    (courses: ICourse[]) => {
+      const q = query.trim().toLowerCase();
+      if (!q) return courses;
 
-    return courses.filter(
-      (c) =>
-        c.title.toLowerCase().includes(q) ||
-        c.shortDescription.toLowerCase().includes(q) ||
-        (c.approvedBy && c.approvedBy.toLowerCase().includes(q)) ||
-        (c.status && c.status.toLowerCase().includes(q)) ||
-        (c.fullDescription && c.fullDescription.toLowerCase().includes(q)) ||
-        (c.totalFee && c.totalFee.toString().includes(q)) ||
-        (c.duration && c.duration.toLowerCase().includes(q))
-    );
-  },
-  [query]
-);
+      return courses.filter(
+        (c) =>
+          c.title.toLowerCase().includes(q) ||
+          c.shortDescription.toLowerCase().includes(q) ||
+          (c.approvedBy && c.approvedBy.toLowerCase().includes(q)) ||
+          (c.status && c.status.toLowerCase().includes(q)) ||
+          (c.fullDescription && c.fullDescription.toLowerCase().includes(q)) ||
+          (c.totalFee && c.totalFee.toString().includes(q)) ||
+          (c.duration && c.duration.toLowerCase().includes(q))
+      );
+    },
+    [query]
+  );
 
 
   return (
