@@ -27,7 +27,10 @@ const Course: React.FC = () => {
       setLoading(true);
       const res = await fetch(courseApi);
       const courseDataBackend = await res.json();
-      const fetchedCourses: ICourse[] = courseDataBackend.courses || [];
+      // Handle both array response and object with courses property
+      const fetchedCourses: ICourse[] = Array.isArray(courseDataBackend) 
+        ? courseDataBackend 
+        : (courseDataBackend.courses || []);
 
       setCourses(fetchedCourses);
 
