@@ -27,27 +27,7 @@ const Course: React.FC = () => {
       setLoading(true);
       const res = await fetch(courseApi);
       const courseDataBackend = await res.json();
-      console.log("API Response:", courseDataBackend); // Debug: See full response
-      
-      // Ensure fetchedCourses is always an array
-      let fetchedCourses: ICourse[] = [];
-      if (Array.isArray(courseDataBackend)) {
-        fetchedCourses = courseDataBackend;
-      } else if (courseDataBackend?.courses && Array.isArray(courseDataBackend.courses)) {
-        fetchedCourses = courseDataBackend.courses;
-      } else if (courseDataBackend?.data && Array.isArray(courseDataBackend.data)) {
-        fetchedCourses = courseDataBackend.data;
-      }
-
-      console.log("Fetched Courses:", fetchedCourses); // Debug: See parsed courses
-      
-      if (!Array.isArray(fetchedCourses) || fetchedCourses.length === 0) {
-        console.warn("No courses found in API response, using fallback data");
-        setCourses(courseData);
-        setCourseCategoryWise({});
-        setLoading(false);
-        return;
-      }
+      const fetchedCourses: ICourse[] = courseDataBackend.courses;
 
       setCourses(fetchedCourses);
 
@@ -61,11 +41,10 @@ const Course: React.FC = () => {
         {}
       );
 
-      console.log("Grouped by Category:", grouped); // Debug: See grouping result
       setCourseCategoryWise(grouped);
       setLoading(false);
     } catch (err) {
-      console.error("Error fetching courses:", err);
+      console.log(err);
       setCourses(courseData);
       setLoading(false);
     }
@@ -73,9 +52,9 @@ const Course: React.FC = () => {
 
   useEffect(() => {
     fetchCourses(courseApi);
-  }, [courseApi]);
+  }, []);
   console.log(courses);
-  console.log(courseCategoriesWise);
+console.log(courseCategoriesWise);
 
   // Prepare categories: all except "Other"
   const otherCourses: ICourse[] = courseCategoriesWise["Other"] ?? [];
@@ -84,24 +63,24 @@ const Course: React.FC = () => {
   );
 
   // Filter courses inside each category
-  const filterCourses = useCallback(
-    (courses: ICourse[]) => {
-      const q = query.trim().toLowerCase();
-      if (!q) return courses;
+const filterCourses = useCallback(
+  (courses: ICourse[]) => {
+    const q = query.trim().toLowerCase();
+    if (!q) return courses;
 
-      return courses.filter(
-        (c) =>
-          c.title.toLowerCase().includes(q) ||
-          c.shortDescription.toLowerCase().includes(q) ||
-          (c.approvedBy && c.approvedBy.toLowerCase().includes(q)) ||
-          (c.status && c.status.toLowerCase().includes(q)) ||
-          (c.fullDescription && c.fullDescription.toLowerCase().includes(q)) ||
-          (c.totalFee && c.totalFee.toString().includes(q)) ||
-          (c.duration && c.duration.toLowerCase().includes(q))
-      );
-    },
-    [query]
-  );
+    return courses.filter(
+      (c) =>
+        c.title.toLowerCase().includes(q) ||
+        c.shortDescription.toLowerCase().includes(q) ||
+        (c.approvedBy && c.approvedBy.toLowerCase().includes(q)) ||
+        (c.status && c.status.toLowerCase().includes(q)) ||
+        (c.fullDescription && c.fullDescription.toLowerCase().includes(q)) ||
+        (c.totalFee && c.totalFee.toString().includes(q)) ||
+        (c.duration && c.duration.toLowerCase().includes(q))
+    );
+  },
+  [query]
+);
 
 
   return (
