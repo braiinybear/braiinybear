@@ -5,6 +5,7 @@ import { courseData, ICourse } from "./courseData";
 import { Loader } from "lucide-react";
 
 
+
 const categoryImages: Record<string, string> = {
   "Paramedical & B.Voc Courses": "/course-categories/Paramedical_&_B.Voc.png",
   "NCVET / NSQF approved skill courses": "/course-categories/NCVET_NSQF.png",
@@ -28,7 +29,7 @@ const Course: React.FC = () => {
       const res = await fetch(courseApi);
       const courseDataBackend = await res.json();
       // Handle both array response and object with courses property
-      const fetchedCourses: ICourse[] = Array.isArray(courseDataBackend) 
+      const fetchedCourses: ICourse[] = Array.isArray(courseDataBackend.data.courses) 
         ? courseDataBackend 
         : (courseDataBackend.courses || []);
 
