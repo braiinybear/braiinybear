@@ -27,8 +27,10 @@ const Course: React.FC = () => {
       setLoading(true);
       const res = await fetch(courseApi);
       const courseDataBackend = await res.json();
-      const fetchedCourses: ICourse[] = courseDataBackend.courses;
+      console.log("API Response:", courseDataBackend); // Debug: See full response
+      const fetchedCourses: ICourse[] = courseDataBackend.courses || courseDataBackend;
 
+      console.log("Fetched Courses:", fetchedCourses); // Debug: See parsed courses
       setCourses(fetchedCourses);
 
       const grouped = fetchedCourses.reduce<Record<string, ICourse[]>>(
@@ -41,10 +43,11 @@ const Course: React.FC = () => {
         {}
       );
 
+      console.log("Grouped by Category:", grouped); // Debug: See grouping result
       setCourseCategoryWise(grouped);
       setLoading(false);
     } catch (err) {
-      console.log(err);
+      console.error("Error fetching courses:", err);
       setCourses(courseData);
       setLoading(false);
     }
@@ -52,7 +55,7 @@ const Course: React.FC = () => {
 
   useEffect(() => {
     fetchCourses(courseApi);
-  }, []);
+  }, [courseApi]);
   console.log(courses);
 console.log(courseCategoriesWise);
 
