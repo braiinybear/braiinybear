@@ -5,7 +5,7 @@ import rehypeRaw from "rehype-raw";
 import { useEffect, useState } from "react";
 
 const courseApi = import.meta.env.VITE_API_URL;
-
+    
 const CourseDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();

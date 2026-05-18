@@ -10,7 +10,7 @@ const TopBar = () => {
         100% { transform: translateX(-100%); }
       }
       .animate-marquee-rtl {
-        animation: marquee-rtl 60s linear infinite;
+        animation: marquee-rtl 60s linear 0.1s infinite;
       }
     `;
     document.head.appendChild(style);

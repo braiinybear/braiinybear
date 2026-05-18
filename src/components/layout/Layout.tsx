@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../Header'
 import Footer from '../Footer'
 import TopBar from '../TopBar';
+import AntidrugHelplineNumber from '../AntidrugTopbar';
 import WhatsAppButton from '../WhatsAppButton';
 import InstagramButton from '../InstagramButton';
 // import NoticeSlider from '../../sections/home/NoticeSlider';
@@ -15,6 +16,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="flex flex-col min-h-screen bg-brainy-gray text-brainy-blue">
       <TopBar />
+      <AntidrugHelplineNumber />
 {/* 
       <NoticeSlider
       texts={messages}
