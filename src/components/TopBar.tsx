@@ -5,12 +5,12 @@ const TopBar = () => {
     // Add the custom marquee animation to the document's stylesheet
     const style = document.createElement('style');
     style.textContent = `
-      @keyframes marquee-rtl {
-        0% { transform: translateX(100%); }
+      @keyframes marquee-topbar {
+        0% { transform: translateX(100vw); }
         100% { transform: translateX(-100%); }
       }
-      .animate-marquee-rtl {
-        animation: marquee-rtl 60s linear 0.1s infinite;
+      .animate-marquee-topbar {
+        animation: marquee-topbar 48s linear 0.1s infinite;
       }
     `;
     document.head.appendChild(style);
@@ -26,7 +26,7 @@ const TopBar = () => {
       <div className="max-w-9xl mx-auto">
         {/* Marquee-like effect with right-to-left animation */}
         <div className="whitespace-nowrap overflow-hidden relative">
-          <div className="animate-marquee-rtl inline-block">
+          <div className="animate-marquee-topbar inline-block">
             🌟 BraiinyBear Joins Hands with Innovation Artificial Insemination Training Institute 🌟 |
             📜 Accredited by: Department of Animal Husbandry, Dairying & Fisheries, Ministry of Agriculture & Farmers Welfare, Government of India, New Delhi |
             🏆 India’s First and Only Institute that Provides Insemination Training |

@@ -1,0 +1,17 @@
+{
+  "header": {
+    "societyName": "BraiinyBear Educational and Training Society",
+    "societyNameHindi": "ब्रैनीबियर शिक्षा प्रशिक्षण एवं सामाजिक संस्था"
+  },
+  "nav": {
+    "home": "Home",
+    "aboutUs": "About Us",
+    "ourPeople": "Our People",
+    "courses": "Courses",
+    "whatWeDo": "What We Do",
+    "gallery": "Gallery",
+    "registration": "Online Registration",
+    "contactUs": "Contact Us",
+    "volunteer": "Volunteer"
+  }
+}

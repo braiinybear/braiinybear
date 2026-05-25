@@ -1,12 +1,14 @@
-// [Imports remain unchanged]
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import LanguageSelector from "./LanguageSelector";
 import Logo from "../assets/BRAIINYBEA-removebg-preview.png";
 import SwachhBharatLogo from "../assets/svgs/Swacch-Bharat-Color.svg";
 import AzadiLogo from "../assets/azadi-ka-amrit-mahotsav-hindi-logo-png_seeklogo-428376-removebg-preview.png";
 import ModiLogo from "../assets/Narendra-Modi-PNG-Image.png";
 
 const Header: React.FC = () => {
+  const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeItem, setActiveItem] = useState("/");
@@ -50,21 +52,20 @@ const Header: React.FC = () => {
   };
 
   const navItems = [
-    { name: "Home", path: "/" },
+    { name: t("nav.home"), path: "/" },
     {
-      name: "About Us",
+      name: t("nav.aboutUs"),
       path: "/overview",
       children: [
-        { name: "About Us", path: "/overview" },
-        { name: "Our People", path: "/about/our-people" },
-        // { name: "Achievements", path: "/about/achievements" },
+        { name: t("nav.aboutUs"), path: "/overview" },
+        { name: t("nav.ourPeople"), path: "/about/our-people" },
       ],
     },
-    { name: "Courses", path: "/courses" },
-    { name: "What We Do", path: "/our-work" },
-    { name: "Gallery", path: "/gallery" },
-    { name: "Online Registration", path: "/registration" },
-    { name: "Contact Us", path: "/contact" },
+    { name: t("nav.courses"), path: "/courses" },
+    { name: t("nav.whatWeDo"), path: "/our-work" },
+    { name: t("nav.gallery"), path: "/gallery" },
+    { name: t("nav.registration"), path: "/registration" },
+    { name: t("nav.contactUs"), path: "/contact" },
   ];
 
   const buttonClasses =
@@ -105,10 +106,10 @@ const Header: React.FC = () => {
               style={{ wordBreak: "break-word" }}
             >
               <span className="block font-semibold text-sm sm:text-base md:text-lg lg:text-xl text-[var(--primary-main)] text-brainy-blue sm:whitespace-nowrap text-ellipsis">
-                BraiinyBear Educational and Training Society
+                {t("header.societyName")}
               </span>
               <span className="block font-semibold text-sm sm:text-base md:text-lg lg:text-xl text-[var(--primary-main)] text-brainy-blue sm:whitespace-nowrap text-ellipsis">
-                ब्रैनीबियर शिक्षा प्रशिक्षण एवं सामाजिक संस्था
+                {t("header.societyNameHindi")}
               </span>
             </div>
           </Link>
@@ -197,15 +198,13 @@ const Header: React.FC = () => {
                   </div>
                 ))}
               </div>
-              <div className="flex space-x-2 xl:space-x-4 pr-2 max-h-fit">
+              <div className="flex items-center space-x-2 xl:space-x-4 pr-2 max-h-fit gap-2">
+                <LanguageSelector />
                 <Link to={"/volunteer"} className="flex items-center">
                   <button className={`${buttonClasses} text-nowrap cursor-pointer`}>
-                    Volunteer
+                    {t("nav.volunteer")}
                   </button>
                 </Link>
-                {/* <button className={`${buttonClasses} text-nowrap`}>
-                  Get Involved
-                </button> */}
               </div>
             </div>
           </nav>
@@ -262,6 +261,9 @@ const Header: React.FC = () => {
             role="menu"
           >
             <ul className="flex flex-col items-center space-y-1 py-4">
+              <li className="pb-3 border-b w-full flex justify-center mb-2">
+                <LanguageSelector />
+              </li>
               {navItems.map((item) => (
                 <li key={item.name} className="w-full p-0 m-0">
                   {item.children ? (

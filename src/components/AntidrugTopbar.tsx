@@ -5,14 +5,14 @@ const AntidrugTopbar = () => {
     // Add the custom marquee animation to the document's stylesheet
     const style = document.createElement('style');
     style.textContent = `
-      @keyframes marquee-rtl {
-        0% { transform: translateX(100%); }
+      @keyframes marquee-antidrug {
+        0% { transform: translateX(100vw); }
         100% { transform: translateX(-100%); }
       }
-      .animate-marquee-rtl {
-        animation: marquee-rtl 100s linear 0.1s infinite;
+      .animate-marquee-antidrug {
+        animation: marquee-antidrug 55s linear 0.1s infinite;
       }
-      .animate-marquee-rtl:hover {
+      .animate-marquee-antidrug:hover {
         animation-play-state: paused;
       }
     `;
@@ -44,7 +44,7 @@ const AntidrugTopbar = () => {
       <div className="w-full">
         {/* Marquee Wrapper */}
         <div className="flex whitespace-nowrap overflow-hidden relative">
-          <div className="animate-marquee-rtl inline-flex items-center gap-4 cursor-pointer">
+          <div className="animate-marquee-antidrug inline-flex items-center gap-4 cursor-pointer">
             {marqueeContent.map((item, index) => (
               <span key={index} className="flex items-center gap-2">
                 {item}
