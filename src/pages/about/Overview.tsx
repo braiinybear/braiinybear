@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet';
 import bgImage from '../../assets/images/IMG-20250319-WA0012.jpg'
-import { Target, Award, Heart, Lightbulb } from 'lucide-react';
+import { Target, Award, Heart, Lightbulb, ShieldCheck, FileText, ExternalLink } from 'lucide-react';
 
 
 const About: React.FC = () => {
@@ -162,6 +162,79 @@ const About: React.FC = () => {
         </div>
       </div>
     </div> */}
+          </div>
+        </section>
+
+        {/* Legal Certifications Section */}
+        <section className="py-16 px-6 bg-white">
+          <div className="container mx-auto max-w-5xl">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-3">Legal Registration</h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-[var(--primary-main)] to-blue-500 mx-auto mb-6 rounded-full"></div>
+              <p className="max-w-2xl mx-auto text-gray-600">
+                We are a legally registered and compliant organization dedicated to transparency, accountability, and social excellence.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-12 gap-8 items-center bg-gray-50 border border-gray-200 rounded-3xl p-8 md:p-12 shadow-sm">
+              {/* Left Column: Description */}
+              <div className="md:col-span-7 space-y-6 text-left">
+                <div className="bg-blue-100 text-[var(--primary-main)] inline-flex items-center px-4 py-1.5 rounded-full text-sm font-semibold mb-2">
+                  <ShieldCheck className="h-4 w-4 mr-2" /> Registered Society
+                </div>
+                <h3 className="text-2xl md:text-3xl font-extrabold text-gray-800 leading-tight">
+                  BraiinyBear Educational and Training Society
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Our society is officially incorporated under active regulatory frameworks, establishing us as a formal educational, training, and social welfare institution. We strictly adhere to standard compliance procedures, ensuring high operational transparency for all partners, members, and supporters.
+                </p>
+                <div className="flex flex-wrap gap-4 pt-2">
+                  <div className="flex items-center bg-white border border-gray-100 px-4 py-2.5 rounded-xl shadow-xs">
+                    <div className="w-2 h-2 rounded-full bg-green-500 mr-2.5"></div>
+                    <span className="text-sm font-medium text-gray-700">Compliance: 100% Active</span>
+                  </div>
+                  <div className="flex items-center bg-white border border-gray-100 px-4 py-2.5 rounded-xl shadow-xs">
+                    <span className="text-sm font-medium text-gray-500 mr-1.5">Authority:</span>
+                    <span className="text-sm font-semibold text-gray-700">Registrar of Societies</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Column: Interactive Certificate Card */}
+              <div className="md:col-span-5 w-full">
+                <div className="bg-white border-2 border-dashed border-blue-200 rounded-2xl p-6 shadow-md transition-all duration-300 hover:shadow-lg hover:border-blue-400 flex flex-col justify-between h-full min-h-[260px] text-left">
+                  <div>
+                    <div className="flex justify-between items-start mb-4">
+                      <div className="bg-blue-50 text-[var(--primary-main)] w-12 h-12 rounded-xl flex items-center justify-center">
+                        <FileText className="h-6 w-6" />
+                      </div>
+                      <span className="bg-green-100 text-green-700 text-xs px-2.5 py-1 rounded-full font-bold animate-pulse">
+                        VERIFIED
+                      </span>
+                    </div>
+                    <h4 className="text-lg font-bold text-gray-800 mb-1">
+                      Certificate of Registration
+                    </h4>
+                    <p className="text-xs text-gray-500 font-mono mb-4">
+                      Reg No: UK0600842025014704
+                    </p>
+                    <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                      Official legal document certifying the incorporation of BraiinyBear Society as a recognized training and welfare body.
+                    </p>
+                  </div>
+                  <div className="border-t border-gray-100 pt-4">
+                    <a
+                      href="/SocietyRegistrationletter.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full inline-flex items-center justify-center gap-2 bg-[var(--primary-main)] hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-xl shadow-sm hover:shadow transition duration-300 transform hover:scale-[1.02]"
+                    >
+                      View Document <ExternalLink className="h-4 w-4" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 

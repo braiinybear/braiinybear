@@ -2,7 +2,6 @@ import React, { useCallback, useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router-dom";
 import { courseData, ICourse } from "./courseData";
-import { Loader } from "lucide-react";
 
 
 
@@ -11,6 +10,98 @@ const categoryImages: Record<string, string> = {
   "NCVET / NSQF approved skill courses": "/course-categories/NCVET_NSQF.png",
   "Veterinary courses": "/course-categories/Veterinary.png",
   "Aviation / Drone Course": "/course-categories/Aviation_Drone.png"
+};
+
+const CourseSkeleton: React.FC = () => {
+  return (
+    <div className="space-y-10 animate-pulse">
+      {/* Skeleton Category 1 */}
+      <div className="col-span-full rounded-lg shadow-md p-6 bg-gray-200/50 border border-gray-100">
+        {/* Category Heading Skeleton */}
+        <div className="h-7 w-64 bg-gray-300 rounded-md mb-6 relative">
+          <div className="absolute left-0 bottom-[-8px] w-16 h-1 bg-gray-400 rounded-full"></div>
+        </div>
+
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[...Array(6)].map((_, i) => (
+            <div key={i} className="bg-white/90 rounded-2xl p-4 flex items-start gap-4 shadow-sm border border-gray-100/50">
+              <div className="w-16 h-16 rounded-full bg-gray-200 flex-shrink-0 animate-pulse"></div>
+              <div className="flex-1 space-y-2 py-1">
+                <div className="h-4 bg-gray-300 rounded w-3/4 animate-pulse"></div>
+                <div className="space-y-1.5">
+                  <div className="h-3 bg-gray-200 rounded w-full animate-pulse"></div>
+                  <div className="h-3 bg-gray-200 rounded w-5/6 animate-pulse"></div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Skeleton Category 2 */}
+      <div className="col-span-full rounded-lg shadow-md p-6 bg-gray-200/50 border border-gray-100">
+        <div className="h-7 w-80 bg-gray-300 rounded-md mb-6 relative">
+          <div className="absolute left-0 bottom-[-8px] w-16 h-1 bg-gray-400 rounded-full"></div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[...Array(3)].map((_, i) => (
+            <div key={i} className="bg-white/90 rounded-2xl p-4 flex items-start gap-4 shadow-sm border border-gray-100/50">
+              <div className="w-16 h-16 rounded-full bg-gray-200 flex-shrink-0 animate-pulse"></div>
+              <div className="flex-1 space-y-2 py-1">
+                <div className="h-4 bg-gray-300 rounded w-3/4 animate-pulse"></div>
+                <div className="space-y-1.5">
+                  <div className="h-3 bg-gray-200 rounded w-full animate-pulse"></div>
+                  <div className="h-3 bg-gray-200 rounded w-5/6 animate-pulse"></div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Skeleton Category 3 */}
+      <div className="col-span-full rounded-lg shadow-md p-6 bg-gray-200/50 border border-gray-100">
+        <div className="h-7 w-48 bg-gray-300 rounded-md mb-6 relative">
+          <div className="absolute left-0 bottom-[-8px] w-16 h-1 bg-gray-400 rounded-full"></div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[...Array(3)].map((_, i) => (
+            <div key={i} className="bg-white/90 rounded-2xl p-4 flex items-start gap-4 shadow-sm border border-gray-100/50">
+              <div className="w-16 h-16 rounded-full bg-gray-200 flex-shrink-0 animate-pulse"></div>
+              <div className="flex-1 space-y-2 py-1">
+                <div className="h-4 bg-gray-300 rounded w-3/4 animate-pulse"></div>
+                <div className="space-y-1.5">
+                  <div className="h-3 bg-gray-200 rounded w-full animate-pulse"></div>
+                  <div className="h-3 bg-gray-200 rounded w-5/6 animate-pulse"></div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Skeleton Category Other */}
+      <div className="col-span-full rounded-md shadow-md p-6 bg-white border border-gray-100">
+        <div className="h-7 w-32 bg-gray-200 rounded-md mb-6 relative">
+          <div className="absolute left-0 bottom-[-8px] w-16 h-1 bg-gray-300 rounded-full"></div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {[...Array(4)].map((_, i) => (
+            <div key={i} className="bg-gray-50 rounded-2xl p-3 flex items-center gap-3 shadow-sm border border-gray-100/50">
+              <div className="w-14 h-14 rounded-lg bg-gray-200 flex-shrink-0 animate-pulse"></div>
+              <div className="flex-1 py-1">
+                <div className="h-4 bg-gray-300 rounded w-5/6 animate-pulse"></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 };
 
 
@@ -168,9 +259,7 @@ const filterCourses = useCallback(
 
           {/* Courses */}
           {loading ? (
-            <div className="flex justify-center items-center min-h-[300px]">
-              <Loader className="w-10 h-10 text-sky-600 animate-spin" />
-            </div>
+            <CourseSkeleton />
           ) : (
             <>
               {/* Render all categories except "Other" */}
