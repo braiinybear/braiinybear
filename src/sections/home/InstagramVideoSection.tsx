@@ -140,26 +140,35 @@ const InstagramVideoCarousel = ({ videos }: { videos: VideoItem[] }) => {
               <div key={`${video.id}-${idx}`} style={style} className="relative overflow-hidden">
                 <video
                   ref={videoRef}
-                  src={video.url}
                   className="w-full h-full object-cover rounded-[15px] hover:scale-108 transition-transform duration-500 ease-in-out"
                   autoPlay
                   muted
                   playsInline
                   onEnded={handleNext}
-                  preload="auto"
+                  preload="metadata"
                   loop={false}
                   controls={false}
-                />
+                >
+                  {/* 1. Highly-compressed, super lightweight WebM stream for modern browsers */}
+                  <source src={`${video.url}?tr=f-webm,q-60,w-480`} type="video/webm" />
+                  {/* 2. Compressed MP4 stream fallback for maximum compatibility */}
+                  <source src={`${video.url}?tr=q-65,w-480`} type="video/mp4" />
+                </video>
                 {titleOverlay}
               </div>
             );
           }
 
           if (video.thumbnail) {
+            // Serve dynamically optimized thumbnail image using ImageKit compression parameter
+            const optimizedThumbnail = video.thumbnail.includes("imagekit.io")
+              ? `${video.thumbnail}?tr=w-320,h-568,q-70,f-auto`
+              : video.thumbnail;
+
             return (
               <div key={`${video.id}-${idx}`} style={style} className="relative overflow-hidden">
                 <img
-                  src={video.thumbnail}
+                  src={optimizedThumbnail}
                   alt={video.title ?? "Video thumbnail"}
                   className="w-full h-full object-cover rounded-[15px]"
                   draggable={false}

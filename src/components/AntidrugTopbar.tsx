@@ -5,14 +5,14 @@ const AntidrugTopbar = () => {
     // Add the custom marquee animation to the document's stylesheet
     const style = document.createElement('style');
     style.textContent = `
-      @keyframes marquee-antidrug {
+      @keyframes marquee-sync-shared {
         0% { transform: translateX(100vw); }
         100% { transform: translateX(-100%); }
       }
-      .animate-marquee-antidrug {
-        animation: marquee-antidrug 55s linear 0.1s infinite;
+      .animate-marquee-sync {
+        animation: marquee-sync-shared 45s linear 0s infinite;
       }
-      .animate-marquee-antidrug:hover {
+      .animate-marquee-sync:hover {
         animation-play-state: paused;
       }
     `;
@@ -36,16 +36,13 @@ const AntidrugTopbar = () => {
     "🌟 Your Future is Bright, Keep the Mind Right"
   ];
 
-  // Doubling the array to ensure a perfectly seamless loop without blank gaps
-  const marqueeContent = [...alertItems, ...alertItems];
-
   return (
     <div className="bg-green-600 text-white py-2 shadow-md overflow-hidden border-b border-emerald-700 select-none text-sm md:text-base font-medium">
       <div className="w-full">
         {/* Marquee Wrapper */}
         <div className="flex whitespace-nowrap overflow-hidden relative">
-          <div className="animate-marquee-antidrug inline-flex items-center gap-4 cursor-pointer">
-            {marqueeContent.map((item, index) => (
+          <div className="animate-marquee-sync inline-flex items-center gap-4 cursor-pointer">
+            {alertItems.map((item, index) => (
               <span key={index} className="flex items-center gap-2">
                 {item}
                 <span className="text-emerald-300 font-bold ml-4">|</span>
