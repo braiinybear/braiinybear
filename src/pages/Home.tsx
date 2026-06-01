@@ -50,34 +50,54 @@ import WorkAreaSection from "../sections/home/WorkAreaSection";
 import { Link } from "react-router-dom";
 import NewsletterSubscriptionSection from "../sections/home/NewsletterSubscriptionSection";
 import InstagramVideoCarousel from "../sections/home/InstagramVideoSection";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 // import Events from "./courses/Courses";
 
 
 const Home: React.FC = () => {
-const [videos,setVideos] = useState([]);
- 
-  useEffect(()=>{
+const [videos, setVideos] = useState([]);
+const [isLoading, setIsLoading] = useState(true);
+const [error, setError] = useState<string | null>(null);
 
-    const fetchVideos = async() =>{
+  const fetchVideos = useCallback(async () => {
+    setIsLoading(true);
+    setError(null);
+
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 25000);
 
     try {
-        const res = await fetch(courseApi+"videos");
-        // const res = await fetch("http://localhost:3000/api/videos");
-
-      if(res.ok){
+      const res = await fetch(courseApi+"videos", { signal: controller.signal });
+      clearTimeout(timeoutId);
+      if (res.ok) {
         const data = await res.json();
-        setVideos(data);
+        const mapped = (Array.isArray(data) ? data : []).map((item: any, idx: number) => ({
+          id: item.id ?? item._id ?? idx,
+          url: item.url,
+          thumbnail: item.thumbnail,
+          title: item.title,
+        }));
+        setVideos(mapped);
+      } else {
+        setError(`Failed to load videos (${res.status})`);
       }
-    } catch (error) {
-      console.log(error);
+    } catch (err) {
+      clearTimeout(timeoutId);
+      if ((err as any)?.name === "AbortError") {
+        setError("Request timed out. Please try again.");
+      } else {
+        setError(err instanceof Error ? err.message : "Failed to load videos");
+      }
+    } finally {
+      setIsLoading(false);
     }
+  }, []);
 
-    }
-
+  useEffect(() => {
     fetchVideos();
+  }, [fetchVideos]);
 
-  },[])
+
 
   return (
     <div className="bg-gray-50">
@@ -104,7 +124,12 @@ const [videos,setVideos] = useState([]);
       <WorkAreaSection />
 
       {/* InstagramVideoSection  */}
-      <InstagramVideoCarousel videos={videos} />
+      <InstagramVideoCarousel
+        videos={videos}
+        isLoading={isLoading}
+        error={error}
+        onRetry={fetchVideos}
+      />
 
 
       {/* Volunteer/Donate CTA */}
