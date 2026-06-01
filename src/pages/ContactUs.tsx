@@ -67,7 +67,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="font-medium text-gray-900">Address</h3>
-                    <p className="text-gray-600 mt-1">15, New Cantonment Road, Dehradun</p>
+                    <p className="text-gray-600 mt-1">86, Ln 1, Rajeshwar Nagar Phase-I, Aman Vihar, <br /> Dehradun, Uttarakhand 248013, India</p>
                   </div>
                 </div>
 
@@ -210,7 +210,7 @@ const Contact: React.FC = () => {
         <div className="mt-12 bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="relative w-full h-80 sm:h-[500px]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d444.19928262020716!2d78.05097314666982!3d30.340222096789756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390929000460a1ab%3A0xfbe090db47be29a1!2sBrainy%20Bear%20Educational%20and%20Training%20Society!5e0!3m2!1sen!2sin!4v1754121540956!5m2!1sen!2sin"
+              src="https://maps.google.com/maps?q=86,%20Ln%201,%20Rajeshwar%20Nagar%20Phase-I,%20Aman%20Vihar,%20Dehradun,%20Uttarakhand%20248013,%20India&t=&z=16&ie=UTF8&iwloc=&output=embed"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="absolute top-0 left-0 w-full h-full border-0"

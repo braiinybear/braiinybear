@@ -23,13 +23,13 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row gap-4 md:gap-8">
 
           {/* Logo and Brief Description */}
-          <div className="flex flex-col items-center w-full sm:w-auto min-h-[250px]">
-            <Link to="/" className="flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center w-full sm:w-auto min-h-[250px] gap-6">
+            <Link to="/" className="flex flex-col items-center justify-center animate-fade-in">
               <div className="min-w-[5rem] sm:min-w-[6rem] md:min-w-[7rem] mb-4">
                 <img
                   src={Logo}
                   alt="BraiinyBear Logo"
-                  className="w-24 sm:w-28 md:w-32 h-auto"
+                  className="w-24 sm:w-28 md:w-32 h-auto hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="text-center">
@@ -42,6 +42,38 @@ const Footer: React.FC = () => {
                 </span>
               </div>
             </Link>
+
+            {/* Legal Registration Badge */}
+            <a
+              href="/SocietyRegistrationletter.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 group flex items-center justify-between gap-4 bg-gradient-to-r from-white/95 to-slate-50/50 hover:from-white hover:to-blue-50/90 border border-gray-300/80 border-l-4 border-l-[var(--primary-main)] rounded-r-2xl rounded-l-lg p-3.5 shadow-xs hover:shadow-md transition-all duration-300 w-full max-w-[320px] cursor-pointer"
+            >
+              <div className="flex items-center gap-3">
+                <div className="bg-[var(--primary-main)]/10 text-[var(--primary-main)] p-2.5 rounded-xl flex items-center justify-center group-hover:scale-110 group-hover:bg-[var(--primary-main)] group-hover:text-white transition-all duration-300 shadow-2xs">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <div className="space-y-0.5">
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-[13px] font-bold text-gray-800 tracking-tight">Registered Society</span>
+                    <span className="bg-emerald-100 text-emerald-800 text-[8px] px-1.5 py-0.5 rounded-full font-extrabold uppercase tracking-wider">
+                      Verified
+                    </span>
+                  </div>
+                  <p className="text-[10px] text-gray-500 font-mono tracking-tight">
+                    Reg No: UK0600842025014704
+                  </p>
+                </div>
+              </div>
+              <div className="text-[var(--primary-main)] bg-white border border-gray-200/80 shadow-3xs p-2 rounded-xl flex items-center justify-center group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300">
+                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 00-2 2h14a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </div>
+            </a>
           </div>
 
           {/* Footer Items - Quick Links and Contact */}
