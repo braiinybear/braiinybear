@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { MapPin, Phone, Mail, Clock, Send, Check } from "lucide-react";
 import emailjs from 'emailjs-com';
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const Contact: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);

@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import edu from "../assets/educational programs.png";
 import communityout from "../assets/community outreach.jpg";
 import govcolab from "../assets/government colab.avif";

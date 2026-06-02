@@ -1,3 +1,4 @@
+import { HelmetProvider } from "react-helmet-async";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import { ToastContainer, Bounce } from "react-toastify";
@@ -57,6 +58,7 @@ pauseOnHover
 theme="light"
 transition={Bounce}
 />
+     <HelmetProvider>
     <Router>
       <ScrollToTop />
       <Routes>
@@ -283,6 +285,7 @@ transition={Bounce}
 
       </Routes>
     </Router>
+    </HelmetProvider>
     </>
  
   );

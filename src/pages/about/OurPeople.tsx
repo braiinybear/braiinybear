@@ -1,5 +1,5 @@
 import { Linkedin, Mail, Twitter } from 'lucide-react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import raksh from '../../assets/images/Headshot-1.jpg';
 import indu from '../../assets/images/indu.jpeg';
 

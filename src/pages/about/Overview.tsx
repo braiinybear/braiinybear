@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import bgImage from '../../assets/images/IMG-20250319-WA0012.jpg'
 import { Target, Award, Heart, Lightbulb, ShieldCheck, FileText, ExternalLink } from 'lucide-react';
 

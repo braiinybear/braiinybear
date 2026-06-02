@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import animalHusbandryImg from "../../assets/work-areas/AnimalHusbandry.jpg";
 
 const AnimalHusbandry: React.FC = () => {

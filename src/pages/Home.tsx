@@ -1,5 +1,5 @@
 import Hero from "../components/homepage/Hero";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 const courseApi = import.meta.env.VITE_API_URL
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
