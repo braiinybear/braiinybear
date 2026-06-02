@@ -55,7 +55,7 @@ import { useEffect, useState, useCallback } from "react";
 
 
 const Home: React.FC = () => {
-const [videos, setVideos] = useState([]);
+const [videos, setVideos] = useState<{ id: any; url: any; thumbnail: any; title: any }[]>([]);
 const [isLoading, setIsLoading] = useState(true);
 const [error, setError] = useState<string | null>(null);
 
