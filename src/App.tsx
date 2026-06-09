@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import { ToastContainer, Bounce } from "react-toastify";
 import ScrollToTop from "./components/ScrollToTop";
+import AnalyticsTracker from "./components/AnalyticsTracker";
 import Loader from "./components/Loader";
 import Faq from "./pages/Faq";
 
@@ -61,6 +62,7 @@ transition={Bounce}
      <HelmetProvider>
     <Router>
       <ScrollToTop />
+      <AnalyticsTracker />
       <Routes>
         <Route
           path="/"
